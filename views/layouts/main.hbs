@@ -1,38 +1,57 @@
 <!DOCTYPE html>
+
 <html lang="en">
-<head>
+
+  <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-
-    <!--  header -->
-
-<div class="navbar bg-base-100">
-  <div class="flex-none">
-    <button class="btn btn-square btn-ghost">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-    </button>
-  </div>
-  <div class="flex-1">
-    <a class="btn btn-ghost normal-case text-xl">CLS Lending</a>
-  </div>
-  <div class="flex-none">
-      <p class="normal-case text-lg text-right">Local Time 13:00 <br/>Wednesday, October 4, 2023</p>
-  </div>
-</div>
-
-  <button class="btn w-64 rounded-full">Button</button>
-
-  <h1>{{header}}</h1>
-  {{{body}}}
-
-    <!-- JQuery JS -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>CLS Lending</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="/js/digital_clock.js"></script>
     
-    <!-- Fontawesome JS -->
-    <script src="https://kit.fontawesome.com/8fc6c81a17.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+            <!--  header  -->
+        <div class="navbar bg-base-100">
+          <div class="flex-none">
+            <img src="/images/logo.png" alt="Logo" class="h-10 w-auto" style="height: 5rem;">
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center" style="margin-left: 1rem;"> 
+              <a class="text-button normal-case text-sm squeezed-font">Building a <span class="highlighted-text">Solid</span> Financial Foundation</a>
+            </div>
+          </div>
+          <div class="flex-none" style="margin-right: 1rem;">
+            <p class="text-xl" id="date-time"></p>
+          </div>
+        </div>
+
+        <div id="background"> 
+          <div id="container">
+            <div id="left-box" class="box">
+              <img id="logo" src="/images/logo.png">
+            </div>
+            <div id="right-box" class="box">
+              <div id="login-container"> 
+                <div class="section" id="upper"> 
+                  <h1> Welcome Back! </h1>
+                </div>
+                <div class="section" id="middle"> 
+
+                </div>  
+                <div class="section" id="lower">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+
+        {{{body}}}
+        
   </body>
 </html>
