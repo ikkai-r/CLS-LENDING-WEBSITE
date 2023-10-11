@@ -5,4 +5,5 @@ const app = express();
 
 app.get(`/`, controller.getIndex);
 
+
 module.exports = app;
