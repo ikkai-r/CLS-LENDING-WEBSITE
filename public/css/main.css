@@ -197,6 +197,7 @@ html {
 }
 
 :root {
+  font-family: 'Helvetica', 'Arial', sans-serif;
   color-scheme: light;
   --pf: 259 94% 44%;
   --sf: 314 100% 40%;
@@ -417,6 +418,7 @@ html {
   color: #FCA311;
 }
 
+/*lagay q muna d2 ung css for login, de aq shur kung paano sia ipasa sa routes x_X */
 #background{
   position: absolute;
   background: rgb(255, 255, 255); 
@@ -458,8 +460,8 @@ html {
 #right-box #login-container{
   position: relative;
   background: rgb(255, 255, 255);
-  height: 90%;
-  width: 80%;
+  height: 75%;
+  width: 65%;
   border-radius: 3rem;
   border-right: 0.7rem solid rgba(0, 0, 0, 0.377);
   border-bottom: 0.7rem solid rgba(0, 0, 0, 0.377);
@@ -484,11 +486,34 @@ html {
 
 #upper h1{
   position: relative;
-  font-size: 4rem;
+  font-size: 2.3rem;
   font-weight: 700;
   margin-left: 2rem;
   text-wrap: nowrap;
   color: #14213d
 }
 
+#username-login, #password-login {
+  width: 85%;
+  height: 8vh;
+  color: black;
+}
 
+#username-login:focus, #password-login:focus {
+  border: .05rem solid #14213d; 
+}
+
+.btn {
+  font-size: 1.1em;
+  font-weight: 600;
+  background-color: #14213d;
+  color: white;
+  border-radius: 5rem;
+  outline: none;
+}
+
+.btn:hover {
+  background-color: white;
+  color: #FCA311;
+  border: .1rem solid #FCA311;
+}
