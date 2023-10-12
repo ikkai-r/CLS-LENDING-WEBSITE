@@ -518,16 +518,6 @@ html {
   border: .1rem solid #FCA311;
 }
 
-#icon-user {
-  left: 3rem;
-  top: 1.2rem;
-}
-
-#icon-lock {
-  left: 3rem;
-  top: 13rem;
-}
-
-/* #icon-user, #icon-lock {
+#icon-user, #icon-lock {
   color: #14213d;
-} */
+}
