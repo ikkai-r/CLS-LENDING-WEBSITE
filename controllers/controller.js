@@ -5,7 +5,7 @@ const controller = {
         res.render('index', {header: 'test', layout: 'layouts/main', css: '/css/login.css'}); // This is to load the page initially
     }, 
     getRegister: function(req, res) {
-        res.render('register', {layout: 'layouts/main'})
+        res.render('register', {layout: 'layouts/main', css: '/css/register.css'})
     }
 
 }
