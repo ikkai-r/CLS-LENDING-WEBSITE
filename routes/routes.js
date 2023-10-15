@@ -7,5 +7,6 @@ app.get(`/`, controller.getIndex);
 app.get('/register', controller.getRegister);
 app.get('/dashboard', controller.getDashboard);
 app.get('/c_dashboard', controller.getClientDashboard);
+app.get('/login', controller.getLogin);
 
 module.exports = app;

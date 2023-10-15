@@ -10,6 +10,7 @@ const hbs = require(`hbs`);
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(`public`));
+app.use('/node_modules', express.static('node_modules'));
 app.use(`/`, routes);
 
 //app.engine('handlebars', exphbs.engine({extname: '.hbs', defaultLayout: 'main'}));

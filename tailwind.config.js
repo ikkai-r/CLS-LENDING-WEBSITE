@@ -3,6 +3,7 @@ module.exports = {
     content: [
       './views/**/*.hbs',
       './public/**/*.{html,js}',
+      "./node_modules/flowbite/**/*.js"
     ],
     theme: {
       extend: {
@@ -13,7 +14,11 @@ module.exports = {
         'cmgray': '#e5e5e5'
       },
     },
-    plugins: [require("daisyui")],
+    plugins: [
+      require("daisyui"),
+      require('flowbite/plugin')
+  ],
+    
     daisyui: {
         themes: false, // true: all themes | false: only light + dark | array: specific themes like this ["light", "dark", "cupcake"]
         darkTheme: "dark", // name of one of the included themes for dark mode
