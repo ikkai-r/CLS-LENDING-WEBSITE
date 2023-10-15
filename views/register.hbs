@@ -6,50 +6,60 @@
             <h1> Create Account </h1>
         </div>
         <form action="" class="mt-10">
-            <div class="grid grid-cols-2 gap-4 mb-5">
-                <div class="relative">
-                    <i class="fa fa-user absolute mt-2 ml-3" id="icon-user"></i>
-                    <input type="text" placeholder="First Name" id="first_name" name="first_name" class="text-sm pl-10 px-4 py-3 bg-gray-200 focus:bg-gray-100 border border-gray-200 rounded-lg focus:outline-none" required>
+            <div class="grid grid-cols-2 gap-10 mb-5">
+                <div class="col-span-1 flex flex-col gap-2">
+                     <span class="text-left">Full Name</span>
+                    <div class="flex flex-row gap-5">
+                        
+                        <div class="relative">
+                            <i class="fa fa-user absolute mt-2 ml-3" id="icon-user"></i>
+                           
+                            <input type="text" placeholder="First Name" id="first_name" name="first_name" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
+                        </div>
+                        <div class="relative">
+                            <i class="fa fa-user absolute mt-2 ml-3" id="icon-user"></i>
+                            <input type="text" placeholder="Last Name" id="last_name" name="last_name" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <i class="fa-solid fa-envelope absolute mt-2 ml-3" id="icon-envelope"></i>
+                        <input type="email" placeholder="Email" id="email" name="email" class="text-sm pl-10 px-4 py-3  focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
+                    </div>
+                    <div class="relative">
+                        <i class="fa-solid fa-phone absolute mt-2 ml-3" id="icon-phone"></i>
+                        <input type="tel" placeholder="Contact Number" id="contact_number" name="contact_number" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
+                    </div>
+                    <div class="relative">
+                        <i class="fa-solid fa-facebook absolute mt-2 ml-3" id="icon-facebook"></i>
+                        <input type="text" placeholder="Facebook Account Link" id="facebook_link" name="facebook_link" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
+                    </div>
+                    <div class="relative">
+                        <i class="fa-solid fa-address-card absolute mt-2 ml-3" id="icon-address"></i>
+                        <input type="text" placeholder="Address" id="address" name="address" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
+                    </div>
                 </div>
-                <div class="relative">
-                    <i class="fa fa-user absolute mt-2 ml-3" id="icon-user"></i>
-                    <input type="text" placeholder="Last Name" id="last_name" name="last_name" class="text-sm pl-10 px-4 py-3 bg-gray-200 focus:bg-gray-100 border border-gray-200 rounded-lg focus:outline-none" required>
+                <div>
+                    <div class="mb-5">
+                        <label class="block text-gray-700 font-bold mb-2">Gender</label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" class="form-radio" name="gender" value="male" required>
+                            <span class="ml-2">Male</span>
+                        </label>
+                        <label class="inline-flex items-center ml-6">
+                            <input type="radio" class="form-radio" name="gender" value="female" required>
+                            <span class="ml-2">Female</span>
+                        </label>
+                    </div>
+                    <div class="relative mb-5">
+                        <i class="fa-solid fa-id-badge absolute mt-2 ml-3" id="icon-id"></i>
+                        <input type="file" placeholder="Government ID Image" id="id_image" name="id_image" accept="image/*" class="text-sm pl-10 px-4 py-3 bg-gray-200 focus:bg-gray-100 border border-gray-200 rounded-lg focus:outline-none" required>
+                    </div>
+                    <div class="relative mb-5">
+                        <i class="fa-solid fa-signature absolute mt-2 ml-3" id="icon-signature"></i>
+                        <input type="file" placeholder="Signature Image" id="signature_image" name="signature_image" accept="image/*" class="text-sm pl-10 px-4 py-3 bg-gray-200 focus:bg-gray-100 border border-gray-200 rounded-lg focus:outline-none" required>
+                    </div>
                 </div>
-                <div class="relative">
-                    <i class="fa-solid fa-envelope absolute mt-2 ml-3" id="icon-envelope"></i>
-                    <input type="email" placeholder="Email" id="email" name="email" class="text-sm pl-10 px-4 py-3 bg-gray-200 focus:bg-gray-100 border border-gray-200 rounded-lg focus:outline-none" required>
-                </div>
-                <div class="relative">
-                    <i class="fa-solid fa-phone absolute mt-2 ml-3" id="icon-phone"></i>
-                    <input type="tel" placeholder="Contact Number" id="contact_number" name="contact_number" class="text-sm pl-10 px-4 py-3 bg-gray-200 focus:bg-gray-100 border border-gray-200 rounded-lg focus:outline-none" required>
-                </div>
-                <div class="relative">
-                    <i class="fa-solid fa-facebook absolute mt-2 ml-3" id="icon-facebook"></i>
-                    <input type="text" placeholder="Facebook Account Link" id="facebook_link" name="facebook_link" class="text-sm pl-10 px-4 py-3 bg-gray-200 focus:bg-gray-100 border border-gray-200 rounded-lg focus:outline-none" required>
-                </div>
-                <div class="relative">
-                    <i class="fa-solid fa-address-card absolute mt-2 ml-3" id="icon-address"></i>
-                    <input type="text" placeholder="Address" id="address" name="address" class="text-sm pl-10 px-4 py-3 bg-gray-200 focus:bg-gray-100 border border-gray-200 rounded-lg focus:outline-none" required>
-                </div>
-            </div>
-            <div class="mb-5">
-                <label class="block text-gray-700 font-bold mb-2">Gender</label>
-                <label class="inline-flex items-center">
-                    <input type="radio" class="form-radio" name="gender" value="male" required>
-                    <span class="ml-2">Male</span>
-                </label>
-                <label class="inline-flex items-center ml-6">
-                    <input type="radio" class="form-radio" name="gender" value="female" required>
-                    <span class="ml-2">Female</span>
-                </label>
-            </div>
-            <div class="relative mb-5">
-                <i class="fa-solid fa-id-badge absolute mt-2 ml-3" id="icon-id"></i>
-                <input type="file" placeholder="Government ID Image" id="id_image" name="id_image" accept="image/*" class="text-sm pl-10 px-4 py-3 bg-gray-200 focus:bg-gray-100 border border-gray-200 rounded-lg focus:outline-none" required>
-            </div>
-            <div class="relative mb-5">
-                <i class="fa-solid fa-signature absolute mt-2 ml-3" id="icon-signature"></i>
-                <input type="file" placeholder="Signature Image" id="signature_image" name="signature_image" accept="image/*" class="text-sm pl-10 px-4 py-3 bg-gray-200 focus:bg-gray-100 border border-gray-200 rounded-lg focus:outline-none" required>
+                
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
