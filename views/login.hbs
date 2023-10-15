@@ -1,11 +1,21 @@
-    <div id="background"> 
-        <div id="container">
-        <div id="right-box" class="box">
-            <div id="login-container" class="items-center"> 
-                <div class="section" id="upper"> 
-                    <h1> Welcome Back! </h1>
+ <div class="min-h-screen h-screen flex items-center justify-center">
+    <div class="flex items-center justify-center items-stretch md:grid md:grid-cols-2">
+        <div class="container flex flex-col justify-center items-center bg-gray-100 ml-9 h-full" id="left-cont">
+            <div class="container flex justify-center mt-10">
+               <img src="/images/logo.png" class="w-20">
+            </div>
+            <div id="login-container" class="container py-12"> 
+
+                <!-- header text -->
+                <div class="section mt-6"> 
+                    <h1 class="mb-4 text-3xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-5xl dark:text-white">Welcome Back!</h1>
+                    <p class="mb-6 text-lg font-normal text-gray-500 dark:text-gray-400">Please sign in to your account.</p>
                 </div>
-                <form action="" class="mt-10" style="width: 90%;">
+
+                <form action="" class="mt-10 flex flex-col items-center" style="width: 90%;">
+                    
+                    <div class="container">
+                    <!-- email -->
                      <label for="email-login" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white text-left">Your email</label>
                         <div class="relative flex items-center">
                             <div class="absolute inset-y-0 flex items-center pl-3.5 pointer-events-none">
@@ -17,6 +27,7 @@
                               <input type="text" id="email-login" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 " placeholder="name@flowbite.com">
                         </div>
 
+                        <!-- password -->
                         <label for="pass-login" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white mt-5 text-left">Password</label>
                         <div class="relative flex items-center">
                             <div class="absolute inset-y-0 flex items-center pl-3.5 pointer-events-none">
@@ -27,22 +38,33 @@
                               <input type="password" id="pass-login" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 " placeholder="••••••••">
                         </div>
 
+                        <!-- remember me -->
                         <div class="flex items-center justify-between mt-6">
-                      <div class="flex items-start">
-                          <div class="flex items-center h-5">
-                            <input id="remember" aria-describedby="remember" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" required="">
-                          </div>
-                          <div class="ml-3 text-sm">
-                            <label for="remember" class="text-gray-500 dark:text-gray-300">Remember me</label>
-                          </div>
-                      </div>
-                      <a href="#" class="text-sm font-medium text-blue-600 hover:underline">Forgot password?</a>
-                  </div>
-                        <button class="btn mt-10" style="width: 80%;">Sign in</button>
-                    </div>             
+                            <div class="flex items-start">
+                                <div class="flex items-center h-5">
+                                    <input id="remember" aria-describedby="remember" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" required="">
+                                </div>
+                                <div class="ml-3 text-sm">
+                                    <label for="remember" class="text-gray-500 dark:text-gray-300">Remember me</label>
+                                </div>
+                            </div>
+                        <a href="#" class="text-sm font-medium text-blue-600 hover:underline">Forgot password?</a>
+                        </div>
+                    </div>
+                        <button class="btn login-btn mt-10" style="width: 90%;">Sign in</button>
+                              
                 </form>
             </div>
         </div>
+             
+            <div id="login-side-cont" class="container px-20 py-12 hidden lg:block h-full">
+            <div class="items-center"> 
+                <div class="section px-20 ml-5 pb-12">          
+        <h1 class="mb-4 text-lg font-extrabold leading-none tracking-tight text-white lg:text-5xl">Building a Solid Financial Foundation with <span class="text-yellow">CLS.</span></h1>
+        <p class="text-lg hidden font-normal text-gray-100 mt-2 md:hidden lg:block">At CLS, our mission is to empower individuals and businesses by providing accessible lending solutions that fuel growth and financial prosperity. </p>
+                </div>
+            </div>
         </div>
-    
     </div>
+ </div>
+    

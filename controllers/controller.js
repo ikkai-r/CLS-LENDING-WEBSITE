@@ -14,7 +14,7 @@ const controller = {
         res.render('client_dashboard', {layout: 'layouts/main'});
     },
     getLogin: function (req, res) {
-        res.render('login', {layout: 'layouts/main', css: '/css/login.css'});
+        res.render('login', {layout: 'layouts/main_no', css: '/css/login2.css'});
     }
 
 

@@ -1,0 +1,56 @@
+.login-btn {
+    font-size: 1.1em;
+    font-weight: 600;
+    background-color: #14213d;
+    color: white;
+    border-radius: 5rem;
+    outline: none;
+  }
+  
+  .login-btn:hover {
+    background-color: white;
+    color: #FCA311;
+    border: .1rem solid #FCA311;
+  }
+
+#login-container {
+    max-width: 85%;
+    height: 100%; /* 160px */
+}
+
+.py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+.px-20 {
+    padding-left: 5rem; /* 80px */
+    padding-right: 5rem; /* 80px */
+}
+
+  .w-20 {
+   width: 5rem;
+  }
+
+  #login-side-cont {
+    max-width: 95%;
+    background-image: url("/images/bg-login.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 5rem; /* 36px */
+    border-radius: 13px;
+    height: 100%;
+  }
+
+  #left-cont {
+    border-radius: 13px;
+  }
+
+  .ml-9 {
+    margin-left: 2.25rem; /* 36px */
+  }
+
+  .text-yellow {
+    color: #FCA311;
+  }
+  
