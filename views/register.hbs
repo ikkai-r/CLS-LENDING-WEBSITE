@@ -1,75 +1,124 @@
 <div id="background">
-  <div id="container">
-    <div id="center-box" class="box">
-      <div id="register-container">
-        <div class="section" id="upper"> 
-            <h1> Create Account </h1>
-        </div>
-        <form action="" class="mt-10">
-            <div class="grid grid-cols-2 gap-10 mb-5">
-                <div class="col-span-1 flex flex-col gap-2">
-                     <span class="text-left">Full Name</span>
-                    <div class="flex flex-row gap-5">
-                        
-                        <div class="relative">
-                            <i class="fa fa-user absolute mt-2 ml-3" id="icon-user"></i>
-                           
-                            <input type="text" placeholder="First Name" id="first_name" name="first_name" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
-                        </div>
-                        <div class="relative">
-                            <i class="fa fa-user absolute mt-2 ml-3" id="icon-user"></i>
-                            <input type="text" placeholder="Last Name" id="last_name" name="last_name" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
-                        </div>
-                    </div>
-                    <div class="relative">
-                        <i class="fa-solid fa-envelope absolute mt-2 ml-3" id="icon-envelope"></i>
-                        <input type="email" placeholder="Email" id="email" name="email" class="text-sm pl-10 px-4 py-3  focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
-                    </div>
-                    <div class="relative">
-                        <i class="fa-solid fa-phone absolute mt-2 ml-3" id="icon-phone"></i>
-                        <input type="tel" placeholder="Contact Number" id="contact_number" name="contact_number" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
-                    </div>
-                    <div class="relative">
-                        <i class="fa-solid fa-facebook absolute mt-2 ml-3" id="icon-facebook"></i>
-                        <input type="text" placeholder="Facebook Account Link" id="facebook_link" name="facebook_link" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
-                    </div>
-                    <div class="relative">
-                        <i class="fa-solid fa-address-card absolute mt-2 ml-3" id="icon-address"></i>
-                        <input type="text" placeholder="Address" id="address" name="address" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
-                    </div>
+    <div id="container">
+        <div id="center-box" class="box">
+            <div id="register-container">
+                <div class="section" id="upper"> 
+                    <h1> Create Account </h1>
                 </div>
-                <div>
-                    <div class="mb-5">
-                        <label class="block text-gray-700 font-bold mb-2">Gender</label>
-                        <label class="inline-flex items-center">
-                            <input type="radio" class="form-radio" name="gender" value="male" required>
-                            <span class="ml-2">Male</span>
-                        </label>
-                        <label class="inline-flex items-center ml-6">
-                            <input type="radio" class="form-radio" name="gender" value="female" required>
-                            <span class="ml-2">Female</span>
-                        </label>
+                <form action="" class="mt-10">
+                    <div class="grid grid-cols-2 gap-10 mb-5">
+                            
+                            {{!-- left section --}}
+                            <div class="col-span-1 flex flex-col gap-2">
+                                <div class="flex flex-row items-center gap-2">
+                                    <span class="text-left">Full Name</span>
+                                    <img src="/images/logo.png" alt="Logo" class="logo">
+                                </div>
+                                <div class="flex flex-row gap-5">
+                                    <div class="relative">
+                                        <i class="fa fa-user absolute mt-2 ml-3" id="icon-user"></i>
+                                        <input type="text" placeholder="First Name" id="first_name" name="first_name" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
+                                    </div>
+                                    <div class="relative">
+                                        <i class="fa fa-user absolute mt-2 ml-3" id="icon-user"></i>
+                                        <input type="text" placeholder="Last Name" id="last_name" name="last_name" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
+                                    </div>
+                                </div>
+                                <div class="flex flex-row items-center gap-2">
+                                    <span class="text-left">Email</span>
+                                    <img src="/images/logo.png" alt="Logo" class="logo">
+                                </div>
+                                <div class="relative">
+                                    <i class="fa-solid fa-envelope absolute mt-2 ml-3" id="icon-envelope"></i>
+                                    <input type="email" placeholder="Email" id="email" name="email" class="text-sm pl-10 px-4 py-3  focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
+                                </div>
+                                <div class="flex flex-row items-center gap-2">
+                                    <span class="text-left">Contact Number</span>
+                                    <img src="/images/logo.png" alt="Logo" class="logo">
+                                </div>
+                                <div class="relative">
+                                    <i class="fa-solid fa-phone absolute mt-2 ml-3" id="icon-phone"></i>
+                                    <input type="tel" placeholder="Contact Number" id="contact_number" name="contact_number" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
+                                </div>
+                                <div class="flex flex-row items-center gap-2">
+                                    <span class="text-left">Facebook Account Link</span>
+                                    <img src="/images/logo.png" alt="Logo" class="logo">
+                                </div>
+                                <div class="relative">
+                                    <i class="fa-solid fa-facebook absolute mt-2 ml-3" id="icon-facebook"></i>
+                                    <input type="text" placeholder="Facebook Account Link" id="facebook_link" name="facebook_link" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
+                                </div>
+                                <div class="flex flex-row items-center gap-2">
+                                    <span class="text-left">Address</span>
+                                    <img src="/images/logo.png" alt="Logo" class="logo">
+                                </div>
+                                <div class="relative">
+                                    <i class="fa-solid fa-address-card absolute mt-2 ml-3" id="icon-address"></i>
+                                    <select id="address" name="address" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
+                                        <option value="" disabled selected>Select your address</option>
+                                        <option value="address1">Address 1</option>
+                                        <option value="address2">Address 2</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            {{!-- right section --}}
+                            <div class="col-span-1 flex flex-col gap-2 ml-10">
+                                <div class="mb-5">
+                                    <span class="text-left block mb-2">Gender</span>
+                                    <div class="flex items-center">
+                                        <label class="inline-flex items-center cursor-pointer">
+                                            <input type="radio" class="form-radio hidden" name="gender" value="male" required>
+                                            <span class="ml-2">Male</span>
+                                        </label>
+                                        <div class="ml-6">
+                                            <label class="inline-flex items-center cursor-pointer">
+                                                <input type="radio" class="form-radio hidden" name="gender" value="female" required>
+                                                <span class="ml-10">Female</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="relative mb-5">
+                                    <label for="id_image" class="text-left block mb-2">Government Issued ID</label>
+                                    <div class="flex items-center"> 
+                                        <i class="fa-solid fa-id-badge absolute mt-2 ml-3" id="icon-id"></i>
+                                        <input type="file" placeholder="Government ID Image" id="id_image" name="id_image" accept="image/*" class="text-sm pl-10 px-4 py-3 bg-gray-200 focus:bg-gray-100 border border-gray-200 rounded-lg focus:outline-none" required>
+                                    </div>
+                                    <label for="ex_id_image" class="text-left block mb-2" id="ex_id_image">Valid_ID.png</label>
+                                    <div id="id_image_preview"></div>
+                                </div>
+
+                                <div class="border-b-2 border-gray-200 mb-2"></div>
+
+                                <div class="relative mb-5">
+                                    <label for="signature_image" class="text-left block mb-2">Signature</label>
+                                    <div class="flex items-center"> 
+                                        <i class="fa-solid fa-signature absolute mt-2 ml-3" id="icon-signature"></i>
+                                        <input type="file" placeholder="Signature Image" id="signature_image" name="signature_image" accept="image/*" class="text-sm pl-10 px-4 py-3 bg-gray-200 focus:bg-gray-100 border border-gray-200 rounded-lg focus:outline-none" required>
+                                    </div>
+                                    <label for="ex_sig_image" class="text-left block mb-2" id="ex_sig_image">Signature.png</label>
+                                    <div id="signature_image_preview"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {{!-- bottom section --}}
+                        <div class="flex items-center justify-center mt-2 w-full">
+                            <button type="submit" class="btn btn-primary">Register</button>
+                        </div>
+                        <div class="flex items-center justify-center mt-2 w-full">
+                            <div>
+                                Already have an account? 
+                                {{!-- replace # with actual link to sign-in page. --}}
+                                <a href="#" class="underline">Sign in</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="relative mb-5">
-                        <i class="fa-solid fa-id-badge absolute mt-2 ml-3" id="icon-id"></i>
-                        <input type="file" placeholder="Government ID Image" id="id_image" name="id_image" accept="image/*" class="text-sm pl-10 px-4 py-3 bg-gray-200 focus:bg-gray-100 border border-gray-200 rounded-lg focus:outline-none" required>
-                    </div>
-                    <div class="relative mb-5">
-                        <i class="fa-solid fa-signature absolute mt-2 ml-3" id="icon-signature"></i>
-                        <input type="file" placeholder="Signature Image" id="signature_image" name="signature_image" accept="image/*" class="text-sm pl-10 px-4 py-3 bg-gray-200 focus:bg-gray-100 border border-gray-200 rounded-lg focus:outline-none" required>
-                    </div>
-                </div>
-                
+                </form>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-      </div>
+        </div>
     </div>
-  </div>
 </div>
 
 
-
-
-                
-        

@@ -10,10 +10,10 @@
 
 #background #container {
     position: relative;
-    height: 70vh; 
+    height: 80vh; 
     width: 65vw; 
     margin: auto;
-    top: 15vh; 
+    top: 5vh; 
     display: flex;
     flex-direction: row;
     text-align: center;
@@ -45,11 +45,11 @@
 
 #register-container .section {
     position: relative;
-    height: 20%;
+    height: 12%;
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: left; 
 }
 
 #register-container #upper {
@@ -60,7 +60,113 @@
 
 #upper h1 {
     position: relative;
-    font-size: 2rem; 
+    font-size: 3rem; 
     font-weight: 700;
     color: #14213d;
+    margin-left: 2rem;
 }
+
+/*
+   <!--  Align the labels with the input fields  -->
+*/
+#register-container input[type="text"],
+#register-container input[type="email"],
+#register-container input[type="tel"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0;
+    border: 2px solid #ccc;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+#register-container select {
+    width: 100%; 
+    padding: 0.75rem;
+    margin: 0;
+    border: 2px solid #ccc;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    box-sizing: border-box; 
+}
+
+/*
+   <!--  Change the Gender input field to check mark  -->
+*/
+.form-radio + span {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+}
+
+.form-radio + span::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border: 2px solid black; 
+    margin-right: 0.5em;
+    vertical-align: middle;
+}
+
+.form-radio:checked + span::before {
+    content: '\2714'; 
+    color: white; 
+    font-size: 1em; 
+    line-height: 1; 
+    text-align: center;
+    background-color: black; 
+}
+
+/*
+   <!--  logo for label  -->
+*/
+.logo {
+    width: 20px; /* Adjust the width as needed */
+    height: auto; /* This maintains the aspect ratio */
+}
+
+/*
+   <!--  register button  -->
+*/
+.btn-primary {
+    background-color: #FCA311; /* Change to your desired color */
+    color: #FFFFFF; /* Change to the desired text color */
+    border-color: #FCA311;
+}
+
+.btn:hover {
+    background-color: #14213d;
+    border-color: #14213d;
+}
+
+
+/*
+   <!--  sign in underline  -->
+*/
+.underline {
+    text-decoration: underline;
+}
+
+/*
+   <!--  example text for file uploads  -->
+*/
+#ex_id_image,
+#ex_sig_image {
+    font-style: italic;
+    color: gray;
+    font-size: 0.8rem; /* Adjust the font size as needed */
+}
+
+/*
+   <!--  border between id and signature  -->
+*/
+.border-b-2 {
+    border-bottom-width: 5px; /* Increase the width as needed */
+    border-bottom-color: #14213d; /* Change to your desired color */
+}
+
+
+
+
