@@ -5,5 +5,6 @@ const app = express();
 
 app.get(`/`, controller.getIndex);
 app.get('/register', controller.getRegister);
+app.get('/clientdb', controller.getClientDashboard);
 
 module.exports = app;

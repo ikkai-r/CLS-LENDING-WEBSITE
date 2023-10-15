@@ -6,6 +6,9 @@ const controller = {
     }, 
     getRegister: function(req, res) {
         res.render('register', {layout: 'layouts/main', css: '/css/register.css'})
+    }, 
+    getClientDashboard: function(req, res) {
+        res.render('clientdb')
     }
 
 }

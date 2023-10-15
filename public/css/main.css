@@ -235,7 +235,7 @@ html {
   --bc: 215 28% 17%;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
     --pf: 262 80% 43%;
@@ -273,7 +273,7 @@ html {
     --b3: 213 18% 10%;
     --bc: 220 13% 69%;
   }
-}
+} */
 
 [data-theme=light] {
   color-scheme: light;
