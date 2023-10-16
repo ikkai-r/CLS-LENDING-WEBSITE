@@ -1,21 +1,11 @@
 
-<div class="min-h-screen bg-black overflow-auto">
+<div class="min-h-screen bg-black">
 
     <!-- toolbar here, to be expanded, need to adjust width -->
-   <div class="fixed w-16 top-0 h-full bg-green-500">
-        <div class="flex flex-col mt-20 mx-5 gap-10">
-            <p> borgor </p>
-            <p> Dashboard </p>
-            <p> Loan Records </p>
-            <p> Audit Log </p>
-            <p> Log Out </p>
-        </div> 
-   </div>
-
-
+    {{> admin_hamburg}}
 
     <!-- right side of the screen, margin will be adjusted if toolbar got expanded -->
-    <div class="ml-28 mr-16 mt-24 grid grid-cols-7 gap-10 h-10">
+    <div class="ml-28 mr-16 mt-20 grid grid-cols-7 gap-10 h-10">
 
          <!-- hello admin stats  -->
         <div class="rounded-xl col-span-3 p-8 bg-white">

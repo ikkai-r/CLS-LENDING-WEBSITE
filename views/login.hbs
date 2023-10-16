@@ -1,15 +1,16 @@
  <div class="min-h-screen h-screen flex items-center justify-center">
-    <div class="grid grid-cols-2">
-        <div class="container flex flex-col justify-center items-center bg-gray-100 ml-9 h-full" id="left-cont" >
-            <div class="container flex justify-center mt-10">
+    <div class="min-h-screen h-screen grid grid-cols-3" style="width: 100%;">
+        <div class="container flex flex-col col-span-3 justify-center items-center bg-gray-100 h-full lg:col-span-1" id="left-cont">
+            <div id="login-container" class="-mt-10 container py-4 flex flex-col justify-center"> 
+                
+             <div class="container pb-32 flex items-center">
                <img src="/images/logo.png" class="w-20">
             </div>
-            <div id="login-container" class="container py-12"> 
 
                 <!-- header text -->
-                <div class="section mt-6"> 
-                    <h1 class="mb-4 text-3xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-5xl dark:text-white">Welcome Back!</h1>
-                    <p class="mb-6 text-lg font-normal text-gray-500 dark:text-gray-400">Please sign in to your account.</p>
+                <div class="section"> 
+                    <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Welcome Back!</h1>
+                    <p class="mb-6 text-xl font-normal text-gray-500 dark:text-gray-400">Please sign in to your account.</p>
                 </div>
 
                 <form action="" class="mt-10 flex flex-col items-center" style="width: 90%;">
@@ -24,7 +25,7 @@
                             <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"/>
                             </svg>
                             </div>
-                              <input type="text" id="email-login" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 " placeholder="name@flowbite.com">
+                              <input type="text" id="email-login" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 " placeholder="name@email.com">
                         </div>
 
                         <!-- password -->
@@ -57,12 +58,10 @@
             </div>
         </div>
 
-                 <div id="login-side-cont" class="container px-20 py-12 hidden lg:block h-full">
-            <div class="items-center"> 
-                <div class="section px-20 ml-5 pb-12">          
-        <h1 class="mb-4 text-lg font-extrabold leading-none tracking-tight text-white lg:text-5xl">Building a Solid Financial Foundation with <span class="text-yellow">CLS.</span></h1>
+        <div id="login-side-cont" class="container px-20 py-12 hidden lg:block lg:col-span-2 lg:flex lg:items-center">
+                <div class="section px-20 ml-5 pb-12" style="height: 60%;">          
+        <h1 class="mb-4 text-lg font-extrabold leading-none tracking-tight text-white lg:text-7xl">Building a Solid Financial Foundation with <span class="text-yellow">CLS.</span></h1>
         <p class="text-lg hidden font-normal text-gray-100 mt-2 md:hidden lg:block">At CLS, our mission is to empower individuals and businesses by providing accessible lending solutions that fuel growth and financial prosperity. </p>
-                </div>
             </div>
         </div>
             
