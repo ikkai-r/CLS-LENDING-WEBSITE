@@ -10,8 +10,8 @@
 
 #background #container {
     position: relative;
-    height: 80vh; 
-    width: 65vw; 
+    height: 90vh; 
+    width: 80vw; 
     margin: auto;
     top: 5vh; 
     display: flex;
@@ -165,6 +165,25 @@
 .border-b-2 {
     border-bottom-width: 5px; 
     border-bottom-color: #14213d; 
+}
+
+/*
+   <!--  image preview  -->
+*/
+.image-preview{
+    width: 150px;
+    min-height: 150px;
+    border: 2px solid #14213d;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: bold;
+}
+
+.image-preview__image{
+    display: none;
+    width: 100%;
 }
 
 

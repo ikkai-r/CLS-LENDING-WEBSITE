@@ -1,3 +1,5 @@
+<script src="/js/file_preview.js"></script>
+
 <div id="background">
     <div id="container">
         <div id="center-box" class="box">
@@ -79,27 +81,34 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="relative mb-5">
-                                    <label for="id_image" class="text-left block mb-2">Government Issued ID</label>
-                                    <div class="flex items-center"> 
-                                        <i class="fa-solid fa-id-badge absolute mt-2 ml-3" id="icon-id"></i>
+
+                                {{!-- id stuff --}}
+                                <div class="relative mb-5 flex items-center">
+                                    <div class="flex-1">
+                                        <label for="id_image" class="text-left block mb-2">Government Issued ID</label>
                                         <input type="file" placeholder="Government ID Image" id="id_image" name="id_image" accept="image/*" class="text-sm pl-10 px-4 py-3 bg-gray-200 focus:bg-gray-100 border border-gray-200 rounded-lg focus:outline-none" required>
+                                        <label for="ex_id_image" class="text-left block mb-2" id="ex_id_image">Valid_ID.png</label>
                                     </div>
-                                    <label for="ex_id_image" class="text-left block mb-2" id="ex_id_image">Valid_ID.png</label>
-                                    <div id="id_image_preview"></div>
+                                    <div class="image-preview ml-5" id="imagePreview">
+                                        <img src="" alt="Image Preview" class="image-preview__image">
+                                        <span class="image-preview__default-text">Image Preview</span>
+                                    </div>
                                 </div>
 
                                 <div class="border-b-2 border-gray-200 mb-2"></div>
 
-                                <div class="relative mb-5">
-                                    <label for="signature_image" class="text-left block mb-2">Signature</label>
-                                    <div class="flex items-center"> 
-                                        <i class="fa-solid fa-signature absolute mt-2 ml-3" id="icon-signature"></i>
+                                <div class="relative mb-5 flex items-center">
+                                    <div class="flex-1">
+                                        <label for="signature_image" class="text-left block mb-2">Signature</label>
                                         <input type="file" placeholder="Signature Image" id="signature_image" name="signature_image" accept="image/*" class="text-sm pl-10 px-4 py-3 bg-gray-200 focus:bg-gray-100 border border-gray-200 rounded-lg focus:outline-none" required>
+                                        <label for="ex_sig_image" class="text-left block mb-2" id="ex_sig_image">Signature.png</label>
                                     </div>
-                                    <label for="ex_sig_image" class="text-left block mb-2" id="ex_sig_image">Signature.png</label>
-                                    <div id="signature_image_preview"></div>
+                                    <div class="image-preview ml-5" id="imagePreview">
+                                        <img src="" alt="Image Preview" class="image-preview__image">
+                                        <span class="image-preview__default-text">Image Preview</span>
+                                    </div>
                                 </div>
+
                             </div>
                         </div>
 
