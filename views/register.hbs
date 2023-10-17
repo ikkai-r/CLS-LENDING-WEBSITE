@@ -1,4 +1,4 @@
-<script src="/js/file_preview.js"></script>
+
 
 <div id="background">
     <div id="container">
@@ -89,10 +89,8 @@
                                         <input type="file" placeholder="Government ID Image" id="id_image" name="id_image" accept="image/*" class="text-sm pl-10 px-4 py-3 bg-gray-200 focus:bg-gray-100 border border-gray-200 rounded-lg focus:outline-none" required>
                                         <label for="ex_id_image" class="text-left block mb-2" id="ex_id_image">Valid_ID.png</label>
                                     </div>
-                                    <div class="image-preview ml-5" id="imagePreview">
-                                        <img src="" alt="Image Preview" class="image-preview__image">
-                                        <span class="image-preview__default-text">Image Preview</span>
-                                    </div>
+                                    <div class="image-preview ml-5" id="imagePreview-id">
+                                        <img src="" id="image-preview__image-id">                                    </div>
                                 </div>
 
                                 <div class="border-b-2 border-gray-200 mb-2"></div>
@@ -103,9 +101,8 @@
                                         <input type="file" placeholder="Signature Image" id="signature_image" name="signature_image" accept="image/*" class="text-sm pl-10 px-4 py-3 bg-gray-200 focus:bg-gray-100 border border-gray-200 rounded-lg focus:outline-none" required>
                                         <label for="ex_sig_image" class="text-left block mb-2" id="ex_sig_image">Signature.png</label>
                                     </div>
-                                    <div class="image-preview ml-5" id="imagePreview">
-                                        <img src="" alt="Image Preview" class="image-preview__image">
-                                        <span class="image-preview__default-text">Image Preview</span>
+                                    <div class="image-preview ml-5" id="imagePreview-sig">
+                                        <img src="" id="image-preview__image-sig">
                                     </div>
                                 </div>
 
@@ -129,5 +126,7 @@
         </div>
     </div>
 </div>
+
+<script src="/js/file_preview.js"></script>
 
 
