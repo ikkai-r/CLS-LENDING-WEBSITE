@@ -1,73 +1,52 @@
 
 
-<div id="background">
-    <div id="container">
-        <div id="center-box" class="box">
-            <div id="register-container">
-                <div class="section" id="upper"> 
-                    <h1> Create Account </h1>
+<div class="min-h-screen h-screen w-full grid grid-cols-3 flex justify-center items-center">
+
+        <div id="myTabContent" class="col-span-3 lg:col-span-2 bg-cmgray flex justify-center items-center lg:h-full">
+            
+            <div id="register-container" class="w-5/6">
+
+              <div class="container pb-16 mt-20 flex items-center">
+               <img src="/images/logo.png" class="w-20">
+            </div>
+
+            <!-- personal info tab -->
+
+            <div class="" id="personal-info" role="tabpanel" aria-labelledby="personal-info-tab">
+            <div class="container"> 
+                    <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Personal Information</h1>
+                    <p class="mb-6 text-xl font-normal text-gray-500 dark:text-gray-400">Fill up your personal details in the fields below.</p>
                 </div>
-                <form action="" class="mt-10">
+
+                <form id="personal-info-form" class="mt-10">
                     <div class="grid grid-cols-2 gap-10 mb-5">
                             
                             {{!-- left section --}}
                             <div class="col-span-1 flex flex-col gap-2">
                                 <div class="flex flex-row items-center gap-2">
-                                    <span class="text-left">Full Name</span>
-                                    <img src="/images/logo.png" alt="Logo" class="logo">
+                                    <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0 13a8.949 8.949 0 0 1-4.951-1.488A3.987 3.987 0 0 1 9 13h2a3.987 3.987 0 0 1 3.951 3.512A8.949 8.949 0 0 1 10 18Z"/>
+                                    </svg>
+                                    <span class="text-left text-sm">Full Name</span>
                                 </div>
-                                <div class="flex flex-row gap-5">
-                                    <div class="relative">
+                                <div class="flex flex-row gap-5 mb-6">
+                                    <div class="relative w-full">
                                         <i class="fa fa-user absolute mt-2 ml-3" id="icon-user"></i>
                                         <input type="text" placeholder="First Name" id="first_name" name="first_name" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
                                     </div>
-                                    <div class="relative">
+                                    <div class="relative w-full">
                                         <i class="fa fa-user absolute mt-2 ml-3" id="icon-user"></i>
                                         <input type="text" placeholder="Last Name" id="last_name" name="last_name" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
                                     </div>
                                 </div>
-                                <div class="flex flex-row items-center gap-2">
-                                    <span class="text-left">Email</span>
-                                    <img src="/images/logo.png" alt="Logo" class="logo">
-                                </div>
-                                <div class="relative">
-                                    <i class="fa-solid fa-envelope absolute mt-2 ml-3" id="icon-envelope"></i>
-                                    <input type="email" placeholder="Email" id="email" name="email" class="text-sm pl-10 px-4 py-3  focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
-                                </div>
-                                <div class="flex flex-row items-center gap-2">
-                                    <span class="text-left">Contact Number</span>
-                                    <img src="/images/logo.png" alt="Logo" class="logo">
-                                </div>
-                                <div class="relative">
-                                    <i class="fa-solid fa-phone absolute mt-2 ml-3" id="icon-phone"></i>
-                                    <input type="tel" placeholder="Contact Number" id="contact_number" name="contact_number" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
-                                </div>
-                                <div class="flex flex-row items-center gap-2">
-                                    <span class="text-left">Facebook Account Link</span>
-                                    <img src="/images/logo.png" alt="Logo" class="logo">
-                                </div>
-                                <div class="relative">
-                                    <i class="fa-solid fa-facebook absolute mt-2 ml-3" id="icon-facebook"></i>
-                                    <input type="text" placeholder="Facebook Account Link" id="facebook_link" name="facebook_link" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
-                                </div>
-                                <div class="flex flex-row items-center gap-2">
-                                    <span class="text-left">Address</span>
-                                    <img src="/images/logo.png" alt="Logo" class="logo">
-                                </div>
-                                <div class="relative">
-                                    <i class="fa-solid fa-address-card absolute mt-2 ml-3" id="icon-address"></i>
-                                    <select id="address" name="address" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
-                                        <option value="" disabled selected>Select your address</option>
-                                        <option value="address1">Address 1</option>
-                                        <option value="address2">Address 2</option>
-                                    </select>
-                                </div>
-                            </div>
 
-                            {{!-- right section --}}
-                            <div class="col-span-1 flex flex-col gap-2 ml-10">
-                                <div class="mb-5">
-                                    <span class="text-left block mb-2">Gender</span>
+                                <div class="mb-6">
+                                    <div class="flex flex-row items-center gap-2 mb-2.5">
+                                    <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
+                                        <path d="M18 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2ZM6.5 3a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3.014 13.021l.157-.625A3.427 3.427 0 0 1 6.5 9.571a3.426 3.426 0 0 1 3.322 2.805l.159.622-6.967.023ZM16 12h-3a1 1 0 0 1 0-2h3a1 1 0 0 1 0 2Zm0-3h-3a1 1 0 1 1 0-2h3a1 1 0 1 1 0 2Zm0-3h-3a1 1 0 1 1 0-2h3a1 1 0 1 1 0 2Z"/>
+                                    </svg>
+                                    <span class="text-left text-sm">Gender</span>
+                                </div>
                                     <div class="flex items-center">
                                         <label class="inline-flex items-center cursor-pointer">
                                             <input type="radio" class="form-radio hidden" name="gender" value="male" required>
@@ -79,15 +58,171 @@
                                                 <span class="ml-10">Female</span>
                                             </label>
                                         </div>
+                                        <div class="ml-6">
+                                            <label class="inline-flex items-center cursor-pointer">
+                                                <input type="radio" class="form-radio hidden" name="gender" value="pref-not" required>
+                                                <span class="ml-10">Prefers not to say</span>
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
+                               
+                                <div class="flex flex-row items-center gap-2 mb-2">
+                                    <img src="/images/logo.png" alt="Logo" class="logo">
+                                    <span class="text-left text-sm">Region</span>
+                                </div>
+                                <div class="relative mb-6">
+                                    <i class="fa-solid fa-address-card absolute mt-2 ml-3" id="icon-address"></i>
+                                    <select name="region" id="region">
+                                        <option value="none" selected disabled hidden>Select an Option</option> 
+                                    </select>
+                                 </div>
 
-                                {{!-- id stuff --}}
+                                 <div class="relative mb-5">
+                                <div class="flex flex-row items-center gap-2 mb-2">
+                                    <img src="/images/logo.png" alt="Logo" class="logo">
+                                    <span class="text-left text-sm">Province</span>
+                                </div>
+                                    <select name="province" id="province">
+                                        <option value="none" selected disabled hidden>Select a Region first</option> 
+                                    </select>
+                               </div>
+                            </div>
+
+                            {{!-- right section --}}
+                            <div class="col-span-1 flex flex-col gap-2 ml-10">
+                               
+                                <div class="relative mb-6">
+                                       <div class="flex flex-row items-center gap-2 mb-2">
+                                    <img src="/images/logo.png" alt="Logo" class="logo">
+                                    <span class="text-left text-sm">City</span>
+                                </div>
+                                      <select name="city" id="city">
+                                        <option value="none" selected disabled hidden>Select a Province first</option> 
+                                      </select>
+                                      </div>
+
+                                 <div class="relative mb-6">
+                                <div class="flex flex-row items-center gap-2 mb-2">
+                                    <img src="/images/logo.png" alt="Logo" class="logo">
+                                    <span class="text-left text-sm">Barangay</span>
+                                </div>
+                                    <select name="barangay" id="barangay">
+                                        <option value="none" selected disabled hidden>Select a City first</option> 
+                                    </select>
+                                </div>
+                                       <div class="flex flex-row items-center gap-2 mb-2">
+                                    <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 18">
+                                        <path d="M17 16h-1V2a1 1 0 1 0 0-2H2a1 1 0 0 0 0 2v14H1a1 1 0 0 0 0 2h16a1 1 0 0 0 0-2ZM5 4a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4Zm0 5V8a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1Zm6 7H7v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3Zm2-7a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1Zm0-4a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1Z"/>
+                                    </svg>
+                                    <span class="text-left text-sm">Additional Address Details</span>
+                                </div>
+                                    <input type="text" placeholder="Block Number, Street Name, ..." id="add_details" name="add_details" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
+                                </div>
+                        </div>
+                         </form>
+
+                         </div>
+
+    <div class="hidden" id="contact-info" role="tabpanel" aria-labelledby="contact-info-tab">
+            <div class="container"> 
+                    <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Contact Information and Account Setup</h1>
+                    <p class="mb-6 text-xl font-normal text-gray-500 dark:text-gray-400">Enter your contact info and set up your account in one go.</p>
+                </div>
+
+                <form id="contact-info-form" class="mt-10">
+                    <div class="mb-5 flex justify-center items-center">
+                            <div class="flex flex-col justify-center" style="width: 80%">
+                                
+                             <h4 class="text-2xl font-bold dark:text-white mb-5">Account Setup</h4>
+                                <div class="flex flex-row items-center gap-2">
+                                    <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
+                                        <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"/>
+                                        <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"/>
+                                    </svg>
+                                    <span class="text-left text-sm">Email</span>
+                                </div>
+                                <div class="relative mb-5">
+                                    <i class="fa-solid fa-envelope absolute mt-2 ml-3" id="icon-envelope"></i>
+                                    <input type="email" placeholder="name@flowbite.com" id="email" name="email" class="text-sm pl-10 px-4 py-3  focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
+                                </div>
+
+                                 <div class="flex flex-row items-center gap-2">
+                                    <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
+                                        <path d="M14 7h-1.5V4.5a4.5 4.5 0 1 0-9 0V7H2a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2Zm-5 8a1 1 0 1 1-2 0v-3a1 1 0 1 1 2 0v3Zm1.5-8h-5V4.5a2.5 2.5 0 1 1 5 0V7Z"/>
+                                    </svg>
+                                    <span class="text-left text-sm">Password</span>
+                                </div>
+                                <div class="relative mb-5">
+                                    <i class="fa-solid fa-envelope absolute mt-2 ml-3" id="icon-envelope"></i>
+                                    <input type="password" placeholder="••••••••" id="password-tks" name="password" class="text-sm pl-10 px-4 py-3  focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
+                                </div>
+
+                                <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Password requirements:</h2>
+                                <ul class="max-w-md space-y-1 text-gray-500 list-inside dark:text-gray-400 mb-14">
+                                    <li class="flex items-center">
+                                        <svg class="w-3.5 h-3.5 mr-2 text-green-500 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                                        </svg>
+                                        At least 10 characters
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="w-3.5 h-3.5 mr-2 text-gray-500 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                                        </svg>
+                                        At least one lowercase character
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="w-3.5 h-3.5 mr-2 text-gray-500 dark:text-gray-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                                        </svg>
+                                        At least one special character, e.g., ! @ # ?
+                                    </li>
+                                </ul>
+
+
+                                <h4 class="text-2xl font-bold dark:text-white mb-5">Contact Information</h4>
+                                <div class="flex flex-row items-center gap-2">
+                                    <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 20">
+                                        <path d="M12 0H2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2ZM7.5 17.5h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2ZM12 13H2V4h10v9Z"/>
+                                    </svg>
+                                    <span class="text-left">Contact Number</span>
+                                </div>
+                                <div class="relative mb-5">
+                                    <i class="fa-solid fa-phone absolute mt-2 ml-3" id="icon-phone"></i>
+                                    <input type="tel" placeholder="09xxxxxxxxx" id="contact_number" name="contact_number" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
+                                </div>
+                                <div class="flex flex-row items-center gap-2">
+                                    <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
+                                        <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span class="text-left">Facebook Account Link</span>
+                                </div>
+                                <div class="relative mb-5">
+                                    <i class="fa-solid fa-facebook absolute mt-2 ml-3" id="icon-facebook"></i>
+                                    <input type="text" placeholder="facebook.com/abc" id="facebook_link" name="facebook_link" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
+                                </div>
+                                
+                            </div>
+                        </div>
+                         </form>
+
+                         </div>
+
+      <div class="hidden" id="upload-info" role="tabpanel" aria-labelledby="upload-info-tab">
+            <div class="container"> 
+                    <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Upload Files</h1>
+                    <p class="mb-6 text-xl font-normal text-gray-500 dark:text-gray-400">Please submit your signature and valid identification.</p>
+                </div>
+
+                <form id="upload-info-form" class="mt-10">
+                    <div class="mb-5 flex justify-center items-center">
+                            <div class="flex flex-col justify-center" style="width: 80%">
+                                   {{!-- id stuff --}}
                                 <div class="relative mb-5 flex items-center">
                                     <div class="flex-1">
                                         <label for="id_image" class="text-left block mb-2">Government Issued ID</label>
                                         <input type="file" placeholder="Government ID Image" id="id_image" name="id_image" accept="image/*" class="text-sm pl-10 px-4 py-3 bg-gray-200 focus:bg-gray-100 border border-gray-200 rounded-lg focus:outline-none" required>
-                                        <label for="ex_id_image" class="text-left block mb-2" id="ex_id_image">Valid_ID.png</label>
                                     </div>
                                     <div class="image-preview ml-5" id="imagePreview-id">
                                         <img src="" id="image-preview__image-id">                                    </div>
@@ -99,34 +234,124 @@
                                     <div class="flex-1">
                                         <label for="signature_image" class="text-left block mb-2">Signature</label>
                                         <input type="file" placeholder="Signature Image" id="signature_image" name="signature_image" accept="image/*" class="text-sm pl-10 px-4 py-3 bg-gray-200 focus:bg-gray-100 border border-gray-200 rounded-lg focus:outline-none" required>
-                                        <label for="ex_sig_image" class="text-left block mb-2" id="ex_sig_image">Signature.png</label>
                                     </div>
                                     <div class="image-preview ml-5" id="imagePreview-sig">
                                         <img src="" id="image-preview__image-sig">
                                     </div>
                                 </div>
-
+                                
                             </div>
                         </div>
+                         </form>
 
-                        {{!-- bottom section --}}
-                        <div class="flex items-center justify-center mt-2 w-full">
-                            <button type="submit" class="btn btn-primary">Register</button>
+                         </div>
+
+                {{!-- bottom section --}}
+                        <div class="flex items-center justify-center mt-10 pt-8 w-full pb-12" role="tablist" data-tabs-toggle="#myTabContent"> 
+                             <button type="button" data-tabs-target="#personal-info" class="btn w-1/2 nxt-btn mr-4" role="tab" aria-controls="personal-info" aria-selected="true">Personal Info</button>
+                            <button type="button" data-tabs-target="#contact-info" class="btn w-1/2 nxt-btn mr-4" role="tab" aria-controls="contact-info" aria-selected="false">Contact Info</button>
+                             <button type="button" data-tabs-target="#upload-info" class="btn w-1/2 nxt-btn mr-4" role="tab" aria-controls="upload-info" aria-selected="false">Upload Info</button>
+                              <button type="submit" id="submit-btn" onclick="submitAllForms()"class="btn w-1/2 nxt-btn mr-4">Submit</button>
                         </div>
-                        <div class="flex items-center justify-center mt-2 w-full">
+
+                    </div>
+                    </div>
+          
+           <div class="hidden bg-cmblue min-h-screen h-full lg:block lg:col-span-1">
+            
+                <div class="container flex items-center justify-center h-full" id="reg-side-cont">
+                
+                <!-- personal info -->
+                
+                    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+                    <div class="grid max-w-2xl mx-auto">
+                        <div class="flex">
+                        <div class="flex flex-col items-center mr-6">
+                            <div class="w-px h-48 opacity-0"></div>
                             <div>
-                                Already have an account? 
-                                {{!-- replace # with actual link to sign-in page. --}}
-                                <a href="#" class="underline">Sign in</a>
+                            <div class="flex items-center justify-center w-9 h-9 text-xs font-medium border rounded-full text-white">
+                                1
                             </div>
+                            </div>
+                            <div class="w-px h-full bg-gray-300"></div>
+                        </div>
+                        <div class="flex flex-col pb-6 sm:items-center sm:flex-row sm:pb-0">
+                            <div class="sm:mr-5">
+                            <div class="flex items-center justify-center w-16 h-16 my-3 rounded-full bg-cmyellow sm:w-24 sm:h-24">
+                                <svg class="w-8 h-8 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0a8.949 8.949 0 0 0 4.951-1.488A3.987 3.987 0 0 0 11 14H9a3.987 3.987 0 0 0-3.951 3.512A8.948 8.948 0 0 0 10 19Zm3-11a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                                </svg>
+                            </div>
+                            </div>
+                            <div>
+                            <p class="text-3xl text-white">Personal Information</p>
+                            </div>
+                        </div>
+                        </div>
+
+
+                        <!-- contact -->
+                        
+                        <div class="flex">
+                        <div class="flex flex-col items-center mr-6">
+                            <div class="w-px h-10 bg-gray-300"></div>
+                            <div>
+                            <div class="flex items-center justify-center  w-9 h-9 text-xs font-medium border rounded-full text-white">
+                                2
+                            </div>
+                            </div>
+                            <div class="w-px h-full bg-gray-300"></div>
+                        </div>
+                        <div class="flex flex-col pb-6 sm:items-center sm:flex-row sm:pb-0">
+                            <div class="sm:mr-5">
+                            <div class="flex items-center justify-center  w-12 h-12  my-3 rounded-full bg-indigo-50">
+                                <svg class="w-10 h-10 text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                                <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                                </svg>
+                            </div>
+                            </div>
+                            <div>
+                            <p class="text-xl text-white">Contact Info and Account Setup</p>
+                            </div>
+                        </div>
+                        </div>
+
+                        <!-- uploading of signatures -->
+
+                        <div class="flex">
+                        <div class="flex flex-col items-center mr-6">
+                            <div class="w-px h-10 bg-gray-300"></div>
+                            <div>
+                            <div class="flex items-center justify-center w-9 h-9 text-xs font-medium border rounded-full text-white">
+                                3
+                            </div>
+                            </div>
+                            <div class="w-px h-full opacity-0"></div>
+                        </div>
+                        <div class="flex flex-col pb-6 sm:items-center sm:flex-row sm:pb-0">
+                            <div class="sm:mr-5">
+                            <div class="flex items-center justify-center w-12 h-12 my-3 rounded-full bg-indigo-50">
+                                <svg class="w-10 h-10 text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                                <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                                </svg>
+                            </div>
+                            </div>
+                            <div>
+                            <p class="text-xl text-white">Uploading of Valid ID and Signature</p>
+                            </div>
+                        </div>
                         </div>
                     </div>
-                </form>
-            </div>
-        </div>
+                    </div>
+                            
+                </div>
+            </div> 
+ 
     </div>
-</div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://f001.backblazeb2.com/file/buonzz-assets/jquery.ph-locations-v1.0.0.js"></script>
 <script src="/js/file_preview.js"></script>
+
 
 

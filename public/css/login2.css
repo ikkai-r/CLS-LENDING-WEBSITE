@@ -8,7 +8,7 @@
   }
   
   .login-btn:hover {
-    background-color: white;
+    background-color: rgb(243 244 246 / var(--tw-bg-opacity));
     color: #FCA311;
     border: .1rem solid #FCA311;
   }

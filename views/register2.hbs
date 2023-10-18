@@ -1,0 +1,143 @@
+
+
+<div class="min-h-screen h-screen">
+        <div id="center-box" class="box col-span-2">
+            <div id="register-container">
+                <div class="section" id="upper"> 
+                    <h1> Create Account </h1>
+                </div>
+                <form action="" class="mt-10">
+                    <div class="grid grid-cols-2 gap-10 mb-5">
+                            
+                            {{!-- left section --}}
+                            <div class="col-span-1 flex flex-col gap-2">
+                                <div class="flex flex-row items-center gap-2">
+                                    <span class="text-left">Full Name</span>
+                                    <img src="/images/logo.png" alt="Logo" class="logo">
+                                </div>
+                                <div class="flex flex-row gap-5">
+                                    <div class="relative">
+                                        <i class="fa fa-user absolute mt-2 ml-3" id="icon-user"></i>
+                                        <input type="text" placeholder="First Name" id="first_name" name="first_name" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
+                                    </div>
+                                    <div class="relative">
+                                        <i class="fa fa-user absolute mt-2 ml-3" id="icon-user"></i>
+                                        <input type="text" placeholder="Last Name" id="last_name" name="last_name" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
+                                    </div>
+                                </div>
+
+                                  <div class="mb-2">
+                                    <span class="text-left block mb-2">Gender</span>
+                                    <div class="flex items-center">
+                                        <label class="inline-flex items-center cursor-pointer">
+                                            <input type="radio" class="form-radio hidden" name="gender" value="male" required>
+                                            <span class="ml-2">Male</span>
+                                        </label>
+                                        <div class="ml-6">
+                                            <label class="inline-flex items-center cursor-pointer">
+                                                <input type="radio" class="form-radio hidden" name="gender" value="female" required>
+                                                <span class="ml-10">Female</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-row items-center gap-2">
+                                    <span class="text-left">Email</span>
+                                    <img src="/images/logo.png" alt="Logo" class="logo">
+                                </div>
+                                <div class="relative">
+                                    <i class="fa-solid fa-envelope absolute mt-2 ml-3" id="icon-envelope"></i>
+                                    <input type="email" placeholder="Email" id="email" name="email" class="text-sm pl-10 px-4 py-3  focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
+                                </div>
+
+                                 <div class="flex flex-row items-center gap-2">
+                                    <span class="text-left">Password</span>
+                                    <img src="/images/logo.png" alt="Logo" class="logo">
+                                </div>
+                                <div class="relative">
+                                    <i class="fa-solid fa-envelope absolute mt-2 ml-3" id="icon-envelope"></i>
+                                    <input type="password" placeholder="password" id="password-tks" name="password" class="text-sm pl-10 px-4 py-3  focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
+                                </div>
+                                
+                                <div class="flex flex-row items-center gap-2">
+                                    <span class="text-left">Contact Number</span>
+                                    <img src="/images/logo.png" alt="Logo" class="logo">
+                                </div>
+                                <div class="relative">
+                                    <i class="fa-solid fa-phone absolute mt-2 ml-3" id="icon-phone"></i>
+                                    <input type="tel" placeholder="Contact Number" id="contact_number" name="contact_number" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
+                                </div>
+                                <div class="flex flex-row items-center gap-2">
+                                    <span class="text-left">Facebook Account Link</span>
+                                    <img src="/images/logo.png" alt="Logo" class="logo">
+                                </div>
+                                <div class="relative">
+                                    <i class="fa-solid fa-facebook absolute mt-2 ml-3" id="icon-facebook"></i>
+                                    <input type="text" placeholder="Facebook Account Link" id="facebook_link" name="facebook_link" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
+                                </div>
+                                <div class="flex flex-row items-center gap-2">
+                                    <span class="text-left">Address</span>
+                                    <img src="/images/logo.png" alt="Logo" class="logo">
+                                </div>
+                                <div class="relative">
+                                    <i class="fa-solid fa-address-card absolute mt-2 ml-3" id="icon-address"></i>
+                                    <select name="region" id="region" class="pb-4"></select>
+                                    <select name="province" id="province" class="mb-4"></select>
+
+                                </div>
+                            </div>
+
+                            {{!-- right section --}}
+                            <div class="col-span-1 flex flex-col gap-2 ml-10">
+                                    <select name="city" id="city" class="mb-3"></select>
+                                    <select name="barangay" id="barangay" class="mb-3"></select>
+                                {{!-- id stuff --}}
+                                <div class="relative mb-5 flex items-center">
+                                    <div class="flex-1">
+                                        <label for="id_image" class="text-left block mb-2">Government Issued ID</label>
+                                        <input type="file" placeholder="Government ID Image" id="id_image" name="id_image" accept="image/*" class="text-sm pl-10 px-4 py-3 bg-gray-200 focus:bg-gray-100 border border-gray-200 rounded-lg focus:outline-none" required>
+                                        <label for="ex_id_image" class="text-left block mb-2" id="ex_id_image">Valid_ID.png</label>
+                                    </div>
+                                    <div class="image-preview ml-5" id="imagePreview-id">
+                                        <img src="" id="image-preview__image-id">                                    </div>
+                                </div>
+
+                                <div class="border-b-2 border-gray-200 mb-2"></div>
+
+                                <div class="relative mb-5 flex items-center">
+                                    <div class="flex-1">
+                                        <label for="signature_image" class="text-left block mb-2">Signature</label>
+                                        <input type="file" placeholder="Signature Image" id="signature_image" name="signature_image" accept="image/*" class="text-sm pl-10 px-4 py-3 bg-gray-200 focus:bg-gray-100 border border-gray-200 rounded-lg focus:outline-none" required>
+                                        <label for="ex_sig_image" class="text-left block mb-2" id="ex_sig_image">Signature.png</label>
+                                    </div>
+                                    <div class="image-preview ml-5" id="imagePreview-sig">
+                                        <img src="" id="image-preview__image-sig">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        {{!-- bottom section --}}
+                        <div class="flex items-center justify-center mt-2 w-full">
+                            <button type="submit" class="btn btn-primary">Register</button>
+                        </div>
+                        <div class="flex items-center justify-center mt-2 w-full">
+                            <div>
+                                Already have an account? 
+                                {{!-- replace # with actual link to sign-in page. --}}
+                                <a href="#" class="underline">Sign in</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+ 
+    </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://f001.backblazeb2.com/file/buonzz-assets/jquery.ph-locations-v1.0.0.js"></script>
+<script src="/js/file_preview.js"></script>
+
+
+
