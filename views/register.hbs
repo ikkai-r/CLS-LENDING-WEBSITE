@@ -249,8 +249,8 @@
                 {{!-- bottom section --}}
                         <div class="flex items-center justify-center mt-10 pt-8 w-full pb-12" role="tablist" data-tabs-toggle="#myTabContent"> 
                              <button type="button" data-tabs-target="#personal-info" class="btn w-1/2 nxt-btn mr-4" role="tab" aria-controls="personal-info" aria-selected="true">Personal Info</button>
-                            <button type="button" data-tabs-target="#contact-info" class="btn w-1/2 nxt-btn mr-4" role="tab" aria-controls="contact-info" aria-selected="false">Contact Info</button>
-                             <button type="button" data-tabs-target="#upload-info" class="btn w-1/2 nxt-btn mr-4" role="tab" aria-controls="upload-info" aria-selected="false">Upload Info</button>
+                            <button type="button" data-tabs-target="#contact-info" class="btn w-1/2 nxt-btn mr-4" role="tab" aria-controls="contact-info" aria-selected="false" onclick="validateFormFieldsP()">Contact Info</button>
+                             <button type="button" data-tabs-target="#upload-info" class="btn w-1/2 nxt-btn mr-4" role="tab" aria-controls="upload-info" aria-selected="false" onclick="validateFormFieldsC()">Upload Info</button>
                               <button type="submit" id="submit-btn" onclick="submitAllForms()"class="btn w-1/2 nxt-btn mr-4">Submit</button>
                         </div>
 
@@ -267,7 +267,7 @@
                     <div class="grid max-w-2xl mx-auto">
                         <div class="flex">
                         <div class="flex flex-col items-center mr-6">
-                            <div class="w-px h-48 opacity-0"></div>
+                            <div id="p-stepper"class="w-px h-48 opacity-0"></div>
                             <div>
                             <div class="flex items-center justify-center w-9 h-9 text-xs font-medium border rounded-full text-white">
                                 1
@@ -277,8 +277,8 @@
                         </div>
                         <div class="flex flex-col pb-6 sm:items-center sm:flex-row sm:pb-0">
                             <div class="sm:mr-5">
-                            <div class="flex items-center justify-center w-16 h-16 my-3 rounded-full bg-cmyellow sm:w-24 sm:h-24">
-                                <svg class="w-8 h-8 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                            <div id="p-stepper-circle" class="flex items-center justify-center w-16 h-16 my-3 rounded-full bg-cmyellow sm:w-24 sm:h-24">
+                                <svg id="p-stepper-icon" class="w-8 h-8 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0 0a8.949 8.949 0 0 0 4.951-1.488A3.987 3.987 0 0 0 11 14H9a3.987 3.987 0 0 0-3.951 3.512A8.948 8.948 0 0 0 10 19Zm3-11a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
                                 </svg>
                             </div>

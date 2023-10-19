@@ -139,3 +139,11 @@ function submitAllForms() {
     document.getElementById('upload-info-form').submit();
 }
 
+
+function validateFormFieldsP() {
+    //check for all fields for personal if filled up before going to contact
+}
+
+function validateFormFieldsC() {
+    //check for all fields for contact if filled up before going to update
+}
