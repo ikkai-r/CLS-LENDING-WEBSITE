@@ -14,6 +14,11 @@ app.use('/node_modules', express.static('node_modules'));
 app.use(`/`, routes);
 
 //app.engine('handlebars', exphbs.engine({extname: '.hbs', defaultLayout: 'main'}));
+// MongoDB schemas
+const Audit = require('./server/schema/Audit');
+const Client = require('./server/schema/Client');
+const Loan_Detail = require('./server/schema/Loan_Detail');
+const Loan = require('./server/schema/Loan');
 
 app.set("view engine", "hbs");
 app.set("views", "./views");
