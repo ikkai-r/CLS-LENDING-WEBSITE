@@ -89,7 +89,6 @@ $(function () {
 $(function () {
     // Initially, personal-info tab is active
     // So, hide personal-info button and upload-info button, and change the text for contact-info button
-    $('#submit-btn').hide();
     hideButtonsPersonal();
     
     // When the user clicks the "Contact Info" tab, show the personal-info and upload-info buttons
@@ -107,28 +106,145 @@ $(function () {
     });
     
     function hideButtonsPersonal() {
-        $('button[data-tabs-target="#personal-info"]').hide();
-        $('button[data-tabs-target="#upload-info"]').hide();
-        $('button[data-tabs-target="#contact-info"]').show();
+        $('button[data-tabs-target="#personal-info"]').addClass('hidden');
+        $('button[data-tabs-target="#upload-info"]').addClass('hidden');
+        $('button[data-tabs-target="#contact-info"]').removeClass('hidden');
         $('button[data-tabs-target="#contact-info"]').text("Next Step");
-        $('#submit-btn').hide();
+        $('#submit-btn').addClass('hidden');
+
+        $('#p-stepper').addClass('h-48');
+        $('#p-stepper').removeClass('h-10');
+        $('#c-stepper').addClass('h-10');
+        $('#c-stepper').removeClass('h-48');
+
+        $('#p-stepper-circle').addClass('w-24');
+        $('#p-stepper-circle').addClass('h-24');
+        $('#p-stepper-circle').removeClass('h-12');
+        $('#p-stepper-circle').removeClass('w-12');
+        $('#c-stepper-circle').removeClass('w-24');
+        $('#c-stepper-circle').removeClass('h-24');
+        $('#c-stepper-circle').addClass('h-12');
+        $('#c-stepper-circle').addClass('w-12');
+
+        $('#p-stepper-icon').addClass('w-9');
+        $('#p-stepper-icon').addClass('h-9');
+        $('#p-stepper-icon').removeClass('w-6');
+        $('#p-stepper-icon').removeClass('h-6');
+
+        $('#c-stepper-icon').removeClass('w-9');
+        $('#c-stepper-icon').removeClass('h-9');
+        $('#c-stepper-icon').addClass('w-6');
+        $('#c-stepper-icon').addClass('h-6');
+
+        $('#p-stepper-circle').removeClass('bg-indigo-50');
+        $('#p-stepper-circle').addClass('bg-cmyellow');
+        $('#c-stepper-circle').addClass('bg-indigo-50');
+        $('#c-stepper-circle').removeClass('bg-cmyellow');
+
+        $('#c-tks').removeClass('text-3xl');
+        $('#c-tks').addClass('text-xl');
+        $('#p-tks').addClass('text-3xl');
+        $('#p-tks').removeClass('text-xl');
     }
     
     function showButtonsContact() {
-        $('button[data-tabs-target="#personal-info"]').show();
-        $('button[data-tabs-target="#upload-info"]').show();
-        $('button[data-tabs-target="#contact-info"]').hide();
-        $('#submit-btn').hide();
+        $('button[data-tabs-target="#personal-info"]').removeClass('hidden');
+        $('button[data-tabs-target="#upload-info"]').removeClass('hidden');
+        $('button[data-tabs-target="#contact-info"]').addClass('hidden');
+        $('#submit-btn').addClass('hidden');
         $('button[data-tabs-target="#personal-info"]').text("Previous Step");
         $('button[data-tabs-target="#upload-info"]').text("Next Step");
+        
+        $('#c-stepper').addClass('h-48');
+        $('#c-stepper').removeClass('h-10');
+        $('#p-stepper').addClass('h-10');
+        $('#p-stepper').removeClass('h-48');
+        $('#u-stepper').addClass('h-10');
+        $('#u-stepper').removeClass('h-48');
+
+        $('#c-stepper-circle').addClass('w-24');
+        $('#c-stepper-circle').addClass('h-24');
+        $('#c-stepper-circle').removeClass('h-12');
+        $('#c-stepper-circle').removeClass('w-12');
+        $('#p-stepper-circle').removeClass('w-24');
+        $('#p-stepper-circle').removeClass('h-24');
+        $('#p-stepper-circle').addClass('h-12');
+        $('#p-stepper-circle').addClass('w-12');
+        $('#u-stepper-circle').removeClass('w-24');
+        $('#u-stepper-circle').removeClass('h-24');
+        $('#u-stepper-circle').addClass('h-12');
+        $('#u-stepper-circle').addClass('w-12');
+
+        $('#c-stepper-icon').addClass('w-9');
+        $('#c-stepper-icon').addClass('h-9');
+        $('#c-stepper-icon').removeClass('w-6');
+        $('#c-stepper-icon').removeClass('h-6');
+
+        $('#p-stepper-icon').removeClass('w-9');
+        $('#p-stepper-icon').removeClass('h-9');
+        $('#p-stepper-icon').addClass('w-6');
+        $('#p-stepper-icon').addClass('h-6');
+
+        $('#u-stepper-icon').removeClass('w-9');
+        $('#u-stepper-icon').removeClass('h-9');
+        $('#u-stepper-icon').addClass('w-6');
+        $('#u-stepper-icon').addClass('h-6');
+
+        $('#c-stepper-circle').removeClass('bg-indigo-50');
+        $('#c-stepper-circle').addClass('bg-cmyellow');
+
+        $('#u-stepper-circle').removeClass('bg-cmyellow');
+        $('#u-stepper-circle').addClass('bg-indigo-50');
+
+        $('#p-tks').removeClass('text-3xl');
+        $('#p-tks').addClass('text-xl');
+        $('#u-tks').removeClass('text-3xl');
+        $('#u-tks').addClass('text-xl');
+
+        $('#c-tks').addClass('text-3xl');
+        $('#c-tks').removeClass('text-xl');
+
     }
 
     function showButtonsUpload() {
-        $('button[data-tabs-target="#personal-info"]').hide();
-        $('button[data-tabs-target="#upload-info"]').hide();
-        $('button[data-tabs-target="#contact-info"]').show();
+        $('button[data-tabs-target="#personal-info"]').addClass('hidden');
+        $('button[data-tabs-target="#upload-info"]').addClass('hidden');
+        $('button[data-tabs-target="#contact-info"]').removeClass('hidden');
         $('button[data-tabs-target="#contact-info"]').text("Previous Step");
-        $('#submit-btn').show();
+        $('#submit-btn').removeClass('hidden');
+
+        $('#u-stepper').addClass('h-48');
+        $('#u-stepper').removeClass('h-10');
+        $('#c-stepper').addClass('h-10');
+        $('#c-stepper').removeClass('h-48');
+
+        $('#u-stepper-circle').addClass('w-24');
+        $('#u-stepper-circle').addClass('h-24');
+        $('#u-stepper-circle').removeClass('h-12');
+        $('#u-stepper-circle').removeClass('w-12');
+        $('#c-stepper-circle').removeClass('w-24');
+        $('#c-stepper-circle').removeClass('h-24');
+        $('#c-stepper-circle').addClass('h-12');
+        $('#c-stepper-circle').addClass('w-12');
+
+        $('#u-stepper-icon').addClass('w-9');
+        $('#u-stepper-icon').addClass('h-9');
+        $('#u-stepper-icon').removeClass('w-6');
+        $('#u-stepper-icon').removeClass('h-6');
+
+        $('#c-stepper-icon').removeClass('w-9');
+        $('#c-stepper-icon').removeClass('h-9');
+        $('#c-stepper-icon').addClass('w-6');
+        $('#c-stepper-icon').addClass('h-6');
+
+        $('#u-stepper-circle').removeClass('bg-indigo-50');
+        $('#u-stepper-circle').addClass('bg-cmyellow');
+
+        $('#c-tks').removeClass('text-3xl');
+        $('#c-tks').addClass('text-xl');
+        $('#u-tks').addClass('text-3xl');
+        $('#u-tks').removeClass('text-xl');
+
     }
 });
 
@@ -141,8 +257,32 @@ function submitAllForms() {
 
 
 function validateFormFieldsP() {
-    //check for all fields for personal if filled up before going to contact
+    const firstNameField = document.getElementById('first_name');
+    const lastNameField = document.getElementById('last_name');
+    const genderFields = document.querySelectorAll('input[name="gender"]');
+    const regionField = document.getElementById('region');
+    const provinceField = document.getElementById('province');
+    const cityField = document.getElementById('city');
+    const barangayField = document.getElementById('barangay');
+    const addDetailsField = document.getElementById('add_details');
+
+    if (
+        firstNameField.value.trim() === '' ||
+        lastNameField.value.trim() === '' ||
+        !Array.from(genderFields).some((radio) => radio.checked) ||
+        regionField.value === 'none' ||
+        provinceField.value === 'none' ||
+        cityField.value === 'none' ||
+        barangayField.value === 'none' ||
+        addDetailsField.value.trim() === ''
+    ) {
+        alert('Please fill in all required fields in the personal info section.');
+        return false; 
+    }
+
+    return true;
 }
+
 
 function validateFormFieldsC() {
     //check for all fields for contact if filled up before going to update
