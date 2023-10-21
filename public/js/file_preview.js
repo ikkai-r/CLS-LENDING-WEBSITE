@@ -250,13 +250,19 @@ $(function () {
 
 
 function submitAllForms() {
-    document.getElementById('personal-info-form').submit();
-    document.getElementById('contact-info-form').submit();
-    document.getElementById('upload-info-form').submit();
+    if(validateFormUpload()) {
+        //submit all forms
+        // document.getElementById('personal-info-form').submit();
+        // document.getElementById('contact-info-form').submit();
+        // document.getElementById('upload-info-form').submit();
+
+        //redirect to client dashboard
+        window.location.href = '/c_dashboard';
+    }
 }
 
 
-function validateFormFieldsP() {
+function validateFormFieldsP(event) {
     const firstNameField = document.getElementById('first_name');
     const lastNameField = document.getElementById('last_name');
     const genderFields = document.querySelectorAll('input[name="gender"]');
@@ -265,6 +271,83 @@ function validateFormFieldsP() {
     const cityField = document.getElementById('city');
     const barangayField = document.getElementById('barangay');
     const addDetailsField = document.getElementById('add_details');
+
+    if(firstNameField.value.trim() === '') {
+        $(firstNameField).addClass('border-red-500');
+        $(firstNameField).removeClass('border-gray-300');
+        $(firstNameField).addClass('placeholder-red-700');
+    } else {
+        $(firstNameField).removeClass('border-red-500');
+        $(firstNameField).addClass('border-gray-300');
+        $(firstNameField).removeClass('placeholder-red-700');
+    }
+
+    if(lastNameField.value.trim() === '') {
+        $(lastNameField).addClass('border-red-500');
+        $(lastNameField).removeClass('border-gray-300');
+        $(lastNameField).addClass('placeholder-red-700');
+    } else {
+        $(lastNameField).removeClass('border-red-500');
+        $(lastNameField).addClass('border-gray-300');
+        $(lastNameField).removeClass('placeholder-red-700');
+    }
+
+    if(!Array.from(genderFields).some((radio) => radio.checked)) {
+        $('#gender-error').removeClass('hidden');
+    } else {
+        $('#gender-error').addClass('hidden');
+    }
+
+    if(regionField.value === 'none') {
+        $(regionField).addClass('border-red-500');
+        $(regionField).removeClass('border-gray-300');
+        $(regionField).addClass('text-red-700');
+    } else {
+        $(regionField).removeClass('border-red-500');
+        $(regionField).addClass('border-gray-300');
+        $(regionField).removeClass('text-red-700');
+    }
+
+    if(provinceField.value === 'none') {
+        $(provinceField).addClass('border-red-500');
+        $(provinceField).removeClass('border-gray-300');
+        $(provinceField).addClass('text-red-700');
+    } else {
+        $(provinceField).removeClass('border-red-500');
+        $(provinceField).addClass('border-gray-300');
+        $(provinceField).removeClass('text-red-700');
+    }
+    
+
+    if(cityField.value === 'none') {
+        $(cityField).addClass('border-red-500');
+        $(cityField).removeClass('border-gray-300');
+        $(cityField).addClass('text-red-700');
+    } else {
+        $(cityField).removeClass('border-red-500');
+        $(cityField).addClass('border-gray-300');
+        $(cityField).removeClass('text-red-700');
+    }
+
+    if(barangayField.value === 'none') {
+        $(barangayField).addClass('border-red-500');
+        $(barangayField).removeClass('border-gray-300');
+        $(barangayField).addClass('text-red-700');
+    } else {
+        $(barangayField).removeClass('border-red-500');
+        $(barangayField).addClass('border-gray-300');
+        $(barangayField).removeClass('text-red-700');
+    }
+
+    if(addDetailsField.value.trim() === '') {
+        $(addDetailsField).addClass('border-red-500');
+        $(addDetailsField).removeClass('border-gray-300');
+        $(addDetailsField).addClass('placeholder-red-700');
+    } else {
+        $(addDetailsField).removeClass('border-red-500');
+        $(addDetailsField).addClass('border-gray-300');
+        $(addDetailsField).removeClass('placeholder-red-700');
+    }
 
     if (
         firstNameField.value.trim() === '' ||
@@ -276,14 +359,142 @@ function validateFormFieldsP() {
         barangayField.value === 'none' ||
         addDetailsField.value.trim() === ''
     ) {
-        alert('Please fill in all required fields in the personal info section.');
-        return false; 
+        event.stopImmediatePropagation();
     }
-
-    return true;
 }
 
+function checkClick(element) {
+    $(element).removeClass('text-red-700');
+    $(element).removeClass('border-red-500');
+    $(element).addClass('border-gray-300');
+}
 
-function validateFormFieldsC() {
+function changeField(element) {
+    $(element).removeClass('border-red-500');
+    $(element).addClass('border-gray-300');
+}
+
+function removeError(element) {
+    $('#gender-error').addClass('hidden');
+}
+
+function validatePassword() {
+    const passwordField = document.getElementById('password-tks');
+    const password = passwordField.value;
+
+    // Check for at least 10 characters
+    const hasMinLength = password.length >= 10;
+
+    // Check for at least one uppercase character using a regular expression
+    const hasUppercase = /[A-Z]/.test(password);
+
+    // Check for at least one special character using a regular expression
+    const hasSpecialChar = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(password);
+    
+    if(hasMinLength) {
+        $('#req-p-1').addClass('text-green-500');
+        $('#req-p-1').removeClass('text-gray-500');
+    } else {
+        $('#req-p-1').removeClass('text-green-500');
+        $('#req-p-1').addClass('text-gray-500');
+    }
+
+    if(hasUppercase) {
+        $('#req-p-2').addClass('text-green-500');
+        $('#req-p-2').removeClass('text-gray-500');
+    } else {
+        $('#req-p-2').removeClass('text-green-500');
+        $('#req-p-2').addClass('text-gray-500');
+    }
+
+    if(hasSpecialChar) {
+        $('#req-p-3').addClass('text-green-500');
+        $('#req-p-3').removeClass('text-gray-500');
+    } else {
+        $('#req-p-3').removeClass('text-green-500');
+        $('#req-p-3').addClass('text-gray-500');
+    }
+
+    // Check if all criteria are met
+    if (hasMinLength && hasUppercase && hasSpecialChar) {
+        // Password is valid
+        return true;
+    } else {
+        // Password is invalid
+        return false;
+    }
+}
+
+function validateFormFieldsC(event) {
     //check for all fields for contact if filled up before going to update
+    const emailField = document.getElementById('email');
+    const passwordField = document.getElementById('password-tks');
+    const contactField = document.getElementById('contact_number');
+    const facebookField = document.getElementById('facebook_link');
+    const contactRegex = /^(09\d{9})$/;
+    const facebookRegex = /^(https:\/\/)?(www\.)?facebook\.com\/[a-zA-Z0-9.]+/;
+    const emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+
+    if(emailField.value.trim() === '' || !emailRegex.test(emailField.value)) {
+        $(emailField).addClass('border-red-500');
+        $(emailField).removeClass('border-gray-300');
+        $(emailField).addClass('placeholder-red-700');
+    } else {
+        $(emailField).removeClass('border-red-500');
+        $(emailField).addClass('border-gray-300');
+        $(emailField).removeClass('placeholder-red-700');
+    }
+
+    if(passwordField.value.trim() === '' || !validatePassword()) {
+        $(passwordField).addClass('border-red-500');
+        $(passwordField).removeClass('border-gray-300');
+        $(passwordField).addClass('placeholder-red-700');
+    } else {
+        $(passwordField).removeClass('border-red-500');
+        $(passwordField).addClass('border-gray-300');
+        $(passwordField).removeClass('placeholder-red-700');
+    }
+
+    if(contactField.value.trim() === '' || !contactRegex.test(contactField.value)) {
+        $(contactField).addClass('border-red-500');
+        $(contactField).removeClass('border-gray-300');
+        $(contactField).addClass('placeholder-red-700');
+    } else {
+        $(contactField).removeClass('border-red-500');
+        $(contactField).addClass('border-gray-300');
+        $(contactField).removeClass('placeholder-red-700');
+    }
+
+    if(facebookField.value.trim() === '' || !facebookRegex.test(facebookField.value)) {
+        $(facebookField).addClass('border-red-500');
+        $(facebookField).removeClass('border-gray-300');
+        $(facebookField).addClass('placeholder-red-700');
+    } else {
+        $(facebookField).removeClass('border-red-500');
+        $(facebookField).addClass('border-gray-300');
+        $(facebookField).removeClass('placeholder-red-700');
+    }
+
+
+    if (
+        emailField.value.trim() === '' || !emailRegex.test(emailField.value) ||
+        passwordField.value.trim() === '' || !validatePassword() ||
+        contactField.value.trim() === '' || !contactRegex.test(contactField.value) || 
+        facebookField.value.trim() === '' || !facebookRegex.test(facebookField.value)
+    ) {
+        event.stopImmediatePropagation();
+    }
+}
+
+function validateFormUpload() {
+    const idImageInput = document.getElementById('id_image');
+    const signatureImageInput = document.getElementById('signature_image');
+
+    if (idImageInput.files.length === 0 || signatureImageInput.files.length === 0) {
+        $("#file-error").removeClass("hidden");
+        return false; // Prevent form submission
+    } else {
+        $("#file-error").addClass("hidden");
+    }
+    return true; // Allow form submission
 }

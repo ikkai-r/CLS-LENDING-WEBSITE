@@ -32,11 +32,11 @@
                                 <div class="flex flex-row gap-5 mb-6">
                                     <div class="relative w-full">
                                         <i class="fa fa-user absolute mt-2 ml-3" id="icon-user"></i>
-                                        <input type="text" placeholder="First Name" id="first_name" name="first_name" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
+                                        <input type="text" placeholder="First Name" id="first_name" name="first_name" class="text-sm pl-10 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none" required onchange="changeField(this)">
                                     </div>
                                     <div class="relative w-full">
                                         <i class="fa fa-user absolute mt-2 ml-3" id="icon-user"></i>
-                                        <input type="text" placeholder="Last Name" id="last_name" name="last_name" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
+                                        <input type="text" placeholder="Last Name" id="last_name" name="last_name" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border border-gray-300 rounded-lg focus:outline-none" required onchange="changeField(this)">
                                     </div>
                                 </div>
 
@@ -47,24 +47,27 @@
                                     </svg>
                                     <span class="text-left text-sm">Gender</span>
                                 </div>
-                                    <div class="flex items-center">
+                                    <div class="flex items-center mb-2">
                                         <label class="inline-flex items-center cursor-pointer">
-                                            <input type="radio" class="form-radio hidden" name="gender" value="male" required>
+                                            <input type="radio" class="form-radio hidden" name="gender" value="male" required onclick="removeError(this)">
                                             <span class="ml-2">Male</span>
                                         </label>
                                         <div class="ml-6">
                                             <label class="inline-flex items-center cursor-pointer">
-                                                <input type="radio" class="form-radio hidden" name="gender" value="female" required>
+                                                <input type="radio" class="form-radio hidden" name="gender" value="female" required onclick="removeError(this)">
                                                 <span class="ml-10">Female</span>
                                             </label>
                                         </div>
                                         <div class="ml-6">
                                             <label class="inline-flex items-center cursor-pointer">
-                                                <input type="radio" class="form-radio hidden" name="gender" value="pref-not" required>
+                                                <input type="radio" class="form-radio hidden" name="gender" value="pref-not" required onclick="removeError(this)">
                                                 <span class="ml-10">Prefers not to say</span>
                                             </label>
                                         </div>
                                     </div>
+                                <span id="gender-error" class="text-sm text-red-500 hidden">
+                                        Please select your gender.
+                                    </span>
                                 </div>
                                
                                 <div class="flex flex-row items-center gap-2 mb-2">
@@ -73,7 +76,7 @@
                                 </div>
                                 <div class="relative mb-6">
                                     <i class="fa-solid fa-address-card absolute mt-2 ml-3" id="icon-address"></i>
-                                    <select name="region" id="region">
+                                    <select name="region" id="region" onclick="checkClick(this)">
                                         <option value="none" selected disabled hidden>Select an Option</option> 
                                     </select>
                                  </div>
@@ -83,7 +86,7 @@
                                     <img src="/images/logo.png" alt="Logo" class="logo">
                                     <span class="text-left text-sm">Province</span>
                                 </div>
-                                    <select name="province" id="province">
+                                    <select name="province" id="province" onclick="checkClick(this)">
                                         <option value="none" selected disabled hidden>Select a Region first</option> 
                                     </select>
                                </div>
@@ -97,7 +100,7 @@
                                     <img src="/images/logo.png" alt="Logo" class="logo">
                                     <span class="text-left text-sm">City</span>
                                 </div>
-                                      <select name="city" id="city">
+                                      <select name="city" id="city" onclick="checkClick(this)">
                                         <option value="none" selected disabled hidden>Select a Province first</option> 
                                       </select>
                                       </div>
@@ -107,7 +110,7 @@
                                     <img src="/images/logo.png" alt="Logo" class="logo">
                                     <span class="text-left text-sm">Barangay</span>
                                 </div>
-                                    <select name="barangay" id="barangay">
+                                    <select name="barangay" id="barangay" onclick="checkClick(this)">
                                         <option value="none" selected disabled hidden>Select a City first</option> 
                                     </select>
                                 </div>
@@ -117,7 +120,7 @@
                                     </svg>
                                     <span class="text-left text-sm">Additional Address Details</span>
                                 </div>
-                                    <input type="text" placeholder="Block Number, Street Name, ..." id="add_details" name="add_details" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
+                                    <input type="text" placeholder="Block Number, Street Name, ..." id="add_details" name="add_details" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border border-gray-300 rounded-lg focus:outline-none" required onchange="changeField(this)"> 
                                 </div>
                         </div>
                          </form>
@@ -144,7 +147,10 @@
                                 </div>
                                 <div class="relative mb-5">
                                     <i class="fa-solid fa-envelope absolute mt-2 ml-3" id="icon-envelope"></i>
-                                    <input type="email" placeholder="name@flowbite.com" id="email" name="email" class="text-sm pl-10 px-4 py-3  focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
+                                    <input type="email" placeholder="name@flowbite.com" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="text-sm pl-10 px-4 py-3 peer focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required onchange="changeField(this)">
+                                     <span class="mt-2 hidden text-sm text-red-500 peer-[&:not(:placeholder-shown):not(:focus):invalid]:block">
+                                        Please enter a valid email address
+                                    </span>
                                 </div>
 
                                  <div class="flex flex-row items-center gap-2">
@@ -155,25 +161,25 @@
                                 </div>
                                 <div class="relative mb-5">
                                     <i class="fa-solid fa-envelope absolute mt-2 ml-3" id="icon-envelope"></i>
-                                    <input type="password" placeholder="••••••••" id="password-tks" name="password" class="text-sm pl-10 px-4 py-3  focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
+                                    <input type="password" placeholder="••••••••" id="password-tks" name="password" class="text-sm pl-10 px-4 py-3  focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required onchange="changeField(this);" oninput="validatePassword()">
                                 </div>
 
                                 <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Password requirements:</h2>
                                 <ul class="max-w-md space-y-1 text-gray-500 list-inside dark:text-gray-400 mb-14">
                                     <li class="flex items-center">
-                                        <svg class="w-3.5 h-3.5 mr-2 text-green-500 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                        <svg id="req-p-1" class="w-3.5 h-3.5 mr-2 text-gray-500 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                                             <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
                                         </svg>
                                         At least 10 characters
                                     </li>
                                     <li class="flex items-center">
-                                        <svg class="w-3.5 h-3.5 mr-2 text-gray-500 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                        <svg id="req-p-2" class="w-3.5 h-3.5 mr-2 text-gray-500 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                                             <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
                                         </svg>
-                                        At least one lowercase character
+                                        At least one uppercase character
                                     </li>
                                     <li class="flex items-center">
-                                        <svg class="w-3.5 h-3.5 mr-2 text-gray-500 dark:text-gray-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                        <svg id="req-p-3" class="w-3.5 h-3.5 mr-2 text-gray-500 dark:text-gray-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                                             <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
                                         </svg>
                                         At least one special character, e.g., ! @ # ?
@@ -190,7 +196,10 @@
                                 </div>
                                 <div class="relative mb-5">
                                     <i class="fa-solid fa-phone absolute mt-2 ml-3" id="icon-phone"></i>
-                                    <input type="tel" placeholder="09xxxxxxxxx" id="contact_number" name="contact_number" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
+                                    <input type="tel" placeholder="09xxxxxxxxx" id="contact_number" name="contact_number" pattern="^09\d{9}$" class="peer text-sm pl-10 px-4 py-3 focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required onchange="changeField(this)">
+                                     <span class="mt-2 hidden text-sm text-red-500 peer-[&:not(:placeholder-shown):not(:focus):invalid]:block">
+                                        Please enter valid phone number.
+                                    </span>
                                 </div>
                                 <div class="flex flex-row items-center gap-2">
                                     <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
@@ -200,7 +209,10 @@
                                 </div>
                                 <div class="relative mb-5">
                                     <i class="fa-solid fa-facebook absolute mt-2 ml-3" id="icon-facebook"></i>
-                                    <input type="text" placeholder="facebook.com/abc" id="facebook_link" name="facebook_link" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required>
+                                    <input type="text" placeholder="facebook.com/abc" id="facebook_link" name="facebook_link" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none peer" pattern="(https:\/\/)?(www\.)?facebook\.com\/[a-zA-Z0-9.]+" required onchange="changeField(this)">
+                                        <span class="mt-2 hidden text-sm text-red-500 peer-[&:not(:placeholder-shown):not(:focus):invalid]:block">
+                                        Please enter valid Facebook link.
+                                    </span>
                                 </div>
                                 
                             </div>
@@ -218,6 +230,7 @@
                 <form id="upload-info-form" class="mt-10">
                     <div class="mb-5 flex justify-center items-center">
                             <div class="flex flex-col justify-center" style="width: 80%">
+
                                    {{!-- id stuff --}}
                                 <div class="relative mb-5 flex items-center">
                                     <div class="flex-1">
@@ -240,7 +253,11 @@
                                     </div>
                                 </div>
                                 
+                                <span id="file-error" class="mt-2 hidden text-base text-red-500">
+                                        Please upload both signature and valid ID.
+                                    </span>
                             </div>
+
                         </div>
                          </form>
 
@@ -249,9 +266,9 @@
                 {{!-- bottom section --}}
                         <div class="flex items-center justify-center mt-10 pt-8 w-full pb-12" role="tablist" data-tabs-toggle="#myTabContent"> 
                              <button type="button" data-tabs-target="#personal-info" class="btn w-1/2 nxt-btn mr-4 hidden" role="tab" aria-controls="personal-info" aria-selected="true">Personal Info</button>
-                            <button id="contact-info-btn" type="button" data-tabs-target="#contact-info" class="btn w-1/2 nxt-btn mr-4 hidden" role="tab" aria-controls="contact-info" aria-selected="false">Contact Info</button>
-                             <button type="button" data-tabs-target="#upload-info" class="btn w-1/2 nxt-btn mr-4 hidden" role="tab" aria-controls="upload-info" aria-selected="false" onclick="validateFormFieldsC()">Upload Info</button>
-                              <button type="submit" id="submit-btn" onclick="submitAllForms()"class="btn w-1/2 nxt-btn mr-4 hidden">Submit</button>
+                            <button id="contact-info-btn" type="button" data-tabs-target="#contact-info" class="btn w-1/2 nxt-btn mr-4 hidden" role="tab" aria-controls="contact-info" aria-selected="false" onclick="validateFormFieldsP(event)">Contact Info</button>
+                             <button type="button" data-tabs-target="#upload-info" class="btn w-1/2 nxt-btn mr-4 hidden" role="tab" aria-controls="upload-info" aria-selected="false" onclick="validateFormFieldsC(event)">Upload Info</button>
+                              <button type="button" id="submit-btn" onclick="submitAllForms()"class="btn w-1/2 nxt-btn mr-4 hidden">Submit</button>
                         </div>
 
                     </div>
