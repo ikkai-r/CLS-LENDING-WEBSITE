@@ -4,22 +4,18 @@ const clientSchema = new mongoose.Schema({
         type:String,
         // default thing here
     },
-    firstname: {
+    first_name: {
         type: String,
         required: true
     },
-    lastname:{
+    last_name:{
         type: String,
         required: true
     },
     gender:{
         type: String,
         required: true,
-        enum: ['Male', 'Female', 'Prefer not to say'] // male, female, prefer not to say
-    },
-    region:{
-        type: String,
-        required: true
+        enum: ['male', 'female', 'pref-not'] // male, female, prefer not to say
     },
     region:{
         type: String,
@@ -33,15 +29,13 @@ const clientSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    baranggay: {
+    barangay: {
         type: String,
         required: true
     },
     addtl_address:{
-        type: String
-    },
-    post_commented: {
-        type: mongoose.Schema.Types.ObjectId, ref:'Post'
+        type: String,
+        required: true
     },
     email:{
         type: String,
