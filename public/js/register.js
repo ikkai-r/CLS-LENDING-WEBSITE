@@ -1,3 +1,5 @@
+// noting lang na this doesn't work fully yet
+
 function submitAllForms(){
     var formData = new FormData();
 

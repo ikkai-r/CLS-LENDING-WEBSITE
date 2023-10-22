@@ -18,6 +18,8 @@ const upload = multer({ storage: storage });
 router.use(express.urlencoded({ extended: true }));
 router.use(express.json());
 
+
+// noting lang na this doesn't work fully yet
 const id_uploads = upload.fields([{ name: 'id_image', maxCount: 1 }, { name: 'signature_image', maxCount: 1 }])
 router.post("/", id_uploads, async (req, res)=>{
     try {   
