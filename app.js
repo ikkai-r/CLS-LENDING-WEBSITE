@@ -25,6 +25,9 @@ const Loan = require('./server/schema/Loan');
 const registerRouter = require('./routes/register.js');
 app.use('/register', registerRouter);
 
+const loginRouter = require('./routes/login.js');
+app.use('/login', loginRouter);
+
 app.set("view engine", "hbs");
 app.set("views", "./views");
 hbs.registerPartials(__dirname + `/views/partials`);
