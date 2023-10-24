@@ -2,10 +2,12 @@
 <div class="min-h-screen bg-black">
 
     <!-- toolbar here, to be expanded, need to adjust width -->
-    {{> admin_sidebar}}
+    <div class="fixed bg-cmblue sidebar ">
+        {{> admin_sidebar}}
+    </div>
 
     <!-- right side of the screen, margin will be adjusted if toolbar got expanded -->
-    <div class="ml-28 mr-16 mt-20 grid grid-cols-7 gap-10 h-10">
+    <div class="ml-28 mr-16 mt-20 grid grid-cols-7 gap-10 h-10 content">
 
          <!-- hello admin stats  -->
         <div class="rounded-xl col-span-3 p-8 bg-white">
