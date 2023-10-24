@@ -62,3 +62,11 @@ li .active span {
         width: 16rem;
     }
 }
+
+.sidebar:hover + .content {
+    margin-left: 18rem;
+  }
+
+.content {
+    transition: 0.3s ease;
+}
