@@ -1068,36 +1068,6 @@ input:checked + .toggle-bg {
   }
 }
 
-.alert {
-  display: grid;
-  width: 100%;
-  grid-auto-flow: row;
-  align-content: flex-start;
-  align-items: center;
-  justify-items: center;
-  gap: 1rem;
-  text-align: center;
-  border-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: hsl(var(--b2) / var(--tw-border-opacity));
-  padding: 1rem;
-  --tw-text-opacity: 1;
-  color: hsl(var(--bc) / var(--tw-text-opacity));
-  border-radius: var(--rounded-box, 1rem);
-  --alert-bg: hsl(var(--b2));
-  --alert-bg-mix: hsl(var(--b1));
-  background-color: var(--alert-bg);
-}
-
-@media (min-width: 640px) {
-  .alert {
-    grid-auto-flow: column;
-    grid-template-columns: auto minmax(auto,1fr);
-    justify-items: start;
-    text-align: left;
-  }
-}
-
 .avatar.placeholder > div {
   display: flex;
   align-items: center;
@@ -3179,10 +3149,6 @@ details.collapse summary::-webkit-details-marker {
   top: 0px;
 }
 
-.top-5 {
-  top: 1.25rem;
-}
-
 .z-10 {
   z-index: 10;
 }
@@ -3243,11 +3209,6 @@ details.collapse summary::-webkit-details-marker {
 .mx-40 {
   margin-left: 10rem;
   margin-right: 10rem;
-}
-
-.mx-5 {
-  margin-left: 1.25rem;
-  margin-right: 1.25rem;
 }
 
 .mx-auto {
@@ -3339,6 +3300,10 @@ details.collapse summary::-webkit-details-marker {
 
 .ml-6 {
   margin-left: 1.5rem;
+}
+
+.ml-9 {
+  margin-left: 2.25rem;
 }
 
 .mr-12 {
@@ -3727,6 +3692,10 @@ details.collapse summary::-webkit-details-marker {
   overflow: hidden;
 }
 
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+
 .rounded {
   border-radius: 0.25rem;
 }
@@ -3803,24 +3772,14 @@ details.collapse summary::-webkit-details-marker {
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
 
-.border-red-600 {
-  --tw-border-opacity: 1;
-  border-color: rgb(224 36 36 / var(--tw-border-opacity));
-}
-
 .border-red-500 {
   --tw-border-opacity: 1;
   border-color: rgb(240 82 82 / var(--tw-border-opacity));
 }
 
-.border-gray-500 {
+.border-red-600 {
   --tw-border-opacity: 1;
-  border-color: rgb(107 114 128 / var(--tw-border-opacity));
-}
-
-.border-red-200 {
-  --tw-border-opacity: 1;
-  border-color: rgb(251 213 213 / var(--tw-border-opacity));
+  border-color: rgb(224 36 36 / var(--tw-border-opacity));
 }
 
 .bg-base-100 {
@@ -3886,11 +3845,6 @@ details.collapse summary::-webkit-details-marker {
 .bg-green-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(49 196 141 / var(--tw-bg-opacity));
-}
-
-.bg-green-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(14 159 110 / var(--tw-bg-opacity));
 }
 
 .bg-indigo-50 {
@@ -4043,10 +3997,6 @@ details.collapse summary::-webkit-details-marker {
   padding-top: 2rem;
 }
 
-.pb-2 {
-  padding-bottom: 0.5rem;
-}
-
 .text-left {
   text-align: left;
 }
@@ -4079,6 +4029,11 @@ details.collapse summary::-webkit-details-marker {
   line-height: 1;
 }
 
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -4097,11 +4052,6 @@ details.collapse summary::-webkit-details-marker {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
 }
 
 .font-bold {
@@ -4126,10 +4076,6 @@ details.collapse summary::-webkit-details-marker {
 
 .uppercase {
   text-transform: uppercase;
-}
-
-.lowercase {
-  text-transform: lowercase;
 }
 
 .normal-case {
@@ -4182,11 +4128,6 @@ details.collapse summary::-webkit-details-marker {
   color: rgb(14 159 110 / var(--tw-text-opacity));
 }
 
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
 .text-red-500 {
   --tw-text-opacity: 1;
   color: rgb(240 82 82 / var(--tw-text-opacity));
@@ -4195,6 +4136,11 @@ details.collapse summary::-webkit-details-marker {
 .text-red-700 {
   --tw-text-opacity: 1;
   color: rgb(200 30 30 / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -4349,12 +4295,9 @@ details.collapse summary::-webkit-details-marker {
   --tw-ring-color: rgb(229 231 235 / var(--tw-ring-opacity));
 }
 
-.group:invalid .group-invalid\:pointer-events-none {
-  pointer-events: none;
-}
-
-.group:invalid .group-invalid\:opacity-30 {
-  opacity: 0.3;
+.group:hover .group-hover\:text-cmblue {
+  --tw-text-opacity: 1;
+  color: rgb(20 33 61 / var(--tw-text-opacity));
 }
 
 .peer:not(:-moz-placeholder-shown):not(:focus):invalid ~ .peer-\[\&\:not\(\:-moz-placeholder-shown\)\:not\(\:focus\)\:invalid\]\:block {
