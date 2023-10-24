@@ -14,7 +14,7 @@ function submitAllForms(){
             selected_gender = gender[i].value;
     }
     formData.append('gender', selected_gender);
-    formData.append('region', $('#region').val()[0]);
+    formData.append('region', $('#region').val());
     formData.append('province', $('#province').val());
     formData.append('city', $('#city').val());
     formData.append('barangay', $('#barangay').val());
