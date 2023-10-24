@@ -1575,6 +1575,8 @@ input:checked + .toggle-bg {
 
 .navbar {
   display: flex;
+  position: sticky;
+  top: 0;
   align-items: center;
   padding: var(--navbar-padding, 0.5rem);
   min-height: 4rem;
