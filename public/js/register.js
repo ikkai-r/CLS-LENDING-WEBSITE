@@ -21,6 +21,7 @@ function submitAllForms(){
     formData.append('region', $('#region').val());
     formData.append('add_details', $('#add_details').val());
     formData.append('email', $('#email').val());
+    formData.append('password', $('#password-tks').val());
     formData.append('contact_number', $('#contact_number').val());
     formData.append('facebook_link', $('#facebook_link').val());
 
