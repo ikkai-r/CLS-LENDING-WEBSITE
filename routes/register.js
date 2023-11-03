@@ -54,8 +54,8 @@ router.post("/", id_uploads, async (req, res)=>{
                 newClient.password = hashedPassword;
                 newClient.contact_num = req.body.contact_number;
                 newClient.fb_link = req.body.facebook_link;
-                newClient.gov_id = 'images/' + req.files['id_name'][0].filename;
-                newClient.signature = 'images/' + req.files['signature_image'][0].filename;
+                newClient.gov_id = "images/" + req.files['id_name'][0].filename;
+                newClient.signature = "images/" + req.files['signature_image'][0].filename;
             }
             newClient.save();
             
