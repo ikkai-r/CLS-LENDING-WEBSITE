@@ -12,6 +12,9 @@ const controller = {
     },
     getClientDashboard: function (req, res) {
         res.render('client_dashboard', {layout: 'layouts/main_no'});
+    },
+    getLoanRecords: function (req, res) {
+        res.render('loan_records', {layout: 'layouts/main', css: '/css/hamburger.css'});
     }
 
 
