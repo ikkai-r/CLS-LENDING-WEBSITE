@@ -3,7 +3,8 @@ const handlebars = require('handlebars');
 const mongoose = require('mongoose');
 const Client = require('../server/schema/Client');
 const router = express.Router();
-var path = require('path')
+var path = require('path');
+const bcrypt = require('bcryptjs');
 
 const multer  = require('multer');
 const storage = multer.diskStorage({
@@ -38,7 +39,9 @@ const id_uploads = upload.fields([{ name: 'id_name', maxCount: 1 }, { name: 'sig
 router.post("/", id_uploads, async (req, res)=>{
     try {   
             var newClient = new Client();
+            
             if(req.files) {
+                const hashedPassword = await bcrypt.hash(req.body.password, 10);
                 newClient.first_name = req.body.first_name;
                 newClient.last_name = req.body.last_name;
                 newClient.gender = req.body.gender;
@@ -48,7 +51,7 @@ router.post("/", id_uploads, async (req, res)=>{
                 newClient.barangay = req.body.barangay;
                 newClient.addtl_address = req.body.add_details;
                 newClient.email = req.body.email;
-                newClient.password = req.body.password;
+                newClient.password = hashedPassword;
                 newClient.contact_num = req.body.contact_number;
                 newClient.fb_link = req.body.facebook_link;
                 newClient.gov_id = "images/" + req.files['id_name'][0].filename;
