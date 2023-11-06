@@ -34,7 +34,6 @@ router.use(express.urlencoded({ extended: true }));
 router.use(express.json());
 
 
-// noting lang na this doesn't work fully yet
 const id_uploads = upload.fields([{ name: 'id_name', maxCount: 1 }, { name: 'signature_image', maxCount: 1 }])
 router.post("/", id_uploads, async (req, res)=>{
     try {   
@@ -43,6 +42,9 @@ router.post("/", id_uploads, async (req, res)=>{
             if(req.files) {
                 const hashedPassword = await bcrypt.hash(req.body.password, 10);
                 newClient.first_name = req.body.first_name;
+                if(req.body.middle_name != '') {
+                  newClient.middle_name = req.body.middle_name;
+                }
                 newClient.last_name = req.body.last_name;
                 newClient.gender = req.body.gender;
                 newClient.region = req.body.region;
