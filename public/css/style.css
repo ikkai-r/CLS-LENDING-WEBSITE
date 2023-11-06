@@ -3530,6 +3530,10 @@ details.collapse summary::-webkit-details-marker {
   width: 7rem;
 }
 
+.w-3\/4 {
+  width: 75%;
+}
+
 .max-w-2xl {
   max-width: 42rem;
 }
