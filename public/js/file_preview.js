@@ -45,29 +45,45 @@ var clicked = false;
 
 var my_handlers = {
 
-    fill_provinces:  function(){
+    fill_provinces:  function(){    
 
-        var region_code = $(this).val();
-        $('#province').ph_locations('fetch_list', [{"region_code": region_code}]);
-        
+        var region_code = $('#region').val();
+
+        if(region_code === null || region_code === undefined) {
+            $('#province').ph_locations('fetch_list', [{"region_code": 15}]);
+        } else {
+            $('#province').ph_locations('fetch_list', [{"region_code": region_code}]);
+        }        
     },
 
     fill_cities: function(){
 
-        var province_code = $(this).val();
-        $('#city').ph_locations( 'fetch_list', [{"province_code": province_code}]);
+        var province_code = $('#province').val();
+
+        if(province_code === null || province_code === undefined) {
+            $('#city').ph_locations('fetch_list', [{"province_code": 1507}]);
+        } else {
+            $('#city').ph_locations( 'fetch_list', [{"province_code": province_code}]);
+        } 
     },
 
 
     fill_barangays: function(){
 
-        var city_code = $(this).val();
-        $('#barangay').ph_locations('fetch_list', [{"city_code": city_code}]);
+        var city_code = $('#city').val();
+
+        if(city_code === null || city_code === undefined) {
+            $('#barangay').ph_locations('fetch_list', [{"city_code": 150708}]);
+        } else {
+            $('#barangay').ph_locations('fetch_list', [{"city_code": city_code}]);
+        }
     }
 };
 
 $(function () {
     var clicked = false; 
+    var provclicked = false;
+    var cityclicked = false;
 
     $('#region').on('change', my_handlers.fill_provinces);
     $('#province').on('change', my_handlers.fill_cities);
@@ -80,10 +96,26 @@ $(function () {
 
     $("#region").on("click", function () {
         if (!clicked) {
+            my_handlers.fill_provinces();
             $('#region').ph_locations('fetch_list');
             clicked = true; 
         }
     });
+
+    $("#province").on("click", function () {
+        if (!provclicked && clicked) {
+            my_handlers.fill_cities();
+            provclicked = true; 
+        }
+    });
+
+    $("#city").on("click", function () {
+        if (!cityclicked && clicked && provclicked) {
+            my_handlers.fill_barangays();
+            cityclicked = true; 
+        }
+    });
+
 });
 
 $(function () {

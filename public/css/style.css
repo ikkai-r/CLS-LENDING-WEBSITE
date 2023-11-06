@@ -1575,13 +1575,10 @@ input:checked + .toggle-bg {
 
 .navbar {
   display: flex;
-  position: sticky;
-  top: 0;
   align-items: center;
   padding: var(--navbar-padding, 0.5rem);
   min-height: 4rem;
   width: 100%;
-  height: auto;
 }
 
 :where(.navbar > *) {
@@ -3361,6 +3358,14 @@ details.collapse summary::-webkit-details-marker {
   margin-top: 2.25rem;
 }
 
+.mr-3 {
+  margin-right: 0.75rem;
+}
+
+.mr-10 {
+  margin-right: 2.5rem;
+}
+
 .block {
   display: block;
 }
@@ -3519,6 +3524,10 @@ details.collapse summary::-webkit-details-marker {
 
 .w-px {
   width: 1px;
+}
+
+.w-28 {
+  width: 7rem;
 }
 
 .max-w-2xl {
@@ -3998,6 +4007,10 @@ details.collapse summary::-webkit-details-marker {
 
 .pt-8 {
   padding-top: 2rem;
+}
+
+.pr-3 {
+  padding-right: 0.75rem;
 }
 
 .text-left {
