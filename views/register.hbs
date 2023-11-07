@@ -29,17 +29,17 @@
                                     </svg>
                                     <span class="text-left text-sm">Full Name</span>
                                 </div>
-                                <div class="flex flex-row gap-5 mb-6">
+                                <div class="flex flex-row gap-2 mb-6">
                                     <div class="relative w-full">
-                                        <i class="fa fa-user absolute mt-2 ml-3" id="icon-user"></i>
                                         <input type="text" placeholder="First Name" id="first_name" name="first_name" class="text-sm pl-10 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none" required onchange="changeField(this)">
                                     </div>
                                     <div class="relative w-full">
-                                        <i class="fa fa-user absolute mt-2 ml-3" id="icon-user"></i>
-                                        <input type="text" placeholder="Last Name" id="last_name" name="last_name" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border border-gray-300 rounded-lg focus:outline-none" required onchange="changeField(this)">
+                                        <input type="text" placeholder="Middle Name" id="middle_name" name="middle_name" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border border-gray-300 rounded-lg focus:outline-none" onchange="changeField(this)">
+                                    </div>
+                                    <div class="relative w-full">
+                                        <input type="text" placeholder="Last Name" id="last_name" name="last_name" class="text-sm pl-10 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none" required onchange="changeField(this)">
                                     </div>
                                 </div>
-
                                 <div class="mb-6">
                                     <div class="flex flex-row items-center gap-2 mb-2.5">
                                     <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
@@ -75,7 +75,6 @@
                                     <span class="text-left text-sm">Region</span>
                                 </div>
                                 <div class="relative mb-6">
-                                    <i class="fa-solid fa-address-card absolute mt-2 ml-3" id="icon-address"></i>
                                     <select name="region" id="region" onclick="checkClick(this)">
                                         <option value="none" selected disabled hidden>Select an Option</option> 
                                     </select>
@@ -146,7 +145,6 @@
                                     <span class="text-left text-sm">Email</span>
                                 </div>
                                 <div class="relative mb-5">
-                                    <i class="fa-solid fa-envelope absolute mt-2 ml-3" id="icon-envelope"></i>
                                     <input type="email" placeholder="name@flowbite.com" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="text-sm pl-10 px-4 py-3 peer focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required onchange="changeField(this)">
                                      <span class="mt-2 hidden text-sm text-red-500 peer-[&:not(:placeholder-shown):not(:focus):invalid]:block">
                                         Please enter a valid email address
@@ -160,7 +158,6 @@
                                     <span class="text-left text-sm">Password</span>
                                 </div>
                                 <div class="relative mb-5">
-                                    <i class="fa-solid fa-envelope absolute mt-2 ml-3" id="icon-envelope"></i>
                                     <input type="password" placeholder="••••••••" id="password-tks" name="password" class="text-sm pl-10 px-4 py-3  focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required onchange="changeField(this);" oninput="validatePassword()">
                                 </div>
 
@@ -195,7 +192,6 @@
                                     <span class="text-left">Contact Number</span>
                                 </div>
                                 <div class="relative mb-5">
-                                    <i class="fa-solid fa-phone absolute mt-2 ml-3" id="icon-phone"></i>
                                     <input type="tel" placeholder="09xxxxxxxxx" id="contact_number" name="contact_number" pattern="^09\d{9}$" class="peer text-sm pl-10 px-4 py-3 focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required onchange="changeField(this)">
                                      <span class="mt-2 hidden text-sm text-red-500 peer-[&:not(:placeholder-shown):not(:focus):invalid]:block">
                                         Please enter valid phone number.
@@ -208,7 +204,6 @@
                                     <span class="text-left">Facebook Account Link</span>
                                 </div>
                                 <div class="relative mb-5">
-                                    <i class="fa-solid fa-facebook absolute mt-2 ml-3" id="icon-facebook"></i>
                                     <input type="text" placeholder="facebook.com/abc" id="facebook_link" name="facebook_link" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none peer" pattern="(https:\/\/)?(www\.)?facebook\.com\/[a-zA-Z0-9.]+" required onchange="changeField(this)">
                                         <span class="mt-2 hidden text-sm text-red-500 peer-[&:not(:placeholder-shown):not(:focus):invalid]:block">
                                         Please enter valid Facebook link.

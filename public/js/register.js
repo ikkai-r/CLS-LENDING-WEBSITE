@@ -14,13 +14,13 @@ function submitAllForms(){
             selected_gender = gender[i].value;
     }
     formData.append('gender', selected_gender);
-    formData.append('region', $('#region').val());
-    formData.append('province', $('#province').val());
-    formData.append('city', $('#city').val());
-    formData.append('barangay', $('#barangay').val());
-    formData.append('region', $('#region').val());
+    formData.append('region', $('#region option:selected').text())
+    formData.append('province', $('#province option:selected').text())
+    formData.append('city', $('#city option:selected').text())
+    formData.append('barangay', $('#barangay option:selected').text());
     formData.append('add_details', $('#add_details').val());
     formData.append('email', $('#email').val());
+    formData.append('password', $('#password-tks').val());
     formData.append('contact_number', $('#contact_number').val());
     formData.append('facebook_link', $('#facebook_link').val());
 

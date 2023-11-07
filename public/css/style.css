@@ -3462,6 +3462,14 @@ details.collapse summary::-webkit-details-marker {
 
 .ml-20 {
   margin-left: 5rem;
+
+.mr-3 {
+  margin-right: 0.75rem;
+}
+
+.mr-10 {
+  margin-right: 2.5rem;
+
 }
 
 .block {
@@ -3622,6 +3630,14 @@ details.collapse summary::-webkit-details-marker {
 
 .w-px {
   width: 1px;
+}
+
+.w-28 {
+  width: 7rem;
+}
+
+.w-3\/4 {
+  width: 75%;
 }
 
 .max-w-2xl {
@@ -4115,6 +4131,10 @@ details.collapse summary::-webkit-details-marker {
   padding-top: 2rem;
 }
 
+.pr-3 {
+  padding-right: 0.75rem;
+}
+  
 .text-left {
   text-align: left;
 }
