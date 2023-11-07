@@ -42,7 +42,7 @@ router.post("/", id_uploads, async (req, res)=>{
             if(req.files) {
                 const hashedPassword = await bcrypt.hash(req.body.password, 10);
                 newClient.first_name = req.body.first_name;
-                if(req.body.middle_name != '') {
+                if(req.body.middle_name !== '' || req.body.middle_name != null || req.body.middle_name != undefined) {
                   newClient.middle_name = req.body.middle_name;
                 }
                 newClient.last_name = req.body.last_name;
