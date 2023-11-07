@@ -1,9 +1,9 @@
-// noting lang na this doesn't work fully yet
 
 function submitAllForms(){
     var formData = new FormData();
 
     formData.append('first_name', $('#first_name').val());
+    formData.append('middle_name', $('#middle_name').val());
     formData.append('last_name', $('#last_name').val());
 
     
@@ -27,6 +27,10 @@ function submitAllForms(){
     formData.append('id_name', $('#id_image')[0].files[0]);
     formData.append('signature_image', $('#signature_image')[0].files[0]);
 
+    const modalbg = document.getElementById('modal-bg');
+    const successmodal = document.getElementById('success-popup-modal');
+    const errormodal = document.getElementById('error-popup-modal');
+
     console.log(formData);
     $.ajax({
         url  : '/register',
@@ -38,10 +42,24 @@ function submitAllForms(){
         success : function(data) {
             console.log(data.message);
             console.log('Successfully registered!');
-            window.location.href = "/register"; 
+            //add modal successfully registered
+            modalbg.classList.remove('hidden');
+            successmodal.classList.remove('hidden');
+            //add timeout
+            setTimeout(function() {
+                window.location.href = "/c_dashboard";
+            }, 2000);
         },
         error: function(error) {
             console.error('Error submitting form:', error);
+            //add modal please try again 
+            modalbg.classList.remove('hidden');
+            errormodal.classList.remove('hidden');
+            //add time out then hide
+            setTimeout(function() {
+                modalbg.classList.add('hidden');
+                errormodal.classList.add('hidden');
+            }, 2000);
 
         }
     });
