@@ -1,0 +1,23 @@
+document.addEventListener('DOMContentLoaded', function() {
+    function switchTab(tabId) {
+        document.querySelectorAll('.tab-content').forEach(function(tabContent) {
+            tabContent.classList.remove('active');
+        });
+        
+        document.getElementById(tabId + '-content').classList.add('active');
+    }
+
+    document.getElementById('profile-tab').addEventListener('click', function() {
+        switchTab('profile');
+    });
+
+    document.getElementById('loan-history-tab').addEventListener('click', function() {
+        switchTab('loan-history');
+    });
+
+    document.getElementById('account-settings-tab').addEventListener('click', function() {
+        switchTab('account-settings');
+    });
+
+    switchTab('profile');
+});

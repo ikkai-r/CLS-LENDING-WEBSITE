@@ -1,0 +1,124 @@
+<div class="parent-container flex flex-col items-center">
+        <!-- First Container: Overview -->
+        <div class="profile-container custom-width">
+            <div class="profile-picture">
+                <img src="/images/pfp_default.jpg" alt="Profile Picture">
+            </div>
+            <h1 class="display-name">John Doe</h1>
+            <div class="buttons-container">
+                <button class="apply-loan-button">Apply for a Loan</button>
+                <button class="edit-profile-button">Edit Profile</button>
+            </div>
+            <div class="email-container">
+                <div class="email-label">Email</div>
+                <div class="email-value">
+                    <span class="hidden-email" id="hidden-email">abcd123@gmail.com</span>
+                    <button class="reveal-button" id="reveal-button">Reveal</button>
+                </div>
+            </div>
+            <div class="loan-details">
+                <div class="loan-count">
+                    <div class="label">Applied Loans</div>
+                    <div class="value">20</div>
+                </div>
+                <div class="loan-count">
+                    <div class="label">Fully Paid Loans</div>
+                    <div class="value">20</div>
+                </div>
+                <div class="loan-count">
+                    <div class="label">Upcoming Dues</div>
+                    <div class="value">20</div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- PROFILE TAB -->
+        <div class="tab-content" id="profile-content">
+                <div class="tabs mt-8 flex space-x-1">
+                    <a class="tab tab-lifted tab-active" id="profile-tab">Profile</a>
+                    <a class="tab tab-lifted" id="loan-history-tab">Loan History</a>
+                    <a class="tab tab-lifted" id="account-settings-tab">Account Settings</a>
+                </div>  
+
+                <!-- Second Container: Personal Details -->
+                <div class="container custom-width">
+                    <h2 class="container-heading">Personal Details</h2>
+                    <div class="details-container">
+                        <div class="detail">
+                            <div class="label">First Name</div>
+                            <div class="value">John</div>
+                        </div>
+                        <div class="detail">
+                            <div class="label">Last Name</div>
+                            <div class="value">Doe</div>
+                        </div>
+                        <div class="detail">
+                            <div class="label">Birthday</div>
+                            <div class="value">January 1, 2000</div>
+                        </div>
+                        <div class="detail">
+                            <div class="label">Gender</div>
+                            <div class="value">Male</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Third Container: Contact Details -->
+                <div class="container custom-width">
+                    <h2 class="container-heading">Contact Details</h2>
+                    <div class="details-container">
+                        <div class="detail">
+                            <div class="label">Mobile Number</div>
+                            <div class="value">xxxx</div>
+                        </div>
+                        <div class="detail">
+                            <div class="label">Phone Type</div>
+                            <div class="value">xxxx</div>
+                        </div>
+                        <div class="detail">
+                            <div class="label">Facebook Link</div>
+                            <div class="value">xxxx</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fourth Container: Address Details -->
+                <div class="container custom-width">
+                    <h2 class="container-heading">Address Details</h2>
+                    <div class="details-container">
+                        <div class="detail">
+                            <div class="label">Country</div>
+                            <div class="value">Philippines</div>
+                        </div>
+                        <div class="detail">
+                            <div class="label">Region</div>
+                            <div class="value">NCR</div>
+                        </div>
+                        <div class="detail">
+                            <div class="label">Province</div>
+                            <div class="value">First District</div>
+                        </div>
+                        <div class="detail">
+                            <div class="label">City</div>
+                            <div class="value">Las Pinas City</div>
+                        </div>
+                        <div class="detail">
+                            <div class="label">Barangay</div>
+                            <div class="value">Talon Uno</div>
+                        </div>
+                        <div class="detail">
+                            <div class="label">Zipcode</div>
+                            <div class="value">1754</div>
+                        </div>
+                        <div class="detail">
+                            <div class="label">Additional Details</div>
+                            <div class="value">Blk 53</div>
+                        </div>
+                    </div>
+                </div>
+        </div>  
+</div>  
+
+<script src="/js/email_hider.js"></script>
+<script src="/js/client_profile_tabs.js"></script>
