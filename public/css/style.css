@@ -1068,36 +1068,6 @@ input:checked + .toggle-bg {
   }
 }
 
-.alert {
-  display: grid;
-  width: 100%;
-  grid-auto-flow: row;
-  align-content: flex-start;
-  align-items: center;
-  justify-items: center;
-  gap: 1rem;
-  text-align: center;
-  border-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: hsl(var(--b2) / var(--tw-border-opacity));
-  padding: 1rem;
-  --tw-text-opacity: 1;
-  color: hsl(var(--bc) / var(--tw-text-opacity));
-  border-radius: var(--rounded-box, 1rem);
-  --alert-bg: hsl(var(--b2));
-  --alert-bg-mix: hsl(var(--b1));
-  background-color: var(--alert-bg);
-}
-
-@media (min-width: 640px) {
-  .alert {
-    grid-auto-flow: column;
-    grid-template-columns: auto minmax(auto,1fr);
-    justify-items: start;
-    text-align: left;
-  }
-}
-
 .avatar.placeholder > div {
   display: flex;
   align-items: center;
@@ -1353,19 +1323,18 @@ input:checked + .toggle-bg {
     background-color: hsl(var(--b3) / var(--tw-bg-opacity));
   }
 
-<<<<<<< Updated upstream
   .btn-primary:hover {
     --tw-border-opacity: 1;
     border-color: hsl(var(--pf) / var(--tw-border-opacity));
     --tw-bg-opacity: 1;
     background-color: hsl(var(--pf) / var(--tw-bg-opacity));
-=======
+  }
+
   .btn-error:hover {
     --tw-border-opacity: 1;
     border-color: hsl(var(--er) / var(--tw-border-opacity));
     --tw-bg-opacity: 1;
     background-color: hsl(var(--er) / var(--tw-bg-opacity));
->>>>>>> Stashed changes
   }
 
   .btn.glass:hover {
@@ -1373,7 +1342,6 @@ input:checked + .toggle-bg {
     --glass-border-opacity: 15%;
   }
 
-<<<<<<< Updated upstream
   .btn-outline.btn-primary:hover {
     --tw-border-opacity: 1;
     border-color: hsl(var(--pf) / var(--tw-border-opacity));
@@ -1381,7 +1349,8 @@ input:checked + .toggle-bg {
     background-color: hsl(var(--pf) / var(--tw-bg-opacity));
     --tw-text-opacity: 1;
     color: hsl(var(--pc) / var(--tw-text-opacity));
-=======
+  }
+
   .btn-outline.btn-error:hover {
     --tw-border-opacity: 1;
     border-color: hsl(var(--er) / var(--tw-border-opacity));
@@ -1389,7 +1358,6 @@ input:checked + .toggle-bg {
     background-color: hsl(var(--er) / var(--tw-bg-opacity));
     --tw-text-opacity: 1;
     color: hsl(var(--erc) / var(--tw-text-opacity));
->>>>>>> Stashed changes
   }
 
   .btn-disabled:hover,
@@ -1897,14 +1865,6 @@ input:checked + .toggle-bg {
     var(--togglehandleborder);
 }
 
-.alert-error {
-  border-color: hsl(var(--er) / 0.2);
-  --tw-text-opacity: 1;
-  color: hsl(var(--erc) / var(--tw-text-opacity));
-  --alert-bg: hsl(var(--er));
-  --alert-bg-mix: hsl(var(--b1));
-}
-
 .btm-nav > *:where(.active) {
   border-top-width: 2px;
   --tw-bg-opacity: 1;
@@ -1938,7 +1898,6 @@ input:checked + .toggle-bg {
   outline-offset: 2px;
 }
 
-<<<<<<< Updated upstream
 .btn-primary {
   --tw-border-opacity: 1;
   border-color: hsl(var(--p) / var(--tw-border-opacity));
@@ -1954,7 +1913,8 @@ input:checked + .toggle-bg {
   border-color: hsl(var(--pf) / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
   background-color: hsl(var(--pf) / var(--tw-bg-opacity));
-=======
+}
+
 .btn-error {
   --tw-border-opacity: 1;
   border-color: hsl(var(--er) / var(--tw-border-opacity));
@@ -1970,7 +1930,6 @@ input:checked + .toggle-bg {
   border-color: hsl(var(--er) / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
   background-color: hsl(var(--er) / var(--tw-bg-opacity));
->>>>>>> Stashed changes
 }
 
 .btn.glass {
@@ -1985,7 +1944,6 @@ input:checked + .toggle-bg {
   --glass-border-opacity: 15%;
 }
 
-<<<<<<< Updated upstream
 .btn-outline.btn-primary {
   --tw-text-opacity: 1;
   color: hsl(var(--p) / var(--tw-text-opacity));
@@ -1998,7 +1956,8 @@ input:checked + .toggle-bg {
   background-color: hsl(var(--pf) / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: hsl(var(--pc) / var(--tw-text-opacity));
-=======
+}
+
 .btn-outline.btn-error {
   --tw-text-opacity: 1;
   color: hsl(var(--er) / var(--tw-text-opacity));
@@ -2011,7 +1970,6 @@ input:checked + .toggle-bg {
   background-color: hsl(var(--er) / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: hsl(var(--erc) / var(--tw-text-opacity));
->>>>>>> Stashed changes
 }
 
 .btn.btn-disabled,
@@ -3260,14 +3218,11 @@ details.collapse summary::-webkit-details-marker {
   bottom: var(--tooltip-tail-offset);
 }
 
-<<<<<<< Updated upstream
-=======
 .tooltip-error {
   --tooltip-color: hsl(var(--er));
   --tooltip-text-color: hsl(var(--erc));
 }
 
->>>>>>> Stashed changes
 .pointer-events-none {
   pointer-events: none;
 }
@@ -3333,13 +3288,10 @@ details.collapse summary::-webkit-details-marker {
   top: 0px;
 }
 
-<<<<<<< Updated upstream
-=======
 .top-4 {
   top: 1rem;
 }
 
->>>>>>> Stashed changes
 .z-10 {
   z-index: 10;
 }
@@ -3497,6 +3449,10 @@ details.collapse summary::-webkit-details-marker {
   margin-left: 2.25rem;
 }
 
+.ml-auto {
+  margin-left: auto;
+}
+
 .mr-12 {
   margin-right: 3rem;
 }
@@ -3553,15 +3509,6 @@ details.collapse summary::-webkit-details-marker {
   margin-top: 2.25rem;
 }
 
-<<<<<<< Updated upstream
-.ml-20 {
-  margin-left: 5rem;
-=======
-.ml-auto {
-  margin-left: auto;
->>>>>>> Stashed changes
-}
-
 .block {
   display: block;
 }
@@ -3596,10 +3543,6 @@ details.collapse summary::-webkit-details-marker {
 
 .h-10 {
   height: 2.5rem;
-}
-
-.h-11 {
-  height: 2.75rem;
 }
 
 .h-12 {
@@ -3662,21 +3605,14 @@ details.collapse summary::-webkit-details-marker {
   height: 100%;
 }
 
-.h-screen {
-  height: 100vh;
-}
-
-<<<<<<< Updated upstream
-=======
 .h-modal {
   height: calc(100% - 2rem);
 }
 
-.max-h-full {
-  max-height: 100%;
+.h-screen {
+  height: 100vh;
 }
 
->>>>>>> Stashed changes
 .min-h-screen {
   min-height: 100vh;
 }
@@ -3713,6 +3649,10 @@ details.collapse summary::-webkit-details-marker {
   width: 1rem;
 }
 
+.w-5 {
+  width: 1.25rem;
+}
+
 .w-5\/6 {
   width: 83.333333%;
 }
@@ -3737,13 +3677,6 @@ details.collapse summary::-webkit-details-marker {
   width: 1px;
 }
 
-<<<<<<< Updated upstream
-=======
-.w-5 {
-  width: 1.25rem;
-}
-
->>>>>>> Stashed changes
 .max-w-2xl {
   max-width: 42rem;
 }
@@ -3765,10 +3698,6 @@ details.collapse summary::-webkit-details-marker {
 }
 
 .flex-shrink-0 {
-  flex-shrink: 0;
-}
-
-.shrink-0 {
   flex-shrink: 0;
 }
 
@@ -3902,15 +3831,14 @@ details.collapse summary::-webkit-details-marker {
   gap: 0.75rem;
 }
 
-<<<<<<< Updated upstream
 .gap-5 {
   gap: 1.25rem;
-=======
+}
+
 .space-x-1 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.25rem * var(--tw-space-x-reverse));
   margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
->>>>>>> Stashed changes
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -3931,20 +3859,16 @@ details.collapse summary::-webkit-details-marker {
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
 
-.space-y-5 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
-}
-
-.space-y-3 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
-}
-
 .overflow-hidden {
   overflow: hidden;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
 }
 
 .whitespace-nowrap {
@@ -4037,16 +3961,6 @@ details.collapse summary::-webkit-details-marker {
   border-color: rgb(224 36 36 / var(--tw-border-opacity));
 }
 
-.bg-\[\#848A97\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(132 138 151 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#D1FAE5\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(209 250 229 / var(--tw-bg-opacity));
-}
-
 .bg-base-100 {
   --tw-bg-opacity: 1;
   background-color: hsl(var(--b1) / var(--tw-bg-opacity));
@@ -4122,6 +4036,10 @@ details.collapse summary::-webkit-details-marker {
   background-color: rgb(249 128 128 / var(--tw-bg-opacity));
 }
 
+.bg-transparent {
+  background-color: transparent;
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -4136,23 +4054,16 @@ details.collapse summary::-webkit-details-marker {
   background-color: rgb(227 160 8 / var(--tw-bg-opacity));
 }
 
-<<<<<<< Updated upstream
-=======
-.bg-transparent {
-  background-color: transparent;
-}
-
->>>>>>> Stashed changes
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
 }
 
-.stroke-current {
-  stroke: currentColor;
-}
-
 .p-1 {
   padding: 0.25rem;
+}
+
+.p-1\.5 {
+  padding: 0.375rem;
 }
 
 .p-2 {
@@ -4175,21 +4086,10 @@ details.collapse summary::-webkit-details-marker {
   padding: 1rem;
 }
 
-.p-6 {
-  padding: 1.5rem;
-}
-
 .p-8 {
   padding: 2rem;
 }
 
-<<<<<<< Updated upstream
-=======
-.p-1\.5 {
-  padding: 0.375rem;
-}
-
->>>>>>> Stashed changes
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -4208,6 +4108,11 @@ details.collapse summary::-webkit-details-marker {
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .py-12 {
@@ -4238,11 +4143,6 @@ details.collapse summary::-webkit-details-marker {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
-
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
 }
 
 .pb-12 {
@@ -4289,13 +4189,6 @@ details.collapse summary::-webkit-details-marker {
   padding-top: 2rem;
 }
 
-<<<<<<< Updated upstream
-=======
-.pb-4 {
-  padding-bottom: 1rem;
-}
-
->>>>>>> Stashed changes
 .text-left {
   text-align: left;
 }
@@ -4397,11 +4290,6 @@ details.collapse summary::-webkit-details-marker {
   letter-spacing: -0.025em;
 }
 
-.text-\[\#059669\] {
-  --tw-text-opacity: 1;
-  color: rgb(5 150 105 / var(--tw-text-opacity));
-}
-
 .text-blue-600 {
   --tw-text-opacity: 1;
   color: rgb(28 100 242 / var(--tw-text-opacity));
@@ -4410,6 +4298,11 @@ details.collapse summary::-webkit-details-marker {
 .text-gray-100 {
   --tw-text-opacity: 1;
   color: rgb(243 244 246 / var(--tw-text-opacity));
+}
+
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
 .text-gray-500 {
@@ -4432,11 +4325,6 @@ details.collapse summary::-webkit-details-marker {
   color: rgb(14 159 110 / var(--tw-text-opacity));
 }
 
-.text-red-400 {
-  --tw-text-opacity: 1;
-  color: rgb(249 128 128 / var(--tw-text-opacity));
-}
-
 .text-red-500 {
   --tw-text-opacity: 1;
   color: rgb(240 82 82 / var(--tw-text-opacity));
@@ -4452,14 +4340,8 @@ details.collapse summary::-webkit-details-marker {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-<<<<<<< Updated upstream
 .underline {
   text-decoration-line: underline;
-=======
-.text-gray-400 {
-  --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity));
->>>>>>> Stashed changes
 }
 
 .placeholder-red-700::-moz-placeholder {
@@ -4544,19 +4426,16 @@ details.collapse summary::-webkit-details-marker {
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-white:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-<<<<<<< Updated upstream
-=======
 .hover\:bg-gray-200:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
->>>>>>> Stashed changes
+.hover\:bg-white:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 .hover\:text-blue-600:hover {
   --tw-text-opacity: 1;
   color: rgb(28 100 242 / var(--tw-text-opacity));
@@ -4663,6 +4542,10 @@ details.collapse summary::-webkit-details-marker {
 }
 
 @media (min-width: 768px) {
+  .md\:inset-0 {
+    inset: 0px;
+  }
+
   .md\:hidden {
     display: none;
   }
