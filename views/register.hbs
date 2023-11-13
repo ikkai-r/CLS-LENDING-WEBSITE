@@ -1,6 +1,34 @@
 
 
-<div class="min-h-screen h-screen w-full grid grid-cols-3 flex justify-center items-center">
+<div class="min-h-screen h-screen w-full grid grid-cols-3 flex justify-center items-center" >
+                 <div id="modal-bg" class="w-full h-full bg-[#848A97] top-0 absolute hidden opacity-75" style="z-index: 9999;"></div>
+                 
+                <div id="success-popup-modal" tabindex="-1" class="w-full h-full top-0 absolute flex justify-center items-center hidden" style="z-index: 9999;">
+                    <div class="relative w-full max-w-md max-h-full ">
+                        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                            <div class="p-6 text-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="text-[#059669] mx-auto h-11 rounded-full bg-[#D1FAE5] w-15 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <h3 class="mb-3 text-lg font-normal text-gray-500">Successfully registered!</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+              <div id="error-popup-modal" tabindex="-1" class="w-full h-full top-0 absolute flex justify-center items-center hidden" style="z-index: 9999;">
+                    <div class="relative w-full max-w-md max-h-full">
+                        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                            <div class="p-6 text-center">
+                                <svg class="mx-auto mb-4 text-red-400 w-15 h-11 mb-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+                                </svg>
+                                <h3 class="mb-3 text-lg font-normal text-gray-500">Error! Please try again.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
 
         <div id="myTabContent" class="col-span-3 lg:col-span-2 bg-cmgray flex justify-center items-center lg:h-full">
             
@@ -29,17 +57,17 @@
                                     </svg>
                                     <span class="text-left text-sm">Full Name</span>
                                 </div>
-                                <div class="flex flex-row gap-5 mb-6">
+                                <div class="flex flex-row gap-2 mb-6">
                                     <div class="relative w-full">
-                                        <i class="fa fa-user absolute mt-2 ml-3" id="icon-user"></i>
                                         <input type="text" placeholder="First Name" id="first_name" name="first_name" class="text-sm pl-10 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none" required onchange="changeField(this)">
                                     </div>
                                     <div class="relative w-full">
-                                        <i class="fa fa-user absolute mt-2 ml-3" id="icon-user"></i>
-                                        <input type="text" placeholder="Last Name" id="last_name" name="last_name" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border border-gray-300 rounded-lg focus:outline-none" required onchange="changeField(this)">
+                                        <input type="text" placeholder="Middle Name" id="middle_name" name="middle_name" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border border-gray-300 rounded-lg focus:outline-none" onchange="changeField(this)">
+                                    </div>
+                                    <div class="relative w-full">
+                                        <input type="text" placeholder="Last Name" id="last_name" name="last_name" class="text-sm pl-10 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none" required onchange="changeField(this)">
                                     </div>
                                 </div>
-
                                 <div class="mb-6">
                                     <div class="flex flex-row items-center gap-2 mb-2.5">
                                     <svg class="w-4 h-4 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
@@ -75,7 +103,6 @@
                                     <span class="text-left text-sm">Region</span>
                                 </div>
                                 <div class="relative mb-6">
-                                    <i class="fa-solid fa-address-card absolute mt-2 ml-3" id="icon-address"></i>
                                     <select name="region" id="region" onclick="checkClick(this)">
                                         <option value="none" selected disabled hidden>Select an Option</option> 
                                     </select>
@@ -146,7 +173,6 @@
                                     <span class="text-left text-sm">Email</span>
                                 </div>
                                 <div class="relative mb-5">
-                                    <i class="fa-solid fa-envelope absolute mt-2 ml-3" id="icon-envelope"></i>
                                     <input type="email" placeholder="name@flowbite.com" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="text-sm pl-10 px-4 py-3 peer focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required onchange="changeField(this)">
                                      <span class="mt-2 hidden text-sm text-red-500 peer-[&:not(:placeholder-shown):not(:focus):invalid]:block">
                                         Please enter a valid email address
@@ -160,7 +186,6 @@
                                     <span class="text-left text-sm">Password</span>
                                 </div>
                                 <div class="relative mb-5">
-                                    <i class="fa-solid fa-envelope absolute mt-2 ml-3" id="icon-envelope"></i>
                                     <input type="password" placeholder="••••••••" id="password-tks" name="password" class="text-sm pl-10 px-4 py-3  focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required onchange="changeField(this);" oninput="validatePassword()">
                                 </div>
 
@@ -195,7 +220,6 @@
                                     <span class="text-left">Contact Number</span>
                                 </div>
                                 <div class="relative mb-5">
-                                    <i class="fa-solid fa-phone absolute mt-2 ml-3" id="icon-phone"></i>
                                     <input type="tel" placeholder="09xxxxxxxxx" id="contact_number" name="contact_number" pattern="^09\d{9}$" class="peer text-sm pl-10 px-4 py-3 focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none" required onchange="changeField(this)">
                                      <span class="mt-2 hidden text-sm text-red-500 peer-[&:not(:placeholder-shown):not(:focus):invalid]:block">
                                         Please enter valid phone number.
@@ -208,7 +232,6 @@
                                     <span class="text-left">Facebook Account Link</span>
                                 </div>
                                 <div class="relative mb-5">
-                                    <i class="fa-solid fa-facebook absolute mt-2 ml-3" id="icon-facebook"></i>
                                     <input type="text" placeholder="facebook.com/abc" id="facebook_link" name="facebook_link" class="text-sm pl-10 px-4 py-3 focus:bg-gray-100 border-2 border-gray-200 rounded-lg focus:outline-none peer" pattern="(https:\/\/)?(www\.)?facebook\.com\/[a-zA-Z0-9.]+" required onchange="changeField(this)">
                                         <span class="mt-2 hidden text-sm text-red-500 peer-[&:not(:placeholder-shown):not(:focus):invalid]:block">
                                         Please enter valid Facebook link.
@@ -369,7 +392,6 @@
  
     </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://f001.backblazeb2.com/file/buonzz-assets/jquery.ph-locations-v1.0.0.js"></script>
 <script src="/js/file_preview.js"></script>
 <script src="/js/register.js"></script>

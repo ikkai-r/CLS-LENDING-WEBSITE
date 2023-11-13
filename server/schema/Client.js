@@ -2,11 +2,14 @@ const mongoose = require("mongoose");
 const clientSchema = new mongoose.Schema({
     profile_pic:{
         type:String,
-        // default thing here
+        default: '/images/pfp_default.jpg'
     },
     first_name: {
         type: String,
         required: true
+    },
+    middle_name:{
+        type: String
     },
     last_name:{
         type: String,

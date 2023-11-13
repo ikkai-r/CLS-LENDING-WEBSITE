@@ -9,4 +9,5 @@ app.get('/dashboard', controller.getDashboard);
 app.get('/c_dashboard', controller.getClientDashboard);
 app.get('/c_profile', controller.getClientProfile);
 
+
 module.exports = app;
