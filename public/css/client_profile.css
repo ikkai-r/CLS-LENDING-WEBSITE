@@ -169,7 +169,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.tabs a.tab {
+.tabs a.tab{
     font-size: 18px; 
     color: black; 
     width: 400px; 
@@ -184,5 +184,30 @@ body {
 .tabs {
     display: flex;
     justify-content: flex-start;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-buttons-container button {
+    font-size: 15px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.input-buttons-container .input-button-active {
+    background-color: #14213d;
+    color: white;
+}
+
+#loan-amount {
+    width: 313px; 
 }
 
