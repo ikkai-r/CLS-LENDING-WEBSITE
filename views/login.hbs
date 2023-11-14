@@ -17,7 +17,7 @@
                     
                     <div class="container">
                     <!-- email -->
-                     <label for="email-login" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white text-left">Your email</label>
+                     <label id="email-label" for="email-login" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white text-left">Your email</label>
                         <div class="relative flex items-center">
                             <div class="absolute inset-y-0 flex items-center pl-3.5 pointer-events-none">
                             <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
@@ -29,7 +29,7 @@
                         </div>
 
                         <!-- password -->
-                        <label for="pass-login" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white mt-5 text-left">Password</label>
+                        <label id="password-label" for="pass-login" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white mt-5 text-left">Password</label>
                         <div class="relative flex items-center">
                             <div class="absolute inset-y-0 flex items-center pl-3.5 pointer-events-none">
                             <svg class="w-4 h-4 text-gray-500 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
@@ -52,7 +52,7 @@
                         <a href="#" class="text-sm font-medium text-blue-600 hover:underline">Forgot password?</a>
                         </div>
                     </div>
-                        <button class="btn login-btn mt-10" style="width: 90%;">Sign in</button>
+                        <button id="login-button" class="btn login-btn mt-10" style="width: 90%;">Sign in</button>
                               
                 </form>
             </div>
@@ -67,4 +67,7 @@
             
     </div>
  </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/js/login_form.js"></script>
     

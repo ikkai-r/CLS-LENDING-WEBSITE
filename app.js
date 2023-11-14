@@ -19,11 +19,16 @@ app.use(`/`, routes);
 // MongoDB schemas
 const Audit = require('./server/schema/Audit');
 const Client = require('./server/schema/Client');
+const Employee = require('./server/schema/Employee');
 const Loan_Detail = require('./server/schema/Loan_Detail');
 const Loan = require('./server/schema/Loan');
 
 const registerRouter = require('./routes/register.js');
 app.use('/register', registerRouter);
+
+const loginRouter = require('./routes/login.js');
+app.use('/login', loginRouter);
+
 
 app.set("view engine", "hbs");
 app.set("views", "./views");
