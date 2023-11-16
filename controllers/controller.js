@@ -11,7 +11,7 @@ const controller = {
         res.render('dashboard', {layout: 'layouts/main', css: '/css/hamburger.css'});
     },
     getClientDashboard: function (req, res) {
-        res.render('client_dashboard', {layout: 'layouts/main_no'});
+        res.render('client_dashboard', {layout: 'layouts/main_no', css: '/css/client_profile.css'});
     },
     getClientProfile: function (req, res) {
         res.render('client_profile', {layout: 'layouts/main', css: '/css/client_profile.css'});
