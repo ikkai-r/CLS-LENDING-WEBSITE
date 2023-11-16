@@ -1,0 +1,169 @@
+<div class="parent-container flex flex-col items-center">
+        <!-- First Container: Overview -->
+        <div class="profile-container custom-width">
+            <div class="profile-picture">
+                <img src="/images/pfp_default.jpg" alt="Profile Picture">
+            </div>
+            <h1 class="display-name">John Doe</h1>
+            <div class="buttons-container">
+                <button class="apply-loan-button" type="button" data-modal-toggle="loan-app-modal">Apply for a Loan</button>
+
+                <!-- loan app modal -->
+                <div id="loan-app-modal" aria-hidden="true" class="hidden overflow-x-hidden overflow-y-auto fixed h-modal md:h-full top-4 left-0 right-0 md:inset-0 z-50 justify-center items-center">
+                    <div class="relative w-full max-w-md px-4 h-full md:h-auto">
+                        <!-- loan app content -->
+                        <div class="container">
+                            <div class="flex justify-end p-2">
+                                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white" data-modal-toggle="loan-app-modal">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
+                                </button>
+                            </div>
+
+                            <form class="space-y-6 px-6 lg:px-8 pb-4 sm:pb-6 xl:pb-8" action="#">
+                                <h2 class="container-heading" style="font-weight: bold;">Loan Application</h2>
+                                
+                                <div>
+                                    <label for="loan-amount" class="label text-left" style="text-align: left;">Amount</label>
+                                    <select name="loan-amount" id="loan-amount" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required="">
+                                        <!-- example values -->
+                                        <option value="1000">₱ 1,000</option>
+                                        <option value="5000">₱ 5,000</option>
+                                        <option value="10000">₱ 10,000</option>
+                                        
+                                    </select>
+                                </div>
+
+                                <div style="padding-top: 10px; padding-bottom: 10px;"> 
+                                    <label for="loan-term" class="label" style="text-align: left;">Terms</label>
+                                    <select name="loan-term" id="loan-term" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required="">
+                                        <!-- example values -->
+                                        <option value="12">12 months</option>
+                                        <option value="24">24 months</option>
+                                        <option value="36">36 months</option>
+                                    </select>
+                                </div>           
+
+                                <div class="buttons-container">
+                                <button class="apply-loan-button mt-10" style="width: 50%">Apply</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div> 
+                <button class="edit-profile-button">Edit Profile</button>
+            </div>
+            <div class="email-container">
+                <div class="email-label">Email</div>
+                <div class="email-value">
+                    <span class="hidden-email" id="hidden-email">abcd123@gmail.com</span>
+                    <button class="reveal-button" id="reveal-button">Reveal</button>
+                </div>
+            </div>
+            <div class="loan-details">
+                <div class="loan-count">
+                    <div class="label">Applied Loans</div>
+                    <div class="value">20</div>
+                </div>
+                <div class="loan-count">
+                    <div class="label">Fully Paid Loans</div>
+                    <div class="value">20</div>
+                </div>
+                <div class="loan-count">
+                    <div class="label">Upcoming Dues</div>
+                    <div class="value">20</div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- PROFILE TAB -->
+        <div class="tab-content" id="profile-content">
+                <div class="tabs mt-8 flex space-x-1">
+                    <a class="tab tab-lifted tab-active" id="profile-tab">Profile</a>
+                    <a class="tab tab-lifted" id="loan-history-tab">Loan History</a>
+                    <a class="tab tab-lifted" id="account-settings-tab">Account Settings</a>
+                </div>  
+
+                <!-- Second Container: Personal Details -->
+                <div class="container custom-width">
+                    <h2 class="container-heading">Personal Details</h2>
+                    <div class="details-container">
+                        <div class="detail">
+                            <div class="label">First Name</div>
+                            <div class="value">John</div>
+                        </div>
+                        <div class="detail">
+                            <div class="label">Last Name</div>
+                            <div class="value">Doe</div>
+                        </div>
+                        <div class="detail">
+                            <div class="label">Birthday</div>
+                            <div class="value">January 1, 2000</div>
+                        </div>
+                        <div class="detail">
+                            <div class="label">Gender</div>
+                            <div class="value">Male</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Third Container: Contact Details -->
+                <div class="container custom-width">
+                    <h2 class="container-heading">Contact Details</h2>
+                    <div class="details-container">
+                        <div class="detail">
+                            <div class="label">Mobile Number</div>
+                            <div class="value">xxxx</div>
+                        </div>
+                        <div class="detail">
+                            <div class="label">Phone Type</div>
+                            <div class="value">xxxx</div>
+                        </div>
+                        <div class="detail">
+                            <div class="label">Facebook Link</div>
+                            <div class="value">xxxx</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fourth Container: Address Details -->
+                <div class="container custom-width">
+                    <h2 class="container-heading">Address Details</h2>
+                    <div class="details-container">
+                        <div class="detail">
+                            <div class="label">Country</div>
+                            <div class="value">Philippines</div>
+                        </div>
+                        <div class="detail">
+                            <div class="label">Region</div>
+                            <div class="value">NCR</div>
+                        </div>
+                        <div class="detail">
+                            <div class="label">Province</div>
+                            <div class="value">First District</div>
+                        </div>
+                        <div class="detail">
+                            <div class="label">City</div>
+                            <div class="value">Las Pinas City</div>
+                        </div>
+                        <div class="detail">
+                            <div class="label">Barangay</div>
+                            <div class="value">Talon Uno</div>
+                        </div>
+                        <div class="detail">
+                            <div class="label">Zipcode</div>
+                            <div class="value">1754</div>
+                        </div>
+                        <div class="detail">
+                            <div class="label">Additional Details</div>
+                            <div class="value">Blk 53</div>
+                        </div>
+                    </div>
+                </div>
+        </div>  
+</div>  
+
+<script src="/js/email_hider.js"></script>
+<script src="/js/client_profile_tabs.js"></script>
+<script src="/js/loan_validator.js"></script>
+<script src="/js/loan_toggleInput.js"></script>

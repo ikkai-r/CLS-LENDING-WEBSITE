@@ -6,30 +6,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CLS Lending</title>
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="{{css}}">
     <script src="/js/digital_clock.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/f3e84a984d.js" crossorigin="anonymous"></script>
   </head>
 
-  <body>
+  <body class="bg-cmgray h-full min-h-screen">
             <!--  header  -->
         <div class="navbar bg-base-100">
           <div class="flex-none">
-            <img src="/images/logo.png" alt="Logo" class="h-10 w-auto" style="height: 5rem;">
+            <img src="/images/logo.png" alt="Logo" class="h-10">
           </div>
           <div class="flex-1">
             <div class="flex items-center" style="margin-left: 1rem;"> 
-              <a class="text-button normal-case text-sm squeezed-font">Building a <span class="highlighted-text">Solid</span> Financial Foundation</a>
+              <a class="text-button normal-case text-sm squeezed-font" style="font-size: 20px">Building a <span class="highlighted-text">Solid</span> Financial Foundation</a>
             </div>
           </div>
           <div class="flex-none" style="margin-right: 1rem;">
-            <p class="text-xl" id="date-time"></p>
+            <p class="text-sm mx-40" id="date-time"></p>
+            <img src="/images/site_city.png" class="fixed right-7 h-20">
           </div>
         </div>
 
 
         {{{body}}}
-        
+        <script src="/node_modules/flowbite/dist/flowbite.min.js"></script>
   </body>
 </html>

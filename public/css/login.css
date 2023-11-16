@@ -72,3 +72,212 @@
     color: #14213d
   }
   
+
+.btn {
+  display: inline-flex;
+  flex-shrink: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border-color: transparent;
+  border-color: hsl(var(--b2) / var(--tw-border-opacity));
+  text-align: center;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-duration: 200ms;
+  border-radius: var(--rounded-btn, 0.5rem);
+  height: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  min-height: 3rem;
+  font-size: 0.875rem;
+  line-height: 1em;
+  gap: 0.5rem;
+  font-weight: 600;
+  text-decoration-line: none;
+  border-width: var(--border-btn, 1px);
+  animation: button-pop var(--animation-btn, 0.25s) ease-out;
+  text-transform: var(--btn-text-case, uppercase);
+  --tw-border-opacity: 1;
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--b2) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--bc) / var(--tw-text-opacity));
+  outline-color: hsl(var(--bc) / 1);
+}
+
+/*
+   <!--  HEADER  -->
+*/
+
+.navbar {
+  border-bottom: 0.4rem solid rgba(0, 0, 0, 0.253);
+  display: flex;
+  align-items: center;
+  padding: var(--navbar-padding, 0.5rem);
+  min-height: 4rem;
+  width: 100%;
+  background-color: white;
+  color: #333;
+  position: absolute;
+  z-index: 1;
+}
+
+:where(.navbar > *) {
+  display: inline-flex;
+  align-items: center;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+.flex-none {
+  flex: none;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.normal-case {
+  text-transform: none;
+}
+
+.squeezed-font {
+  font-size: 1.2rem; 
+  letter-spacing: -0.05em; 
+}
+
+.text-button {
+  color: hsl(var(--bc) / var(--tw-text-opacity));
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.5rem; 
+}
+
+.text-button {
+  display: inline; 
+  padding: 0; 
+  background: none; 
+  border: none; 
+  cursor: auto; 
+  font-size: 1.5rem;
+}
+
+.highlighted-text {
+  color: #FCA311;
+}
+
+/*lagay q muna d2 ung css for login, de aq shur kung paano sia ipasa sa routes x_X */
+#background{
+  position: absolute;
+  background: rgb(255, 255, 255); 
+  height: 100vh; 
+  width: 100%;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.788), rgba(255, 255, 255, 0.788)), url("/images/corporate_background.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+#background #container{
+  position: relative;
+  height: 70vh; 
+  width: 90vw;
+  margin: auto;
+  top: 20vh;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+#background .box{
+  position: relative;
+  height: 100%; 
+  width: 50%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#left-box #logo{
+  position: relative;
+  height: 20rem;
+  text-align: center;
+  justify-content: center;
+}
+
+#right-box #login-container{
+  position: relative;
+  background: rgb(255, 255, 255);
+  height: 75%;
+  width: 65%;
+  border-radius: 3rem;
+  border-right: 0.7rem solid rgba(0, 0, 0, 0.377);
+  border-bottom: 0.7rem solid rgba(0, 0, 0, 0.377);
+  display: flex;
+  flex-direction: column;
+}
+
+#login-container .section{
+  position: relative;
+  height: 20%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+#login-container #upper{
+  flex-direction: left;
+  border-bottom: 0.3rem solid #14213d;
+  overflow: hidden;
+}
+
+#upper h1{
+  position: relative;
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  text-wrap: nowrap;
+  color: #14213d
+}
+
+#username-login, #password-login {
+  width: 85%;
+  height: 8vh;
+  color: black;
+}
+
+#username-login:focus, #password-login:focus {
+  border: .05rem solid #14213d; 
+}
+
+.btn {
+  font-size: 1.1em;
+  font-weight: 600;
+  background-color: #14213d;
+  color: white;
+  border-radius: 5rem;
+  outline: none;
+}
+
+.btn:hover {
+  background-color: white;
+  color: #FCA311;
+  border: .1rem solid #FCA311;
+}
+
+#icon-user, #icon-lock {
+  color: #14213d;
+}

@@ -1,0 +1,213 @@
+body {
+    background-color: #e5e5e5;
+}
+
+.profile-container {
+    text-align: center;
+    margin: auto;
+    margin-top: 2%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    margin: 0 auto;
+    transition: transform 0.3s;
+}
+
+.profile-picture img:hover {
+    transform: scale(1.1); 
+}
+
+.display-name {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.email-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.email-label {
+    font-weight: bold;
+    margin-right: 10px;
+    margin-top: 6px;
+    transition: color 0.3s;
+}
+
+.hidden-email {
+    display: none;
+}
+
+.reveal-button {
+    background: #14213d;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.reveal-button:hover {
+    background-color: #FCA311; 
+    transform: scale(1.05); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.loan-details {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px; 
+    margin-left: 16px;
+}
+
+.loan-count {
+    border: 3px solid #14213d;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+}
+
+.loan-count:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.label {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px; 
+    display: block; 
+    transition: color 0.3s;
+}
+
+.value {
+    text-align: center; 
+    margin-top: 5px; 
+}
+
+.container {
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    background-color: white;
+}
+
+.container-heading {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    text-align: left;
+    border-bottom: 3px solid #FCA311;
+    display: inline-block; /* Set to inline-block */
+    width: 100%; /* Make it take up full width */
+}
+
+.detail {
+    border: 3px solid #14213d;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.detail:hover { 
+    transform: scale(1.05); 
+}
+
+.details-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px; 
+}
+
+.reveal-button:hover, .loan-count:hover, .detail:hover {
+    cursor: pointer; 
+}
+
+.container, .profile-container {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.container-heading, .display-name {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.buttons-container {
+    margin-top: 20px;
+}
+
+.apply-loan-button,
+.edit-profile-button {
+    background-color: #14213d;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 10px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.apply-loan-button:hover,
+.edit-profile-button:hover {
+    background-color: #FCA311; 
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tabs a.tab{
+    font-size: 18px; 
+    color: black; 
+    width: 400px; 
+    display: inline-block;
+    text-align: center;
+}
+
+.tabs .tab-active::before {
+    background-color: black; 
+}
+
+.tabs {
+    display: flex;
+    justify-content: flex-start;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-buttons-container button {
+    font-size: 15px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.input-buttons-container .input-button-active {
+    background-color: #14213d;
+    color: white;
+}
+
+#loan-amount {
+    width: 313px; 
+}
+

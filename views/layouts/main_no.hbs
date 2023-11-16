@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLS Lending</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/loader.css">
+    <link rel="stylesheet" href="{{css}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/f3e84a984d.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body class="bg-cmgray">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+         {{> loader}}
+        {{{body}}}
+        
+        <script src="/node_modules/flowbite/dist/flowbite.min.js"></script>
+        <script>
+          $(window).on('load', function () {
+              // Fade out the loader quickly
+              $('.loader-wrapper').fadeOut("slow");
+          });
+        </script>
+  </body>
+</html>
