@@ -66,6 +66,8 @@ router.get("/clientLogIn", async function(req, res) {
             const exists = copy.length > 0;
     
             res.json(exists);
+        } else {
+            res.json(false);
         }
         
     } catch(err) {

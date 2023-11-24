@@ -40,21 +40,28 @@ function submitAllForms(){
         contentType: false,
         enctype: 'multipart/form-data',
         success : function(data) {
+
             console.log(data.message);
             console.log('Successfully registered!');
+
             //add modal successfully registered
             modalbg.classList.remove('hidden');
             successmodal.classList.remove('hidden');
+
             //add timeout
             setTimeout(function() {
                 window.location.href = "/c_dashboard";
             }, 2000);
+
         },
         error: function(error) {
+
             console.error('Error submitting form:', error);
+            
             //add modal please try again 
             modalbg.classList.remove('hidden');
             errormodal.classList.remove('hidden');
+
             //add time out then hide
             setTimeout(function() {
                 modalbg.classList.add('hidden');

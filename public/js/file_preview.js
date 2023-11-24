@@ -282,6 +282,7 @@ $(function () {
 
 
 function submitAllForms() {
+
     if(validateFormUpload()) {
         //submit all forms
         // document.getElementById('personal-info-form').submit();
@@ -291,6 +292,7 @@ function submitAllForms() {
         //redirect to client dashboard
         window.location.href = '/c_dashboard';
     }
+    
 }
 
 
@@ -401,9 +403,45 @@ function checkClick(element) {
     $(element).addClass('border-gray-300');
 }
 
+async function checkUniqueEmail(element) {
+
+    let found = false;
+
+    if ( element.id == 'email' ){
+        try {
+            if ( element.value != '' ){
+                const response = await fetch(`/register/verifyClientEmail?email=${element.value}`, {
+                    method: "GET"
+                });
+                found = await response.json();
+            }
+            
+        } catch(err) {
+            console.log(err);
+        }
+
+        if(found) {
+            $(element).addClass('border-red-500');
+            $(element).removeClass('border-gray-200');
+            return false;
+        } else {
+            $(element).removeClass('border-red-500');
+            $(element).addClass('border-gray-300');
+            return true;
+        }
+    } 
+
+}
+
 function changeField(element) {
-    $(element).removeClass('border-red-500');
-    $(element).addClass('border-gray-300');
+
+    if ( element.id == 'email' ){
+        checkUniqueEmail(element);
+    } else {
+        $(element).removeClass('border-red-500');
+        $(element).addClass('border-gray-300');
+    }
+
 }
 
 function removeError(element) {
@@ -467,7 +505,7 @@ function validateFormFieldsC(event) {
     const facebookRegex = /^(https:\/\/)?(www\.)?facebook\.com\/[a-zA-Z0-9.]+/;
     const emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
 
-    if(emailField.value.trim() === '' || !emailRegex.test(emailField.value)) {
+    if(emailField.value.trim() === '' || !emailRegex.test(emailField.value) ) {
         $(emailField).addClass('border-red-500');
         $(emailField).removeClass('border-gray-300');
         $(emailField).addClass('placeholder-red-700');
@@ -507,6 +545,15 @@ function validateFormFieldsC(event) {
         $(facebookField).removeClass('placeholder-red-700');
     }
 
+
+    // I AM NOT SURE HOW TO DO THIS. Dapat hinihinto niya mag next step pag hindi unique ung email
+    checkUniqueEmail(emailField).then((res) => {
+        // Unique email (true - unique, false - not unique)
+        if (res === false){
+            console.log(res)
+            event.stopImmediatePropagation();
+        }
+    });
 
     if (
         emailField.value.trim() === '' || !emailRegex.test(emailField.value) ||
