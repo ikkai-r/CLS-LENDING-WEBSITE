@@ -15,6 +15,9 @@ const controller = {
     },
     getClientProfile: function (req, res) {
         res.render('client_profile', {layout: 'layouts/main', css: '/css/client_profile.css'});
+    } ,
+    getLoanRecords: function (req, res) {
+        res.render('loan-records', {layout: 'layouts/main', css: '/css/hamburger.css'});
     }
 
 }
