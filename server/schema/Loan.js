@@ -1,6 +1,9 @@
 const { Decimal128 } = require("mongodb");
 const mongoose = require("mongoose");
 const loanSchema = new mongoose.Schema({
+    reference:{
+        type: String,
+    },
     date_applied:{
         type: Date,
     },
