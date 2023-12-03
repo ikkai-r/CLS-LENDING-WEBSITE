@@ -1640,10 +1640,12 @@ input:checked + .toggle-bg {
 
 .navbar {
   display: flex;
-  position: fixed;
+  position: sticky;
   align-items: center;
   padding: var(--navbar-padding, 0.5rem);
-  min-height: 4rem;
+  min-height: 1rem;
+  max-height: 2.5rem;
+  top:0;
   width: 100%;
 }
 

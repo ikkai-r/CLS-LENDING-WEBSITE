@@ -8,7 +8,7 @@ const controller = {
         res.render('register', {layout: 'layouts/main_no', css: '/css/register.css'})
     },
     getDashboard: function (req, res) {
-        res.render('dashboard', {layout: 'layouts/main_no', css: '/css/hamburger.css'});
+        res.render('dashboard', {layout: 'layouts/main', css: '/css/hamburger.css'});
     },
     getClientDashboard: function (req, res) {
         res.render('client_dashboard', {layout: 'layouts/main_no', css: '/css/client_profile.css'});
