@@ -1,18 +1,18 @@
-
+<link rel="stylesheet" href="/css/calendar.css">
 <!-- toolbar here, to be expanded, need to adjust width -->
 <div class="fixed bg-cmblue sidebar">
     {{> admin_sidebar}}
 </div>
 
 <!-- right side of the screen, margin will be adjusted if toolbar got expanded -->
-<div class="ml-28 mr-16 mt-10 grid grid-cols-7 gap-10 h-10 content">
+<div class="ml-28 mr-16 grid grid-cols-7 gap-10 h-10 content">
 
         <!-- hello admin stats  -->
-    <div class="rounded-xl col-span-3 p-8 bg-white">
+    <div class="rounded-xl mt-10 col-span-2 p-8 bg-white">
             <div>
                 <p class="mx-3 mb-10 font-bold text-4xl"> Hello admin! </p>
             </div>
-            <div class="rounded-lg p-3 m-3 bg-green-400">
+            <div class="rounded-lg p-3 m-3 mb-4 bg-green-400">
                 <p class="text-3xl text-right font-bold"> 500 </p>
                 <p class="  text-lg text-right"> successful loans </p>
             </div>
@@ -27,9 +27,11 @@
     </div>
 
 <!-- calendar -->
-    <div class="rounded-xl col-span-4 p-8 bg-white">
-            <p class="mx-3 mb-10 font-bold text-3xl"> Calendar </p>
-            
+    <div class="rounded-xl mt-10 col-span-5 p-8 bg-white">
+            <p class="mx-3 mb-2 font-bold text-3xl"> Calendar </p>
+            <div class="responsive-iframe-container">
+                <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FManila&showDate=1&showPrint=0&showCalendars=0&showTz=0&showNav=1&showTitle=0&src=ZW4tZ2IucGhpbGlwcGluZXMjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%230B8043" style="border-width:0" width="680" height="300" frameborder="0" scrolling="no"></iframe>
+            </div>
     </div>
 
 <!-- statistics -->
