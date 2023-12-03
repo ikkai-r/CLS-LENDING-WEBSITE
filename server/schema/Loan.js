@@ -7,6 +7,7 @@ const loanSchema = new mongoose.Schema({
     date_approved:{
         type: Date
     },
+    // not sure if need additional dates for subsequent payments...?
     client: {
         type: mongoose.Schema.Types.ObjectId, ref:'Client'
     },
