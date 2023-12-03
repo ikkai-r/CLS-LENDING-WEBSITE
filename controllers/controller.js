@@ -22,4 +22,32 @@ const controller = {
 
 }
 
-module.exports = controller;
+//registration link generation
+const generatedLinks = new Map();
+
+function generateUniqueLink() {
+    return 'https://samplename.com/register/' + Math.random().toString(36).substring(2, 15);
+}
+
+function generateRegistrationLink(req, res) {
+    const link = generateUniqueLink();
+    generatedLinks.set(link, { expired: false });
+    res.json({ link });
+}
+
+function registerUser(req, res) {
+    const { link } = req.params;
+    const linkData = generatedLinks.get(link);
+    if (linkData && !linkData.expired) {
+        linkData.expired = true;
+        res.send('Registration successful!');
+    } else {
+        res.status(404).send('Invalid or expired registration link.');
+    }
+}
+
+module.exports = {
+    ...controller,
+    generateRegistrationLink,
+    registerUser,
+};
