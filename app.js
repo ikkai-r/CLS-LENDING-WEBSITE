@@ -29,6 +29,8 @@ app.use('/register', registerRouter);
 const loginRouter = require('./routes/login.js');
 app.use('/login', loginRouter);
 
+const loanRecordsRouter = require('./routes/loan_records.js');
+app.use('/loan-records', loanRecordsRouter);
 
 app.set("view engine", "hbs");
 app.set("views", "./views");
