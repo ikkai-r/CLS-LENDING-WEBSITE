@@ -335,10 +335,17 @@
     <div class="col-span-2 "></div>
 
     <!-- button -->
-    <div class="rounded-xl p-3 col-span-3 mb-8 bg-white">
-        <div class="text-xl text-center cursor-pointer"> Generate client registration link </div>
+    <div class="rounded-xl p-3 col-span-3 mb-8 flex items-center justify-center" id="registration-button">
+        <button class="button" onclick="openRegistrationModal(event)">Generate Registration Link</button>
     </div>
 
-</div>
+    <div id="registration-modal" class="hidden fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-50 flex items-center justify-center">
+        <div class="bg-white p-6 rounded-lg">
+            <p class="mb-4">Here is your registration link:</p>
+            <input type="text" id="registration-link-input" class="w-full mb-4" readonly>
+            <button onclick="copyRegistrationLink()" class="button">Copy Link</button>
+            <button onclick="closeRegistrationModal()" class="button">Close</button>
+        </div>
+    </div>
 
-
+<script src="/js/client-reg_link.js"></script>
