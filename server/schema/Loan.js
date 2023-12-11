@@ -1,33 +1,33 @@
-const { Decimal128, Int32 } = require("mongodb");
+const { Decimal128 } = require("mongodb");
 const mongoose = require("mongoose");
 const loanSchema = new mongoose.Schema({
     reference:{
         type: Number,
+        required: true,
     },
     date_applied:{
         type: Date,
+        required: true,
+        default: Date.now,
     },
     date_approved:{
         type: Date
     },
     // not sure if need additional dates for subsequent payments...?
     client: {
-        type: mongoose.Schema.Types.ObjectId, ref:'Client'
+        type: mongoose.Schema.Types.ObjectId, ref:'Client',
+        required: true
     },
     category: {
         type: String,
-        enum: ['Investment', 'Loan Out', 'Profit', 'Capital']
+        enum: ['Investment', 'Loan Out', 'Profit', 'Capital'],
     },
     status:{
         type: String,
-        enum: ['Paid', 'Overdue', 'Sent', 'Complete']
-
+        enum: ['Paid', 'Overdue', 'Sent', 'Complete'],
     },
     description:{
         type: String
-    },
-    reference:{
-        type:String
     },
     capital:{
         type: Decimal128,
@@ -48,7 +48,6 @@ const loanSchema = new mongoose.Schema({
     },
     approved:{
         type: String,
-        required: true,
         default: 'Pending',
         enum: ['Pending', 'Approved', 'Rejected']
     },

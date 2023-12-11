@@ -1,5 +1,9 @@
 const mongoose = require("mongoose");
 const clientSchema = new mongoose.Schema({
+    date_creation:{
+        type:Date,
+        default: Date.now
+    },
     profile_pic:{
         type:String,
         default: '/images/pfp_default.jpg'
