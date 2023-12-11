@@ -3390,6 +3390,14 @@ details.collapse summary::-webkit-details-marker {
   grid-column: span 7 / span 7;
 }
 
+.col-span-6 {
+  grid-column: span 6 / span 6;
+}
+
+.col-span-12 {
+  grid-column: span 12 / span 12;
+}
+
 .m-3 {
   margin: 0.75rem;
 }
@@ -3584,6 +3592,10 @@ details.collapse summary::-webkit-details-marker {
   margin-top: 2rem;
 }
 
+.ms-auto {
+  margin-inline-start: auto;
+}
+
 .block {
   display: block;
 }
@@ -3692,6 +3704,10 @@ details.collapse summary::-webkit-details-marker {
   height: 100vh;
 }
 
+.h-\[calc\(100\%-1rem\)\] {
+  height: calc(100% - 1rem);
+}
+
 .max-h-full {
   max-height: 100%;
 }
@@ -3792,6 +3808,10 @@ details.collapse summary::-webkit-details-marker {
   width: 2.5rem;
 }
 
+.w-8 {
+  width: 2rem;
+}
+
 .max-w-2xl {
   max-width: 42rem;
 }
@@ -3890,6 +3910,10 @@ details.collapse summary::-webkit-details-marker {
   grid-template-columns: repeat(7, minmax(0, 1fr));
 }
 
+.grid-cols-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -3962,6 +3986,10 @@ details.collapse summary::-webkit-details-marker {
   gap: 0.75rem;
 }
 
+.gap-6 {
+  gap: 1.5rem;
+}
+
 .space-x-1 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.25rem * var(--tw-space-x-reverse));
@@ -3990,6 +4018,12 @@ details.collapse summary::-webkit-details-marker {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
+
+.space-x-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.75rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .divide-y > :not([hidden]) ~ :not([hidden]) {
@@ -4068,6 +4102,16 @@ details.collapse summary::-webkit-details-marker {
   border-top-right-radius: 0.5rem;
 }
 
+.rounded-b {
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.rounded-t {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
 .border {
   border-width: 1px;
 }
@@ -4090,6 +4134,10 @@ details.collapse summary::-webkit-details-marker {
 
 .border-s {
   border-inline-start-width: 1px;
+}
+
+.border-t {
+  border-top-width: 1px;
 }
 
 .border-blue-600 {
@@ -4632,6 +4680,12 @@ details.collapse summary::-webkit-details-marker {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-sm {
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .outline {
   outline-style: solid;
 }
@@ -4748,6 +4802,11 @@ details.collapse summary::-webkit-details-marker {
   border-color: rgb(63 131 248 / var(--tw-border-opacity));
 }
 
+.focus\:border-blue-600:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(28 100 242 / var(--tw-border-opacity));
+}
+
 .focus\:bg-gray-100:focus {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
@@ -4795,6 +4854,11 @@ details.collapse summary::-webkit-details-marker {
   --tw-ring-color: rgb(248 180 180 / var(--tw-ring-opacity));
 }
 
+.focus\:ring-blue-600:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(28 100 242 / var(--tw-ring-opacity));
+}
+
 .group:hover .group-hover\:text-cmblue {
   --tw-text-opacity: 1;
   color: rgb(20 33 61 / var(--tw-text-opacity));
@@ -4817,11 +4881,23 @@ details.collapse summary::-webkit-details-marker {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+:is([dir="rtl"] .rtl\:space-x-reverse) > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 1;
+}
+
 :is([dir="rtl"] .rtl\:text-right) {
   text-align: right;
 }
 
 @media (min-width: 640px) {
+  .sm\:col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+
+  .sm\:col-span-6 {
+    grid-column: span 6 / span 6;
+  }
+
   .sm\:mr-5 {
     margin-right: 1.25rem;
   }
