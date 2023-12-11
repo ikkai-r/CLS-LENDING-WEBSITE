@@ -100,7 +100,6 @@ body {
 
 .container {
     text-align: center;
-    margin: auto;
     padding: 20px;
     border-radius: 10px;
     margin-top: 20px;
@@ -114,6 +113,16 @@ body {
     border-bottom: 3px solid #FCA311;
     display: inline-block; /* Set to inline-block */
     width: 100%; /* Make it take up full width */
+}
+
+.num-loan {
+    background-color: rgb(241, 236, 236);
+    border-radius: 3px;
+    padding-top: 5px;    
+    padding-bottom: 5px;    
+    padding-left: 8px;
+    padding-right: 8px;
+
 }
 
 .detail {
