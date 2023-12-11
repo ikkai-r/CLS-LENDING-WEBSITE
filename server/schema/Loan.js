@@ -1,8 +1,8 @@
-const { Decimal128 } = require("mongodb");
+const { Decimal128, Int32 } = require("mongodb");
 const mongoose = require("mongoose");
 const loanSchema = new mongoose.Schema({
     reference:{
-        type: String,
+        type: Number,
     },
     date_applied:{
         type: Date,
@@ -47,8 +47,10 @@ const loanSchema = new mongoose.Schema({
         enum: ['Monthly', 'Biweekly', 'Weekly', 'Quarterly']
     },
     approved:{
-        type: Boolean,
-        default: false
+        type: String,
+        required: true,
+        default: 'Pending',
+        enum: ['Pending', 'Approved', 'Rejected']
     },
     loan_details:{
         type: mongoose.Schema.Types.ObjectId, ref:'Loan_Detail'

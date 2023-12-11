@@ -15,7 +15,7 @@ const controller = {
                     {
                         $match: { 
                             category: 'Complete',
-                            approved: true 
+                            approved: 'Approved' 
                         }
                      },
                      {
@@ -31,7 +31,7 @@ const controller = {
                     {
                         $match: { 
                             category: 'Overdue',
-                            approved: true 
+                            approved: 'Approved' 
                         }
                      },
                      {
@@ -64,7 +64,7 @@ const controller = {
             const getUnapprovedLoans = await Loan.aggregate(
                 [
                     {
-                        $match: { approved: false }
+                        $match: { approved: 'Pending' }
                      },
                   
                     {
@@ -82,18 +82,58 @@ const controller = {
                     }
                   ]
             );
-
-            res.render('dashboard', 
-            {
-                layout: 'layouts/main', 
-                css: '/css/hamburger.css',
-                loan: getLoans,
-                successful_loans: getSuccessfulLoans[0].sLoans,
-                near_deadline_loans: 0,
-                overdue_loans: getOverdueLoans[0].oLoans,
-                unapproved_loan: getUnapprovedLoans
-                
-            });
+            if (getSuccessfulLoans.length == 0 && getOverdueLoans.length == 0){
+                res.render('dashboard', 
+                {
+                    layout: 'layouts/main', 
+                    css: '/css/hamburger.css',
+                    loan: getLoans,
+                    successful_loans: 0,
+                    near_deadline_loans: 0,
+                    overdue_loans: 0,
+                    unapproved_loan: getUnapprovedLoans
+                    
+                });
+            }
+            else if (getSuccessfulLoans.length == 0){
+                res.render('dashboard', 
+                {
+                    layout: 'layouts/main', 
+                    css: '/css/hamburger.css',
+                    loan: getLoans,
+                    successful_loans: 0,
+                    near_deadline_loans: 0,
+                    overdue_loans: getOverdueLoans[0].oLoans,
+                    unapproved_loan: getUnapprovedLoans
+                    
+                });
+            }
+            else if (getOverdueLoans.length == 0){
+                res.render('dashboard', 
+                {
+                    layout: 'layouts/main', 
+                    css: '/css/hamburger.css',
+                    loan: getLoans,
+                    successful_loans: getSuccessfulLoans[0].sLoans,
+                    near_deadline_loans: 0,
+                    overdue_loans: 0,
+                    unapproved_loan: getUnapprovedLoans
+                    
+                });
+            }
+            else{
+                res.render('dashboard', 
+                {
+                    layout: 'layouts/main', 
+                    css: '/css/hamburger.css',
+                    loan: getLoans,
+                    successful_loans: getSuccessfulLoans[0].sLoans,
+                    near_deadline_loans: 0,
+                    overdue_loans: getOverdueLoans[0].oLoans,
+                    unapproved_loan: getUnapprovedLoans
+                    
+                });
+            }
         } catch(err) {
             console.log(err);
         }
@@ -128,7 +168,7 @@ const controller = {
             const getUnapprovedLoans = await Loan.aggregate(
                 [
                     {
-                        $match: { approved: false }
+                        $match: { approved: 'Pending' }
                      },
                   
                     {
