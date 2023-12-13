@@ -10,29 +10,29 @@
                     <div class="flex flex-col">
                         <div>
                             <span class="text-lg mr-2">Total Estimates</span>
-                            <span class="text-sm num-loan  font-bold ">6</span>
+                            <span class="text-sm num-loan  font-bold ">{{total_estimates}}</span>
                         </div>
                         <div class="flex gap-9">
                             <div class="mr-10">
                                 <div class="pt-5">
-                                <span class="text-lg font-bold mr-2">₱10,302.00</span>
+                                <span class="text-lg font-bold mr-2">₱{{accepted_money}}</span>
                                 </div>
                                 <div class="flex items-center mt-2">
                                     <svg class="w-4 h-4 text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 10">
                                         <path d="M9.207 1A2 2 0 0 0 6.38 1L.793 6.586A2 2 0 0 0 2.207 10H13.38a2 2 0 0 0 1.414-3.414L9.207 1Z"/>
                                     </svg>
-                                <span class="text-sm ml-2 text-gray-500">ACCEPTED (2)</span>
+                                <span class="text-sm ml-2 text-gray-500">ACCEPTED ({{accepted_num}})</span>
                                 </div>
                             </div>
                             <div>
                                 <div class="pt-5">
-                                <span class="text-lg font-bold mr-2">₱5,302.00</span>
+                                <span class="text-lg font-bold mr-2">₱{{pending_money}}</span>
                                 </div>
                                 <div class="flex items-center mt-2">
                                     <svg class="w-4 h-4 text-amber-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 10">
                                         <path d="M9.207 1A2 2 0 0 0 6.38 1L.793 6.586A2 2 0 0 0 2.207 10H13.38a2 2 0 0 0 1.414-3.414L9.207 1Z"/>
                                     </svg>
-                                <span class="text-sm ml-2 text-gray-500">PENDING (2)</span>
+                                <span class="text-sm ml-2 text-gray-500">PENDING ({{pending_num}})</span>
                                 </div>
                             </div>
                         </div>
@@ -43,40 +43,40 @@
                     <div class="flex flex-col">
                         <div>
                             <span class="text-lg mr-2">Loan Invoices</span>
-                            <span class="text-sm num-loan  font-bold ">6</span>
+                            <span class="text-sm num-loan  font-bold ">{{total_loan_invoices}}</span>
                         </div>
                         <div class="flex gap-9">
                             <div class="mr-10">
                                 <div class="pt-5">
-                                <span class="text-lg font-bold mr-2">₱10,302.00</span>
+                                <span class="text-lg font-bold mr-2">₱{{paid_money}}</span>
                                 </div>
                                 <div class="flex items-center mt-2">
                                     <svg class="w-4 h-4 text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 10">
                                         <path d="M9.207 1A2 2 0 0 0 6.38 1L.793 6.586A2 2 0 0 0 2.207 10H13.38a2 2 0 0 0 1.414-3.414L9.207 1Z"/>
                                     </svg>
-                                <span class="text-sm ml-2 text-gray-500">PAID (1)</span>
+                                <span class="text-sm ml-2 text-gray-500">PAID ({{paid_num}})</span>
                                 </div>
                             </div>
                             <div class="mr-10">
                                 <div class="pt-5">
-                                <span class="text-lg font-bold mr-2">₱5,302.00</span>
+                                <span class="text-lg font-bold mr-2">₱{{pending_money}}</span>
                                 </div>
                                 <div class="flex items-center mt-2">
                                     <svg class="w-4 h-4 text-amber-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 10">
                                         <path d="M9.207 1A2 2 0 0 0 6.38 1L.793 6.586A2 2 0 0 0 2.207 10H13.38a2 2 0 0 0 1.414-3.414L9.207 1Z"/>
                                     </svg>
-                                <span class="text-sm ml-2 text-gray-500">PENDING (2)</span>
+                                <span class="text-sm ml-2 text-gray-500">PENDING ({{pending_num}})</span>
                                 </div>
                             </div>
                             <div>
                                 <div class="pt-5">
-                                <span class="text-lg font-bold mr-2">₱5,302.00</span>
+                                <span class="text-lg font-bold mr-2">₱{{overdue_money}}</span>
                                 </div>
                                 <div class="flex items-center mt-2">
                                     <svg class="w-4 h-4 text-red-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 10">
                                         <path d="M9.207 1A2 2 0 0 0 6.38 1L.793 6.586A2 2 0 0 0 2.207 10H13.38a2 2 0 0 0 1.414-3.414L9.207 1Z"/>
                                     </svg>
-                                <span class="text-sm ml-2 text-gray-500">OVERDUE (3)</span>
+                                <span class="text-sm ml-2 text-gray-500">OVERDUE ({{overdue_num}})</span>
                                 </div>
                             </div>
                         </div>
@@ -91,7 +91,7 @@
                         <div class="flex gap-9">
                             <div class="mr-10">
                                 <div class="pt-5">
-                                <span class="text-lg font-bold mr-2">60.1%</span>
+                                <span class="text-lg font-bold mr-2">{{approval_rate}}%</span>
                                 </div>
                                 <div class="flex items-center mt-2">
                                     <svg class="w-4 h-4 text-green-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 10">
@@ -102,7 +102,7 @@
                             </div>
                             <div>
                                 <div class="pt-5">
-                                <span class="text-lg font-bold mr-2">50%</span>
+                                <span class="text-lg font-bold mr-2">{{completion_rate}}%</span>
                                 </div>
                                 <div class="flex items-center mt-2">
                                     <svg class="w-4 h-4 text-amber-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 10">
@@ -316,305 +316,9 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                        <th scope="row" class="px-6 py-4 font-medium text-green-500 whitespace-nowrap dark:text-white">
-                            Approved
-                        </th>
-                        <td class="px-6 py-4">
-                            RF-5001
-                        </td>
-                        <td class="px-6 py-4">
-                            09/02/2023
-                        </td>
-                        <td class="px-6 py-4">
-                            Personal Savings
-                        </td>
-                        <td class="px-6 py-4">
-                            PHP 5,000
-                        </td>
-                        <td class="px-6 py-4">
-                            PHP 5,000
-                        </td>
-                        <td class="px-6 py-4">
-                            PHP 10,000
-                        </td>
-                    </tr>
-                   <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                        <th scope="row" class="px-6 py-4 font-medium text-green-500 whitespace-nowrap dark:text-white">
-                            Approved
-                        </th>
-                        <td class="px-6 py-4">
-                            RF-5001
-                        </td>
-                        <td class="px-6 py-4">
-                            09/02/2023
-                        </td>
-                        <td class="px-6 py-4">
-                            Personal Savings
-                        </td>
-                        <td class="px-6 py-4">
-                            PHP 5,000
-                        </td>
-                        <td class="px-6 py-4">
-                            PHP 5,000
-                        </td>
-                        <td class="px-6 py-4">
-                            PHP 10,000
-                        </td>
-                    </tr>
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                        <th scope="row" class="px-6 py-4 font-medium text-green-500 whitespace-nowrap dark:text-white">
-                            Approved
-                        </th>
-                        <td class="px-6 py-4">
-                            RF-5001
-                        </td>
-                        <td class="px-6 py-4">
-                            09/02/2023
-                        </td>
-                        <td class="px-6 py-4">
-                            Personal Savings
-                        </td>
-                        <td class="px-6 py-4">
-                            PHP 5,000
-                        </td>
-                        <td class="px-6 py-4">
-                            PHP 5,000
-                        </td>
-                        <td class="px-6 py-4">
-                            PHP 10,000
-                        </td>
-                    </tr>
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                        <th scope="row" class="px-6 py-4 font-medium text-green-500 whitespace-nowrap dark:text-white">
-                            Approved
-                        </th>
-                        <td class="px-6 py-4">
-                            RF-5001
-                        </td>
-                        <td class="px-6 py-4">
-                            09/02/2023
-                        </td>
-                        <td class="px-6 py-4">
-                            Personal Savings
-                        </td>
-                        <td class="px-6 py-4">
-                            PHP 5,000
-                        </td>
-                        <td class="px-6 py-4">
-                            PHP 5,000
-                        </td>
-                        <td class="px-6 py-4">
-                            PHP 10,000
-                        </td>
-                    </tr>
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                        <th scope="row" class="px-6 py-4 font-medium text-green-500 whitespace-nowrap dark:text-white">
-                            Approved
-                        </th>
-                        <td class="px-6 py-4">
-                            RF-5001
-                        </td>
-                        <td class="px-6 py-4">
-                            09/02/2023
-                        </td>
-                        <td class="px-6 py-4">
-                            Personal Savings
-                        </td>
-                        <td class="px-6 py-4">
-                            PHP 5,000
-                        </td>
-                        <td class="px-6 py-4">
-                            PHP 5,000
-                        </td>
-                        <td class="px-6 py-4">
-                            PHP 10,000
-                        </td>
-                    </tr>
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                        <th scope="row" class="px-6 py-4 font-medium text-green-500 whitespace-nowrap dark:text-white">
-                            Approved
-                        </th>
-                        <td class="px-6 py-4">
-                            RF-5001
-                        </td>
-                        <td class="px-6 py-4">
-                            09/02/2023
-                        </td>
-                        <td class="px-6 py-4">
-                            Personal Savings
-                        </td>
-                        <td class="px-6 py-4">
-                            PHP 5,000
-                        </td>
-                        <td class="px-6 py-4">
-                            PHP 5,000
-                        </td>
-                        <td class="px-6 py-4">
-                            PHP 10,000
-                        </td>
-                    </tr>
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                        <th scope="row" class="px-6 py-4 font-medium text-green-500 whitespace-nowrap dark:text-white">
-                            Approved
-                        </th>
-                        <td class="px-6 py-4">
-                            RF-5001
-                        </td>
-                        <td class="px-6 py-4">
-                            09/02/2023
-                        </td>
-                        <td class="px-6 py-4">
-                            Personal Savings
-                        </td>
-                        <td class="px-6 py-4">
-                            PHP 5,000
-                        </td>
-                        <td class="px-6 py-4">
-                            PHP 5,000
-                        </td>
-                        <td class="px-6 py-4">
-                            PHP 10,000
-                        </td>
-                    </tr>
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                        <th scope="row" class="px-6 py-4 font-medium text-green-500 whitespace-nowrap dark:text-white">
-                            Approved
-                        </th>
-                        <td class="px-6 py-4">
-                            RF-5001
-                        </td>
-                        <td class="px-6 py-4">
-                            09/02/2023
-                        </td>
-                        <td class="px-6 py-4">
-                            Personal Savings
-                        </td>
-                        <td class="px-6 py-4">
-                            PHP 5,000
-                        </td>
-                        <td class="px-6 py-4">
-                            PHP 5,000
-                        </td>
-                        <td class="px-6 py-4">
-                            PHP 10,000
-                        </td>
-                    </tr>
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                        <th scope="row" class="px-6 py-4 font-medium text-green-500 whitespace-nowrap dark:text-white">
-                            Approved
-                        </th>
-                        <td class="px-6 py-4">
-                            RF-5001
-                        </td>
-                        <td class="px-6 py-4">
-                            09/02/2023
-                        </td>
-                        <td class="px-6 py-4">
-                            Personal Savings
-                        </td>
-                        <td class="px-6 py-4">
-                            PHP 5,000
-                        </td>
-                        <td class="px-6 py-4">
-                            PHP 5,000
-                        </td>
-                        <td class="px-6 py-4">
-                            PHP 10,000
-                        </td>
-                    </tr>
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                        <th scope="row" class="px-6 py-4 font-medium text-green-500 whitespace-nowrap dark:text-white">
-                            Approved
-                        </th>
-                        <td class="px-6 py-4">
-                            RF-5001
-                        </td>
-                        <td class="px-6 py-4">
-                            09/02/2023
-                        </td>
-                        <td class="px-6 py-4">
-                            Personal Savings
-                        </td>
-                        <td class="px-6 py-4">
-                            PHP 5,000
-                        </td>
-                        <td class="px-6 py-4">
-                            PHP 5,000
-                        </td>
-                        <td class="px-6 py-4">
-                            PHP 10,000
-                        </td>
-                    </tr>
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                        <th scope="row" class="px-6 py-4 font-medium text-green-500 whitespace-nowrap dark:text-white">
-                            Approved
-                        </th>
-                        <td class="px-6 py-4">
-                            RF-5001
-                        </td>
-                        <td class="px-6 py-4">
-                            09/02/2023
-                        </td>
-                        <td class="px-6 py-4">
-                            Personal Savings
-                        </td>
-                        <td class="px-6 py-4">
-                            PHP 5,000
-                        </td>
-                        <td class="px-6 py-4">
-                            PHP 5,000
-                        </td>
-                        <td class="px-6 py-4">
-                            PHP 10,000
-                        </td>
-                    </tr>
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                        <th scope="row" class="px-6 py-4 font-medium text-green-500 whitespace-nowrap dark:text-white">
-                            Approved
-                        </th>
-                        <td class="px-6 py-4">
-                            RF-5001
-                        </td>
-                        <td class="px-6 py-4">
-                            09/02/2023
-                        </td>
-                        <td class="px-6 py-4">
-                            Personal Savings
-                        </td>
-                        <td class="px-6 py-4">
-                            PHP 5,000
-                        </td>
-                        <td class="px-6 py-4">
-                            PHP 5,000
-                        </td>
-                        <td class="px-6 py-4">
-                            PHP 10,000
-                        </td>
-                    </tr>
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                        <th scope="row" class="px-6 py-4 font-medium text-green-500 whitespace-nowrap dark:text-white">
-                            Approved
-                        </th>
-                        <td class="px-6 py-4">
-                            RF-5001
-                        </td>
-                        <td class="px-6 py-4">
-                            09/02/2023
-                        </td>
-                        <td class="px-6 py-4">
-                            Personal Savings
-                        </td>
-                        <td class="px-6 py-4">
-                            PHP 5,000
-                        </td>
-                        <td class="px-6 py-4">
-                            PHP 5,000
-                        </td>
-                        <td class="px-6 py-4">
-                            PHP 10,000
-                        </td>
-                    </tr>
+                    {{#each loans}}
+                    {{> loan_entry_client_profile this}}
+                    {{/each}}
                 </tbody>
             </table>
         
@@ -626,8 +330,8 @@
                         <div class="flex gap-5 items-center">
                             <img class="w-16 h-16 rounded-full col-span-1" src="/images/pfp_default.jpg">
                             <div class="col-span-2 flex flex-col items-start">
-                                <span class="text-base">Juan Dela Cruz</span>
-                                <span class="text-sm text-gray-500">Customer since 10/02/2022</span>
+                                <span class="text-base">{{first_name}} {{middle_name}} {{last_name}}</span>
+                                <span class="text-sm text-gray-500">Customer since {{date_creation}}</span>
                             </div>
                         </div>
                         <div class="flex flex-col items-start mt-8">
@@ -636,31 +340,39 @@
                                 <svg class="w-4 h-4 text-gray-500 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 18">
                                         <path d="M7 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Zm2 1H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z"/>
                                     </svg>
-                                <span class="text-left text-sm">Male, 25 years old</span>
+                                {{#ifEquals gender "male"}}
+                                <span class="text-left text-sm">Male</span>
+                                {{/ifEquals}}
+                                {{#ifEquals gender "female"}}
+                                <span class="text-left text-sm">Female</span>
+                                {{/ifEquals}}
+                                {{#ifEquals gender "pref-not"}}
+                                <span class="text-left text-sm">Prefers to not say</span>
+                                {{/ifEquals}}
                             </div>
                             <div class="flex gap-3 pt-4">
                                 <svg class="w-4 h-4 text-gray-500 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 2-8.4 7.05a1 1 0 0 1-1.2 0L1 2m18 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1m18 0v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2"/>
                                 </svg>
-                                <span class="text-left text-sm hover:text-blue-500"><a href="mailto:zannn@gmail.com">zannn@gmail.com</a></span>
+                                <span class="text-left text-sm hover:text-blue-500"><a href="mailto:{{email}}">{{email}}</a></span>
                             </div>
                             <div class="flex gap-3 pt-4">
                                 <svg class="w-4 h-4 text-gray-500 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m16.344 12.168-1.4-1.4a1.98 1.98 0 0 0-2.8 0l-.7.7a1.98 1.98 0 0 1-2.8 0l-2.1-2.1a1.98 1.98 0 0 1 0-2.8l.7-.7a1.981 1.981 0 0 0 0-2.8l-1.4-1.4a1.828 1.828 0 0 0-2.8 0C-.638 5.323 1.1 9.542 4.78 13.22c3.68 3.678 7.9 5.418 11.564 1.752a1.828 1.828 0 0 0 0-2.804Z"/>
                                 </svg>
-                                <span class="text-left text-sm hover:text-blue-500"><a href="tel:+639876423738"></a>+639876423738</span>
+                                <span class="text-left text-sm hover:text-blue-500"><a href="tel:{{contact_num}}"></a>+{{contact_num}}</span>
                             </div>
                             <div class="flex gap-3 pt-4">
                                 <svg class="w-4 h-4 text-gray-500 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8v10a1 1 0 0 0 1 1h4v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5h4a1 1 0 0 0 1-1V8M1 10l9-9 9 9"/>
                                 </svg>
-                                <span class="text-left	text-sm"> 268 Magsaysay Avenue, Baguio, Benguet, CAR, Philippines</span>
+                                <span class="text-left	text-sm"> {{addtl_address}}, {{city}}, {{province}}, {{region}}</span>
                             </div>
                             <div class="flex gap-3 pt-4">
                                 <svg class="w-4 h-4 text-gray-500 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
                                     <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
                                 </svg>
-                                <span class="text-left text-sm hover:text-blue-500"><a href="facebook.com/abc">facebook.com/abc</a></span>
+                                <span class="text-left text-sm hover:text-blue-500"><a href="{{fb_link}}">{{fb_link}}</a></span>
                             </div>
                         </div>
 

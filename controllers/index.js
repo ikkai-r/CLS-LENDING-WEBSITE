@@ -1,13 +1,12 @@
-const express = require ("express");
-const handlebars = require('handlebars');
-const mongoose = require('mongoose');
 const Client = require('../server/schema/Client');
 const Employee = require('../server/schema/Employee');
 const bcrypt = require('bcryptjs');
 
-const router = express.Router();
+const getIndex = function(req, res) {
+    res.render('login', {header: 'test', layout: 'layouts/main_no', css: '/css/login2.css'}); // This is to load the page initially
+}
 
-router.get("/employeeLogIn", async function(req, res) {
+const employeeLogIn = async function(req, res) {
     try {
         const copy = await Employee.find({
             email: req.query.email,
@@ -20,9 +19,9 @@ router.get("/employeeLogIn", async function(req, res) {
     } catch(err) {
         res.json(false);
     }
-});
+}
 
-router.get("/verifyEmployeeEmail", async function(req, res) {
+const verifyEmployeeEmail = async function(req, res) {
     try {
         const copy = await Employee.find({
             email: req.query.email,
@@ -34,9 +33,9 @@ router.get("/verifyEmployeeEmail", async function(req, res) {
     } catch(err) {
         res.json(false);
     }
-});
+}
 
-router.get("/verifyClientEmail", async function(req, res) {
+const verifyClientEmail = async function(req, res) {
     try {
         const copy = await Client.find({
             email: req.query.email,
@@ -48,9 +47,9 @@ router.get("/verifyClientEmail", async function(req, res) {
     } catch(err) {
         res.json(false);
     }
-});
+}
 
-router.get("/clientLogIn", async function(req, res) {
+const clientLogIn = async function(req, res) {
     try {
 
         const find = await Client.findOne({email: req.query.email}, {password: 1}).exec();
@@ -73,6 +72,12 @@ router.get("/clientLogIn", async function(req, res) {
     } catch(err) {
         res.json(false);
     }
-});
+}
 
-module.exports = router;
+module.exports = {
+    getIndex,
+    employeeLogIn,
+    verifyEmployeeEmail,
+    verifyClientEmail,
+    clientLogIn,
+}

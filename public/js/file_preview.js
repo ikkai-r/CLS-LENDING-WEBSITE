@@ -410,7 +410,7 @@ async function checkUniqueEmail(element) {
     if ( element.id == 'email' ){
         try {
             if ( element.value != '' ){
-                const response = await fetch(`/register/verifyClientEmail?email=${element.value}`, {
+                const response = await fetch(`/register/api/verifyClientEmail?email=${element.value}`, {
                     method: "GET"
                 });
                 found = await response.json();

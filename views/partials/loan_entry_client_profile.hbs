@@ -1,0 +1,35 @@
+<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+    {{#ifEquals approved "Approved"}}
+        <th scope="row" class="px-6 py-4 font-medium text-green-500 whitespace-nowrap dark:text-white">
+            Approved
+        </th>
+    {{/ifEquals}}
+    {{#ifEquals approved "Pending"}}
+        <th scope="row" class="px-6 py-4 font-medium text-yellow-500 whitespace-nowrap dark:text-white">
+            Pending
+        </th>
+    {{/ifEquals}}
+     {{#ifEquals approved "Rejected"}}
+        <th scope="row" class="px-6 py-4 font-medium text-red-500 whitespace-nowrap dark:text-white">
+            Rejected
+        </th>
+    {{/ifEquals}}
+    <td class="px-6 py-4">
+        RF-{{reference}}
+    </td>
+    <td class="px-6 py-4">
+        {{date_applied}}
+    </td>
+    <td class="px-6 py-4">
+        {{category}}
+    </td>
+    <td class="px-6 py-4">
+        PHP {{capital}}
+    </td>
+    <td class="px-6 py-4">
+        PHP {{interest}}
+    </td>
+    <td class="px-6 py-4">
+        PHP {{balance}}
+    </td>
+</tr>

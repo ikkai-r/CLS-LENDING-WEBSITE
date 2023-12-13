@@ -1,5 +1,5 @@
 function generateRegistrationLink() {
-    fetch('/api/generate-registration-link', {
+    fetch('/register/api/generate-registration-link', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -17,7 +17,7 @@ function generateRegistrationLink() {
 function openRegistrationModal(event) {
     event.preventDefault(); 
 
-    fetch('/api/generate-registration-link', {
+    fetch('/register/api/generate-registration-link', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
